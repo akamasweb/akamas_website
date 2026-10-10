@@ -1165,6 +1165,63 @@ ul {
   border: 1px solid color-mix(in srgb, var(--m-fg) 12%, transparent);
 }
 
+/* Screenshot πραγματικού έργου */
+.mock--shot {
+  --m-bg: #1a2236;
+  --m-fg: #e8ecf3;
+}
+
+.mock__host {
+  margin-left: 10px;
+  padding: 1px 12px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--m-fg) 10%, transparent);
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--m-fg) 65%, transparent);
+}
+
+.mock__shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project--live {
+  display: block;
+  color: inherit;
+}
+
+.project__badge--live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  color: var(--accent-ink);
+  transition:
+    background-color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+
+.project--live:hover .project__badge--live,
+.project--live:focus-visible .project__badge--live {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.project--live:hover .project__name {
+  color: var(--accent-ink);
+}
+
+.project__name {
+  transition: color 0.25s var(--ease);
+}
+
 .mock--1 .mock__copy {
   order: 2;
 }
@@ -2236,6 +2293,12 @@ ul {
 
   .project__text {
     display: none;
+  }
+
+  /* Το κουμπί κάτω από το όνομα, ώστε τα μεγάλα ονόματα να έχουν όλο το πλάτος */
+  .project__info {
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   /* Χώρος από πάνω για την ετικέτα «Δημοφιλές» */

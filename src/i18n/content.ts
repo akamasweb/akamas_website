@@ -1,5 +1,9 @@
 export type Lang = 'el' | 'en'
 
+// Ένα έργο του portfolio. Με url και image είναι πραγματικό έργο (με screenshot και link),
+// χωρίς αυτά εμφανίζεται ως «Concept» με εικονογράφηση.
+export type WorkItem = { name: string; category: string; text: string; url?: string; image?: string }
+
 const el = {
   // Το όνομα της εταιρείας όπως εμφανίζεται στο λογότυπο, στο hero και στο footer
   brand: 'ΑΚΑΜΑΣ',
@@ -97,7 +101,22 @@ const el = {
     title: 'Ας μιλήσει η δουλειά μας για εμάς.',
     conceptLabel: 'Concept',
     viewProject: 'Δείτε το έργο',
+    visitLabel: 'Δείτε το site',
     items: [
+      {
+        name: 'IMA — International Marine Automations',
+        category: 'Ναυτιλία · Εταιρική ιστοσελίδα',
+        text: 'Δίγλωσση ιστοσελίδα για εταιρεία ναυτιλιακών ηλεκτρολογικών επισκευών και αυτοματισμών στον Πειραιά, με αναφορά βλάβης 24/7.',
+        url: 'https://imagreece.gr',
+        image: '/work/imagreece.webp',
+      },
+      {
+        name: 'SePilateVo',
+        category: 'Στούντιο Pilates · Ιστοσελίδα & κρατήσεις',
+        text: 'Ιστοσελίδα για στούντιο Pilates στον Άγιο Ιωάννη Ρέντη, με υπηρεσίες, κριτικές, πρόγραμμα μαθημάτων και κρατήσεις.',
+        url: 'https://sepilatevo.gr',
+        image: '/work/sepilatevo.webp',
+      },
       {
         name: 'Θάλασσα Suites',
         category: 'Ξενοδοχείο · Σύστημα κρατήσεων',
@@ -118,7 +137,7 @@ const el = {
         category: 'Υγεία · Web app',
         text: 'Online ραντεβού και υπενθυμίσεις, που μείωσαν τα χαμένα ραντεβού.',
       },
-    ],
+    ] as WorkItem[],
   },
   manifesto: {
     eyebrow: 'Γιατί ἀκάμας',
@@ -333,7 +352,22 @@ const en: Content = {
     title: 'Work that speaks for itself.',
     conceptLabel: 'Concept',
     viewProject: 'View project',
+    visitLabel: 'Visit site',
     items: [
+      {
+        name: 'IMA — International Marine Automations',
+        category: 'Maritime · Company website',
+        text: 'A bilingual website for a Piraeus-based marine electrical and automation repair company, with 24/7 breakdown reporting.',
+        url: 'https://imagreece.gr',
+        image: '/work/imagreece.webp',
+      },
+      {
+        name: 'SePilateVo',
+        category: 'Pilates studio · Website & bookings',
+        text: 'A website for a Pilates studio in Agios Ioannis Rentis, with services, reviews, class timetable and bookings.',
+        url: 'https://sepilatevo.gr',
+        image: '/work/sepilatevo.webp',
+      },
       {
         name: 'Thalassa Suites',
         category: 'Hotel · Booking system',

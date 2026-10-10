@@ -60,7 +60,7 @@ export function Services() {
   )
 }
 
-// TODO: αντικαταστήστε τα concept έργα με πραγματικά έργα (και screenshots) όταν είναι διαθέσιμα.
+// Εικονογραφήσεις για τα concept έργα (όσα δεν έχουν url/image στο content.ts).
 const MOCK_PALETTES = [
   { bg: '#0f3b57', fg: '#e8f1f5', accent: '#5fb3c9' },
   { bg: '#e9e4d0', fg: '#2f3a1f', accent: '#6b7a2c' },
@@ -110,6 +110,22 @@ function SiteMock({ variant }: { variant: number }) {
   )
 }
 
+// Screenshot πραγματικού έργου μέσα σε πλαίσιο browser
+function SiteShot({ url, image, name }: { url: string; image: string; name: string }) {
+  const host = new URL(url).host
+  return (
+    <div className="mock mock--shot">
+      <div className="mock__bar" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+        <span className="mock__host">{host}</span>
+      </div>
+      <img className="mock__shot" src={image} alt={`${name} (${host})`} width={1440} height={900} loading="lazy" decoding="async" />
+    </div>
+  )
+}
+
 export function Work() {
   const { t } = useLanguage()
   const w = t.work
@@ -118,21 +134,48 @@ export function Work() {
       <div className="container">
         <SectionHead index="02" eyebrow={w.eyebrow} title={w.title} />
         <div className="work">
-          {w.items.map((item, i) => (
-            <article key={item.name} className="project" data-reveal style={{ '--d': i % 2 } as CSSProperties}>
-              <div className="project__media">
-                <SiteMock variant={i} />
+          {w.items.map((item, i) => {
+            const style = { '--d': i % 2 } as CSSProperties
+            const info = (
+              <div>
+                <p className="project__category">{item.category}</p>
+                <h3 className="project__name">{item.name}</h3>
+                <p className="project__text">{item.text}</p>
               </div>
-              <div className="project__info">
-                <div>
-                  <p className="project__category">{item.category}</p>
-                  <h3 className="project__name">{item.name}</h3>
-                  <p className="project__text">{item.text}</p>
+            )
+
+            // Πραγματικό έργο: όλη η κάρτα είναι link προς το site
+            if (item.url && item.image) {
+              return (
+                <a key={item.name} className="project project--live" href={item.url} target="_blank" rel="noopener" data-reveal style={style}>
+                  <div className="project__media">
+                    <SiteShot url={item.url} image={item.image} name={item.name} />
+                  </div>
+                  <div className="project__info">
+                    {info}
+                    <span className="project__badge project__badge--live">
+                      {w.visitLabel}
+                      <ArrowUpRightIcon width={14} height={14} />
+                    </span>
+                  </div>
+                </a>
+              )
+            }
+
+            // Concept: κάθε concept παίρνει τη δική του εικονογράφηση, ανεξάρτητα από τα πραγματικά έργα
+            const variant = w.items.slice(0, i).filter((x) => !(x.url && x.image)).length
+            return (
+              <article key={item.name} className="project" data-reveal style={style}>
+                <div className="project__media">
+                  <SiteMock variant={variant} />
                 </div>
-                <span className="project__badge">{w.conceptLabel}</span>
-              </div>
-            </article>
-          ))}
+                <div className="project__info">
+                  {info}
+                  <span className="project__badge">{w.conceptLabel}</span>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
