@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Στο build το scripts/prerender.mjs αντικαθιστά ό,τι είναι ανάμεσα σε seo-start και seo-end
+         με τίτλο, περιγραφή, canonical, hreflang, Open Graph και δομημένα δεδομένα για κάθε σελίδα. -->
+    <!--seo-start-->
+    <title>Akamas — Web Design &amp; Development</title>
+    <meta name="description" content="Akamas: σχεδιασμός και ανάπτυξη ιστοσελίδων, e-shop και web εφαρμογών. Ακούραστα, μέχρι το αποτέλεσμα να είναι σωστό." />
+    <!--seo-end-->
+    <meta name="theme-color" content="#0B162E" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Ορίζει το θέμα πριν εμφανιστεί η σελίδα, ώστε να μην «αναβοσβήνει» -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var t;
+        try {
+          t = localStorage.getItem('akamas-theme');
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        root.dataset.theme = t;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', t === 'light' ? '#F4F6F8' : '#0B162E');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
