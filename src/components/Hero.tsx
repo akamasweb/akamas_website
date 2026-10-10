@@ -111,9 +111,14 @@ export function Hero() {
           <span className="hero__syllables">{h.syllables}</span>
           <span className="hero__ipa">{h.ipa}</span>
           {canSpeak && (
-            <button type="button" className={`speak-btn${speaking ? ' is-speaking' : ''}`} onClick={onListen}>
+            <button
+              type="button"
+              className={`speak-btn${speaking ? ' is-speaking' : ''}`}
+              onClick={onListen}
+              aria-label={h.listen}
+            >
               <SpeakerIcon width={16} height={16} />
-              {h.listen}
+              <span className="speak-btn__label">{h.listen}</span>
             </button>
           )}
         </div>
