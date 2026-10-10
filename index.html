@@ -13,7 +13,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Ορίζει το θέμα πριν εμφανιστεί η σελίδα, ώστε να μην «αναβοσβήνει» -->
+    <!-- Ορίζει το θέμα πριν εμφανιστεί η σελίδα, ώστε να μην «αναβοσβήνει».
+         Προεπιλογή είναι το σκούρο· το φωτεινό μόνο αν το έχει διαλέξει ο επισκέπτης με το κουμπί. -->
     <script>
       (function () {
         var root = document.documentElement;
@@ -22,8 +23,8 @@
         try {
           t = localStorage.getItem('akamas-theme');
         } catch (e) {}
-        if (t !== 'light' && t !== 'dark') {
-          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        if (t !== 'light') {
+          t = 'dark';
         }
         root.dataset.theme = t;
         var meta = document.querySelector('meta[name="theme-color"]');
