@@ -20,7 +20,15 @@ export function render(lang: Lang, page: Page) {
   )
 }
 
-const abs = (path: string) => `${site.url}${path}`
+// Η τελική διεύθυνση του site ορίζεται από το scripts/prerender.mjs:
+// από το config.ts αν έχει συμπληρωθεί, αλλιώς αυτόματα από το Vercel / Netlify.
+export const configuredUrl = site.url
+let baseUrl = site.url
+export function setBaseUrl(url: string) {
+  baseUrl = url.replace(/\/$/, '')
+}
+
+const abs = (path: string) => `${baseUrl}${path}`
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
@@ -31,7 +39,7 @@ function businessJsonLd(lang: Lang) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': `${site.url}/#business`,
+    '@id': `${baseUrl}/#business`,
     name: 'Akamas Web Design & Development',
     alternateName: ['Akamas', 'ΑΚΑΜΑΣ'],
     url: abs(pathFor('home', lang)),

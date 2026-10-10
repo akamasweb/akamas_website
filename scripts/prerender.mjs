@@ -9,7 +9,18 @@ const root = path.resolve(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
 const ssrDir = path.join(root, 'dist-ssr')
 
-const { routes, render, head, sitemap, robots } = await import(pathToFileURL(path.join(ssrDir, 'entry-server.js')).href)
+const { routes, render, head, sitemap, robots, configuredUrl, setBaseUrl } = await import(
+  pathToFileURL(path.join(ssrDir, 'entry-server.js')).href
+)
+
+// Διεύθυνση του site, με σειρά προτεραιότητας:
+// 1. το url στο src/config.ts  2. η μεταβλητή SITE_URL
+// 3. το Vercel (VERCEL_PROJECT_PRODUCTION_URL: το domain σας αν έχει συνδεθεί, αλλιώς το *.vercel.app)
+// 4. το Netlify (URL)  5. τοπικά, για δοκιμές
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+const siteUrl = configuredUrl || process.env.SITE_URL || vercelUrl || process.env.URL || 'http://localhost:4173'
+setBaseUrl(siteUrl)
+console.log(`  site url: ${siteUrl}`)
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
 const SEO_BLOCK = /<!--seo-start-->[\s\S]*?<!--seo-end-->/

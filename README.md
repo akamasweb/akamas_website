@@ -26,5 +26,6 @@ npm run preview   # προεπισκόπηση της τελικής έκδοσ�
 
 - Build command: `npm run build`
 - Output directory: `dist`
-- Πριν το πρώτο ανέβασμα, ορίστε το σωστό domain στο `url` του `src/config.ts`.
+- Η διεύθυνση του site (για Google, sitemap, κοινοποιήσεις) συμπληρώνεται αυτόματα στο Vercel / Netlify,
+  και γίνεται το δικό σας domain μόλις το συνδέσετε εκεί. Σε άλλον πάροχο, ορίστε το `url` στο `src/config.ts`.
 - Μετά το ανέβασμα, στείλτε ένα δοκιμαστικό μήνυμα από τη φόρμα και επιβεβαιώστε το email ενεργοποίησης του FormSubmit.
