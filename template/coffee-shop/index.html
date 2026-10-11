@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Κόκκος Coffee Roasters — Specialty καφές & καβουρδιστήριο στο Παγκράτι</title>
+  <meta name="description" content="Specialty καφές, δικό μας καβουρδιστήριο και φρέσκα αρτοσκευάσματα στο Παγκράτι. Template από την Akamas με ενδεικτικό περιεχόμενο.">
+  <meta name="theme-color" content="#F4EADB">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23B4532A'/%3E%3Cpath d='M32 13c-9 0-15 8-15 19s6 19 15 19 15-8 15-19-6-19-15-19z' fill='%23FBF6EE'/%3E%3Cpath d='M30 15c-6 7 6 14 0 34' fill='none' stroke='%23B4532A' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>if (/[?&]lang=en(&|$)/.test(location.search)) document.documentElement.classList.add('lang-pending')</script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-bean" viewBox="0 0 24 24">
+        <path d="M12 3.2c-4.6 0-7.6 3.9-7.6 8.8s3 8.8 7.6 8.8 7.6-3.9 7.6-8.8-3-8.8-7.6-8.8z" fill="currentColor"/>
+        <path d="M11 4.4c-3 3.6 3.2 7.6.4 15.2" fill="none" stroke="var(--bean-line, #F4EADB)" stroke-width="1.7" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 20 20">
+        <path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s-5.5-5.2-5.5-9.5a5.5 5.5 0 0 1 11 0C15.5 12.8 10 18 10 18z"/><circle cx="10" cy="8.5" r="2"/></g>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 20 20">
+        <path d="M6.2 3.5 8 7.2 6.6 8.6a9.4 9.4 0 0 0 4.8 4.8L12.8 12l3.7 1.8-.6 2.7c-.1.5-.6.9-1.1.9A13.3 13.3 0 0 1 2.6 5.2c0-.5.4-1 .9-1.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2.75" y="4.75" width="14.5" height="10.5" rx="1.5"/><path d="m3.5 5.5 6.5 5.25 6.5-5.25"/></g>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4.3l2.8 1.8"/></g>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 20 20">
+        <path d="m10 1.8 2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.7l-5.1 2.8L6 11.8l-4.3-4 5.8-.7z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 20 20">
+        <path d="M10 17s-6.5-4-6.5-8.6A3.6 3.6 0 0 1 10 6.3a3.6 3.6 0 0 1 6.5 2.1C16.5 13 10 17 10 17z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 20 20">
+        <path d="m10 2 2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16C4 8 9 4 17 4c0 8-4 12-11 12"/><path d="M4 16l7-7"/></g>
+      </symbol>
+      <symbol id="i-bike" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16 9 9h6l3.5 7M9 9l3.5 7H5.5M14 6h2.5l-1.5 3"/></g>
+      </symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24">
+        <g fill="currentColor"><ellipse cx="7" cy="9" rx="1.9" ry="2.4"/><ellipse cx="11" cy="6.5" rx="1.9" ry="2.4"/><ellipse cx="15" cy="7" rx="1.9" ry="2.4"/><ellipse cx="18" cy="10.5" rx="1.8" ry="2.2"/><path d="M12.3 11c-3 0-6 4.5-5.2 6.9.7 2 3 1 5.2 1s4.6 1 5.2-1c.7-2.4-2.2-6.9-5.2-6.9z"/></g>
+      </symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 9.5a13 13 0 0 1 18 0M6 12.8a8.6 8.6 0 0 1 12 0M9 16a4.2 4.2 0 0 1 6 0"/><circle cx="12" cy="19" r=".9" fill="currentColor"/></g>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 20 20">
+        <path d="M4.5 10.5l3.6 3.5L15.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top" aria-label="Κόκκος Coffee Roasters, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+        <span class="logo__mark" aria-hidden="true"><svg><use href="#i-bean"/></svg></span>
+        <span class="logo__text" aria-hidden="true">
+          <span class="logo__name" data-keep-lang>Κόκκος</span>
+          <span class="logo__sub">coffee roasters</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση" data-i18n-attr="aria-label:nav.label">
+        <ul class="nav__list">
+          <li><a href="#menu" data-i18n="nav.menu">Μενού</a></li>
+          <li><a href="#roast" data-i18n="nav.roast">Καφές του μήνα</a></li>
+          <li><a href="#story" data-i18n="nav.story">Η ιστορία μας</a></li>
+          <li><a href="#visit" data-i18n="nav.visit">Ωράριο & τοποθεσία</a></li>
+        </ul>
+        <p class="nav__status" data-status-text-nav aria-hidden="true"></p>
+      </nav>
+
+      <div class="site-header__tools">
+        <p class="status-pill" data-status-pill hidden><span class="status-pill__dot" aria-hidden="true"></span><span data-status-short></span></p>
+        <div class="lang" role="group" aria-label="Γλώσσα" data-i18n-attr="aria-label:lang.label">
+          <button type="button" class="lang__btn" data-set-lang="el" aria-pressed="true" lang="el" aria-label="Ελληνικά">EL</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+        </div>
+        <button type="button" class="burger" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα πλοήγησης" data-burger>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="kicker"><svg class="kicker__bean" aria-hidden="true"><use href="#i-bean"/></svg><span data-i18n="hero.kicker">Specialty καφές & καβουρδιστήριο · Παγκράτι</span></p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">Ο καφές της γειτονιάς, <em>ψημένος δίπλα σας.</em></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Καβουρδίζουμε μικρές παρτίδες κάθε Τρίτη, στο πίσω μέρος του μαγαζιού. Freddo για το πρωινό τρέξιμο, φίλτρο για τις αργές Κυριακές και κρουασάν βουτύρου που βγαίνει ζεστό στις 8.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu"><span data-i18n="hero.cta1">Δείτε το μενού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#visit" data-i18n="hero.cta2">Βρείτε μας</a>
+          </div>
+          <div class="hero__meta">
+            <p class="open-status" data-open-status><span class="open-status__dot" aria-hidden="true"></span><span data-status-text>Ωράριο: Δευτέρα – Παρασκευή 07:00 – 21:00</span></p>
+            <p class="hero__rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span data-i18n="hero.rating">4,8 από 1.240 κριτικές</span></p>
+          </div>
+        </div>
+
+        <div class="hero__art">
+          <img class="hero__img" src="./assets/hero.svg" width="640" height="680" alt="Εικονογράφηση: φλιτζάνι cappuccino με latte art, κρουασάν και κόκκοι καφέ" data-i18n-attr="alt:hero.imgAlt" fetchpriority="high">
+          <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+            <defs><path id="stamp-path" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+            <circle cx="100" cy="100" r="98" class="stamp__bg"/>
+            <circle cx="100" cy="100" r="56" class="stamp__ring"/>
+            <g class="stamp__rotor">
+              <text class="stamp__text"><textPath href="#stamp-path" textLength="462" lengthAdjust="spacing" data-i18n="hero.stamp">Ψημένος κάθε Τρίτη · Παγκράτι ·</textPath></text>
+            </g>
+            <use href="#i-bean" x="76" y="76" width="48" height="48" class="stamp__bean"/>
+          </svg>
+          <p class="hero__note"><span class="hero__note-label" data-i18n="hero.noteLabel">Σήμερα στη μηχανή</span><span class="hero__note-value" data-i18n="hero.noteValue">Αιθιοπία Guji · natural</span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <ul class="ribbon__list">
+          <li data-i18n="ribbon.1">Freddo espresso</li><li data-i18n="ribbon.2">Flat white</li><li data-i18n="ribbon.3">V60 & Chemex</li><li data-i18n="ribbon.4">Cold brew 18 ωρών</li><li data-i18n="ribbon.5">Κρουασάν βουτύρου</li><li data-i18n="ribbon.6">Ελληνικός στο μπρίκι</li><li data-i18n="ribbon.7">Κόκκοι για το σπίτι</li>
+        </ul>
+        <ul class="ribbon__list">
+          <li data-i18n="ribbon.1">Freddo espresso</li><li data-i18n="ribbon.2">Flat white</li><li data-i18n="ribbon.3">V60 & Chemex</li><li data-i18n="ribbon.4">Cold brew 18 ωρών</li><li data-i18n="ribbon.5">Κρουασάν βουτύρου</li><li data-i18n="ribbon.6">Ελληνικός στο μπρίκι</li><li data-i18n="ribbon.7">Κόκκοι για το σπίτι</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= ΜΕΝΟΥ ================= -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="menu.eyebrow">Το μενού</p>
+          <h2 class="section-title" id="menu-title" data-i18n-html="menu.title">Από το πρώτο espresso <em>ως το τελευταίο κρουασάν.</em></h2>
+          <p class="section-lead" data-i18n="menu.lead">Όλοι οι καφέδες γίνονται με κόκκους που ψήσαμε εμείς την ίδια εβδομάδα. Οι τιμές περιλαμβάνουν ΦΠΑ.</p>
+        </header>
+
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Κατηγορίες μενού" data-i18n-attr="aria-label:menu.tablist" hidden>
+            <button type="button" class="tabs__tab" role="tab" id="tab-espresso" aria-controls="panel-espresso" aria-selected="true"><span data-i18n="cat.espresso">Espresso bar</span></button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-cold" aria-controls="panel-cold" aria-selected="false" tabindex="-1"><span data-i18n="cat.cold">Κρύοι καφέδες</span></button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-filter" aria-controls="panel-filter" aria-selected="false" tabindex="-1"><span data-i18n="cat.filter">Φίλτρου & specialty</span></button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false" tabindex="-1"><span data-i18n="cat.drinks">Ροφήματα</span></button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-sweets" aria-controls="panel-sweets" aria-selected="false" tabindex="-1"><span data-i18n="cat.sweets">Γλυκά & αρτοσκευάσματα</span></button>
+            <button type="button" class="tabs__tab" role="tab" id="tab-brunch" aria-controls="panel-brunch" aria-selected="false" tabindex="-1"><span data-i18n="cat.brunch">Brunch</span></button>
+          </div>
+
+          <!-- Espresso bar -->
+          <div class="panel" id="panel-espresso" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.espresso">Espresso bar</h3>
+              <p class="panel__intro" data-i18n="menu.espresso.intro">Με το blend «Γειτονιά»: Βραζιλία και Κολομβία, με νότες σοκολάτας και φουντουκιού.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name">Espresso</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.0">2,00 €</span></div><p class="item__desc" data-i18n="m.espresso">Μονός ή διπλός, από το blend της γειτονιάς.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Cortado</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.6">2,60 €</span></div><p class="item__desc" data-i18n="m.cortado">Espresso με λίγο ζεστό γάλα, μισό-μισό.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Cappuccino</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.2">3,20 €</span></div><p class="item__desc" data-i18n="m.cappuccino">Διπλός espresso με βελούδινο αφρόγαλα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Flat white <span class="tag tag--fav"><svg aria-hidden="true"><use href="#i-heart"/></svg><span data-i18n="tag.fav">αγαπημένο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.4">3,40 €</span></div><p class="item__desc" data-i18n="m.flatwhite">Διπλό ristretto με λεπτό στρώμα μεταξένιου γάλακτος.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Latte</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.5">3,50 €</span></div><p class="item__desc" data-i18n="m.latte">Περισσότερο γάλα, πιο απαλή γεύση.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Mocha</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.9">3,90 €</span></div><p class="item__desc" data-i18n="m.mocha">Espresso, βελγική σοκολάτα και αφρόγαλα.</p></li>
+              </ul>
+              <p class="panel__note"><svg aria-hidden="true"><use href="#i-leaf"/></svg><span data-i18n-html="menu.milkNote">Φυτικό γάλα (βρώμης ή αμυγδάλου) <strong data-price-inline="0.4">+0,40 €</strong> · Extra shot <strong data-price-inline="0.6">+0,60 €</strong></span></p>
+            </div>
+            <figure class="panel__art panel__art--sage">
+              <img src="./assets/tile-latte.svg" width="520" height="480" loading="lazy" alt="Εικονογράφηση: flat white σε πράσινο κεραμικό φλιτζάνι" data-i18n-attr="alt:art.latte">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.espresso.pick">Flat white με το blend «Γειτονιά»</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Κρύοι καφέδες -->
+          <div class="panel" id="panel-cold" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.cold">Κρύοι καφέδες</h3>
+              <p class="panel__intro" data-i18n="menu.cold.intro">Το ελληνικό καλοκαίρι κρατάει οκτώ μήνες. Είμαστε έτοιμοι.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name">Freddo espresso <span class="tag tag--fav"><svg aria-hidden="true"><use href="#i-heart"/></svg><span data-i18n="tag.fav">αγαπημένο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.8">2,80 €</span></div><p class="item__desc" data-i18n="m.freddo">Διπλός espresso χτυπημένος με πάγο. Σκέτος, μέτριος ή γλυκός.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Freddo cappuccino</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.3">3,30 €</span></div><p class="item__desc" data-i18n="m.freddocap">Freddo espresso με κρύο αφρόγαλα από φρέσκο γάλα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Cold brew</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.8">3,80 €</span></div><p class="item__desc" data-i18n="m.coldbrew">Εκχύλιση 18 ωρών με το single origin της εβδομάδας.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Espresso tonic <span class="tag tag--new"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="tag.new">νέο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="4.2">4,20 €</span></div><p class="item__desc" data-i18n="m.tonic">Espresso, tonic και φλούδα πορτοκαλιού.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Iced latte</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.6">3,60 €</span></div><p class="item__desc" data-i18n="m.icedlatte">Διπλός espresso, κρύο γάλα και πολύς πάγος.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.frappe.name">Φραπέ</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.5">2,50 €</span></div><p class="item__desc" data-i18n="m.frappe">Γιατί κάποια πράγματα δεν αλλάζουν.</p></li>
+              </ul>
+              <p class="panel__note"><svg aria-hidden="true"><use href="#i-leaf"/></svg><span data-i18n-html="menu.milkNote">Φυτικό γάλα (βρώμης ή αμυγδάλου) <strong data-price-inline="0.4">+0,40 €</strong> · Extra shot <strong data-price-inline="0.6">+0,60 €</strong></span></p>
+            </div>
+            <figure class="panel__art panel__art--terra">
+              <img src="./assets/tile-freddo.svg" width="300" height="360" loading="lazy" alt="Εικονογράφηση: freddo cappuccino με πάγο και καλαμάκι" data-i18n-attr="alt:art.freddo">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.cold.pick">Freddo cappuccino με γάλα βρώμης</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Φίλτρου -->
+          <div class="panel" id="panel-filter" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.filter">Φίλτρου & specialty</h3>
+              <p class="panel__intro" data-i18n="menu.filter.intro">Ρωτήστε μας τι έχει ο πάγκος σήμερα: αλλάζουμε single origin κάθε εβδομάδα.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.batch.name">Φίλτρο της ημέρας</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.8">2,80 €</span></div><p class="item__desc" data-i18n="m.batch">Batch brew με τον καφέ της ημέρας. Το ξαναγεμίζουμε δωρεάν.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">V60 / Chemex</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="4.5">4,50 €</span></div><p class="item__desc" data-i18n="m.v60">Pour-over με όποιο single origin διαλέξετε από τη βιτρίνα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">AeroPress</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="4.2">4,20 €</span></div><p class="item__desc" data-i18n="m.aeropress">Καθαρό, ζουμερό φλιτζάνι σε δύο λεπτά.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.greek.name">Ελληνικός καφές</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.2">2,20 €</span></div><p class="item__desc" data-i18n="m.greek">Στο μπρίκι, με πλούσιο καϊμάκι. Μονός ή διπλός.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name"><span data-i18n="m.flight.name">Flight γευσιγνωσίας</span> <span class="tag tag--new"><svg aria-hidden="true"><use href="#i-spark"/></svg><span data-i18n="tag.new">νέο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="7.5">7,50 €</span></div><p class="item__desc" data-i18n="m.flight">Τρία single origin δίπλα-δίπλα, για τους περίεργους.</p></li>
+              </ul>
+            </div>
+            <figure class="panel__art panel__art--cream">
+              <img src="./assets/tile-v60.svg" width="300" height="520" loading="lazy" alt="Εικονογράφηση: παρασκευή καφέ φίλτρου με V60 πάνω από κανάτα" data-i18n-attr="alt:art.v60">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.filter.pick">V60 με την Αιθιοπία του μήνα</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Ροφήματα -->
+          <div class="panel" id="panel-drinks" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.drinks">Ροφήματα</h3>
+              <p class="panel__intro" data-i18n="menu.drinks.intro">Για όσους θέλουν κάτι ζεστό χωρίς καφεΐνη, ή απλώς κάτι διαφορετικό.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.choc.name">Σοκολάτα</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.6">3,60 €</span></div><p class="item__desc" data-i18n="m.choc">Βελγική σοκολάτα 54%, ζεστή ή κρύα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Matcha latte</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="4.2">4,20 €</span></div><p class="item__desc" data-i18n="m.matcha">Ceremonial matcha από την Ιαπωνία, με γάλα βρώμης.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Chai latte</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.9">3,90 €</span></div><p class="item__desc" data-i18n="m.chai">Μαύρο τσάι με κανέλα, κάρδαμο και τζίντζερ.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.mountain.name">Τσάι του βουνού</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.8">2,80 €</span></div><p class="item__desc" data-i18n="m.mountain">Από τον Ταΰγετο, με θυμαρίσιο μέλι.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.juice.name">Χυμός πορτοκάλι</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.8">3,80 €</span></div><p class="item__desc" data-i18n="m.juice">Φρεσκοστυμμένος, τη στιγμή που τον παραγγέλνετε.</p></li>
+              </ul>
+            </div>
+            <figure class="panel__art panel__art--oat">
+              <img src="./assets/tile-matcha.svg" width="520" height="480" loading="lazy" alt="Εικονογράφηση: matcha latte σε κεραμικό φλιτζάνι" data-i18n-attr="alt:art.matcha">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.drinks.pick">Matcha latte με λίγο μέλι</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Γλυκά -->
+          <div class="panel" id="panel-sweets" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.sweets">Γλυκά & αρτοσκευάσματα</h3>
+              <p class="panel__intro" data-i18n="menu.sweets.intro">Ζυμώνουμε το βράδυ, ψήνουμε το πρωί. Όταν τελειώσουν, τελείωσαν.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name"><span data-i18n="m.croissant.name">Κρουασάν βουτύρου</span> <span class="tag tag--fav"><svg aria-hidden="true"><use href="#i-heart"/></svg><span data-i18n="tag.fav">αγαπημένο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.6">2,60 €</span></div><p class="item__desc" data-i18n="m.croissant">Βγαίνει από τον φούρνο κάθε πρωί στις 8.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Pain au chocolat</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.9">2,90 €</span></div><p class="item__desc" data-i18n="m.painchoc">Με δύο μπάρες μαύρης σοκολάτας.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Cinnamon roll</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.4">3,40 €</span></div><p class="item__desc" data-i18n="m.cinnamon">Κανέλα Κεϋλάνης και γλάσο από τυρί κρέμα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Banana bread <span class="tag tag--vegan"><svg aria-hidden="true"><use href="#i-leaf"/></svg><span>vegan</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="3.2">3,20 €</span></div><p class="item__desc" data-i18n="m.banana">Χωρίς αυγά και βούτυρο, με καρύδια.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.koulouri.name">Κουλούρι Θεσσαλονίκης</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="1.2">1,20 €</span></div><p class="item__desc" data-i18n="m.koulouri">Τραγανό, με σουσάμι, από τον φούρνο της γωνίας.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.cookie.name">Cookie σοκολάτας</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="2.5">2,50 €</span></div><p class="item__desc" data-i18n="m.cookie">Με κομμάτια σοκολάτας και νιφάδες αλατιού.</p></li>
+              </ul>
+            </div>
+            <figure class="panel__art panel__art--caramel">
+              <img src="./assets/tile-croissant.svg" width="300" height="300" loading="lazy" alt="Εικονογράφηση: κρουασάν βουτύρου σε πιατάκι" data-i18n-attr="alt:art.croissant">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.sweets.pick">Κρουασάν και cortado, το πρωινό μας</span></figcaption>
+            </figure>
+          </div>
+
+          <!-- Brunch -->
+          <div class="panel" id="panel-brunch" data-panel>
+            <div class="panel__body">
+              <h3 class="panel__title" data-i18n="cat.brunch">Brunch</h3>
+              <p class="panel__intro" data-i18n="menu.brunch.intro">Σερβίρεται κάθε μέρα ως τις 14:00, με ψωμί προζυμιού από τον γειτονικό φούρνο.</p>
+              <ul class="items">
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.toast.name">Τοστ προζυμιού</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="5.8">5,80 €</span></div><p class="item__desc" data-i18n="m.toast">Γραβιέρα Νάξου και καπνιστή γαλοπούλα.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Avocado toast</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="8.5">8,50 €</span></div><p class="item__desc" data-i18n="m.avocado">Με φέτα, ντοματίνια και αυγό ποσέ.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name"><span data-i18n="m.strapatsada.name">Στραπατσάδα</span> <span class="tag tag--fav"><svg aria-hidden="true"><use href="#i-heart"/></svg><span data-i18n="tag.fav">αγαπημένο</span></span></h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="7.9">7,90 €</span></div><p class="item__desc" data-i18n="m.strapatsada">Αυγά με ντομάτα και φέτα, σε ψωμί προζυμιού.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name" data-i18n="m.yoghurt.name">Γιαούρτι με μέλι</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="5.9">5,90 €</span></div><p class="item__desc" data-i18n="m.yoghurt">Στραγγιστό γιαούρτι, θυμαρίσιο μέλι, καρύδια και granola.</p></li>
+                <li class="item"><div class="item__row"><h4 class="item__name">Pancakes</h4><span class="item__leader" aria-hidden="true"></span><span class="item__price" data-price="7.5">7,50 €</span></div><p class="item__desc" data-i18n="m.pancakes">Με μέλι, φρέσκα φρούτα και κρέμα mascarpone.</p></li>
+              </ul>
+            </div>
+            <figure class="panel__art panel__art--espresso">
+              <img src="./assets/tile-coldbrew.svg" width="300" height="300" loading="lazy" alt="Εικονογράφηση: μπουκάλι cold brew και ποτήρι με πάγο" data-i18n-attr="alt:art.coldbrew">
+              <figcaption><span class="panel__art-kicker" data-i18n="menu.pick">Η πρόταση του barista</span><span data-i18n="menu.brunch.pick">Στραπατσάδα με ένα cold brew στο πλάι</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΚΑΦΕΣ ΤΟΥ ΜΗΝΑ ================= -->
+    <section class="section roast" id="roast" aria-labelledby="roast-title">
+      <div class="wrap roast__grid">
+        <div class="roast__art" data-reveal>
+          <div class="roast__disc" aria-hidden="true"></div>
+          <img src="./assets/bag.svg" width="360" height="460" loading="lazy" alt="Εικονογράφηση: χάρτινο σακουλάκι καφέ του Κόκκου" data-i18n-attr="alt:art.bag">
+          <p class="roast__badge" aria-hidden="true"><span data-i18n="roast.badge1">Καφές</span><strong data-i18n="roast.badge2">του μήνα</strong></p>
+        </div>
+
+        <div class="roast__info" data-reveal>
+          <p class="eyebrow" data-i18n="roast.eyebrow">Ο καφές του μήνα</p>
+          <h2 class="section-title" id="roast-title"><span data-i18n="roast.origin">Αιθιοπία</span> <em>Guji Hambela</em></h2>
+          <p class="roast__lead" data-i18n="roast.lead">Από μικρούς παραγωγούς στα 2.100 μέτρα, αποξηραμένος ολόκληρος στον ήλιο. Γλυκός σαν ώριμο φρούτο, με φινάλε που θυμίζει μαύρο τσάι.</p>
+
+          <ul class="notes" aria-label="Γευστικές νότες" data-i18n-attr="aria-label:roast.notesLabel">
+            <li class="note note--apricot"><span class="note__dot" aria-hidden="true"></span><span data-i18n="roast.note1">Βερίκοκο</span></li>
+            <li class="note note--jasmine"><span class="note__dot" aria-hidden="true"></span><span data-i18n="roast.note2">Γιασεμί</span></li>
+            <li class="note note--tea"><span class="note__dot" aria-hidden="true"></span><span data-i18n="roast.note3">Μαύρο τσάι</span></li>
+          </ul>
+
+          <dl class="specs">
+            <div><dt data-i18n="roast.region">Περιοχή</dt><dd>Guji, Oromia</dd></div>
+            <div><dt data-i18n="roast.altitude">Υψόμετρο</dt><dd data-i18n="roast.altitudeVal">2.100 μ.</dd></div>
+            <div><dt data-i18n="roast.variety">Ποικιλία</dt><dd>Heirloom</dd></div>
+            <div><dt data-i18n="roast.process">Επεξεργασία</dt><dd data-i18n="roast.processVal">Natural (ξηρή)</dd></div>
+          </dl>
+
+          <div class="roast-level">
+            <p class="roast-level__label"><span data-i18n="roast.level">Βαθμός καβουρδίσματος</span> <strong data-i18n="roast.levelVal">Ανοιχτός</strong></p>
+            <div class="roast-level__scale" role="img" aria-label="Βαθμός καβουρδίσματος: 2 από 5, ανοιχτός" data-i18n-attr="aria-label:roast.levelAria">
+              <span class="is-on"></span><span class="is-on"></span><span></span><span></span><span></span>
+            </div>
+            <p class="roast-level__ends" aria-hidden="true"><span data-i18n="roast.light">Ανοιχτό</span><span data-i18n="roast.dark">Σκούρο</span></p>
+          </div>
+
+          <div class="roast__buy">
+            <p class="roast__price"><span class="roast__weight">250 g</span><strong data-price="14.5">14,50 €</strong></p>
+            <p class="roast__price"><span class="roast__weight">1 kg</span><strong data-price="48">48,00 €</strong></p>
+            <p class="roast__date"><svg aria-hidden="true"><use href="#i-clock"/></svg><span><span data-i18n="roast.roasted">Ψήθηκε:</span> <time data-roast-date>την περασμένη Τρίτη</time></span></p>
+          </div>
+          <p class="roast__brew"><span data-i18n="roast.brew">Ιδανικός για</span> V60 · Chemex · AeroPress · <span data-i18n="roast.brewEspresso">και ως espresso για τους τολμηρούς</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΙΣΤΟΡΙΑ ================= -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="wrap story__grid">
+        <div class="story__copy" data-reveal>
+          <p class="eyebrow eyebrow--light" data-i18n="story.eyebrow">Η ιστορία μας</p>
+          <h2 class="section-title section-title--light" id="story-title" data-i18n-html="story.title">Ένα μικρό καβουρδιστήριο, <em>μια μεγάλη γειτονιά.</em></h2>
+          <p class="story__text" data-i18n="story.text1">Ο Κόκκος άνοιξε το 2016 ως ένας πάγκος με μια μηχανή espresso και έναν καβουρδιστή πέντε κιλών. Σήμερα ψήνουμε κάθε Τρίτη για το μαγαζί και για τριάντα καφέ της Αθήνας.</p>
+          <p class="story__text" data-i18n="story.text2">Δουλεύουμε πάντα σε μικρές παρτίδες και με κόκκους από φάρμες που ξέρουμε με το όνομά τους. Αν περάσετε Τρίτη πρωί, θα το καταλάβετε από τη μυρωδιά στο τετράγωνο.</p>
+        </div>
+        <figure class="story__art" data-reveal>
+          <img src="./assets/roaster.svg" width="700" height="613" loading="lazy" alt="Εικονογράφηση: ο καβουρδιστής του Κόκκου με σακιά πράσινου καφέ" data-i18n-attr="alt:art.roaster">
+        </figure>
+      </div>
+      <div class="wrap">
+        <ol class="process">
+          <li class="process__step" data-reveal><span class="process__num">01</span><h3 data-i18n="story.s1.title">Διαλέγουμε</h3><p data-i18n="story.s1.text">Δοκιμάζουμε δεκάδες δείγματα κάθε εποχή και κρατάμε μόνο όσα μας εκπλήσσουν.</p></li>
+          <li class="process__step" data-reveal><span class="process__num">02</span><h3 data-i18n="story.s2.title">Ψήνουμε</h3><p data-i18n="story.s2.text">Παρτίδες των 12 κιλών, με προφίλ που προσαρμόζουμε σε κάθε καφέ ξεχωριστά.</p></li>
+          <li class="process__step" data-reveal><span class="process__num">03</span><h3 data-i18n="story.s3.title">Αφήνουμε να ξεκουραστεί</h3><p data-i18n="story.s3.text">Ο καφές «ανασαίνει» τρεις έως επτά ημέρες πριν φτάσει στο φλιτζάνι σας.</p></li>
+        </ol>
+        <dl class="facts">
+          <div class="fact" data-reveal><dt data-i18n="story.f1">ψήνουμε από τότε</dt><dd>2016</dd></div>
+          <div class="fact" data-reveal><dt data-i18n="story.f2">ανά παρτίδα</dt><dd>12 kg</dd></div>
+          <div class="fact" data-reveal><dt data-i18n="story.f3">φάρμες συνεργάτες</dt><dd>5</dd></div>
+          <div class="fact" data-reveal><dt data-i18n="story.f4">καφέ σερβίρουν τον καφέ μας</dt><dd>30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= ΜΩΣΑΪΚΟ ================= -->
+    <section class="section mosaic-section" aria-labelledby="mosaic-title">
+      <div class="wrap">
+        <header class="section-head section-head--center">
+          <p class="eyebrow" data-i18n="mosaic.eyebrow">Από το πρωί ως το βράδυ</p>
+          <h2 class="section-title" id="mosaic-title" data-i18n-html="mosaic.title">Μια μέρα <em>στον Κόκκο</em></h2>
+        </header>
+        <ul class="mosaic">
+          <li class="tile tile--a tile--terra" data-reveal><img src="./assets/tile-freddo.svg" width="300" height="360" loading="lazy" alt="" ><p class="tile__cap"><time>07:00</time><span data-i18n="mosaic.t1">Ο πρώτος freddo της ημέρας</span></p></li>
+          <li class="tile tile--b tile--oat" data-reveal><img src="./assets/tile-croissant.svg" width="300" height="300" loading="lazy" alt=""><p class="tile__cap"><time>08:00</time><span data-i18n="mosaic.t2">Βγαίνουν τα κρουασάν</span></p></li>
+          <li class="tile tile--c tile--quote" data-reveal><blockquote><p data-i18n="mosaic.quote">«Το πιο ζουμερό V60 που έχω πιει στην Αθήνα.»</p></blockquote><p class="tile__by" data-i18n="mosaic.quoteBy">Δανάη Π., τακτική πελάτισσα</p></li>
+          <li class="tile tile--d tile--sage" data-reveal><img src="./assets/tile-latte.svg" width="520" height="480" loading="lazy" alt=""><p class="tile__cap"><time>10:30</time><span data-i18n="mosaic.t3">Flat white και εφημερίδα</span></p></li>
+          <li class="tile tile--e tile--cream" data-reveal><img src="./assets/tile-v60.svg" width="300" height="520" loading="lazy" alt=""><p class="tile__cap"><time>12:00</time><span data-i18n="mosaic.t4">Ώρα για φίλτρο</span></p></li>
+          <li class="tile tile--f tile--word" data-reveal><p class="tile__big" data-i18n-html="mosaic.roastday">Κάθε Τρίτη <em>η γειτονιά μυρίζει καφέ.</em></p></li>
+          <li class="tile tile--g tile--caramel" data-reveal><img src="./assets/tile-coldbrew.svg" width="300" height="300" loading="lazy" alt=""><p class="tile__cap"><time>16:00</time><span data-i18n="mosaic.t5">Cold brew στο πεζοδρόμιο</span></p></li>
+          <li class="tile tile--h tile--milk" data-reveal><img src="./assets/tile-matcha.svg" width="520" height="480" loading="lazy" alt=""><p class="tile__cap"><time>19:00</time><span data-i18n="mosaic.t6">Κάτι χωρίς καφεΐνη για το βράδυ</span></p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΚΡΙΤΙΚΕΣ ================= -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="reviews__head">
+          <div>
+            <p class="eyebrow" data-i18n="reviews.eyebrow">Τι λένε για εμάς</p>
+            <h2 class="section-title" id="reviews-title" data-i18n-html="reviews.title">Η γειτονιά <em>έχει άποψη.</em></h2>
+          </div>
+          <div class="score" data-reveal>
+            <p class="score__num">4,8</p>
+            <div>
+              <p class="stars stars--lg" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+              <p class="score__label" data-i18n="reviews.score">1.240 κριτικές · ενδεικτικά</p>
+            </div>
+          </div>
+        </div>
+        <ul class="review-list">
+          <li class="review" data-reveal>
+            <p class="stars" role="img" aria-label="5 από 5 αστέρια" data-i18n-attr="aria-label:reviews.five"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></p>
+            <blockquote class="review__text"><p data-i18n="reviews.r1">Ο καλύτερος freddo της περιοχής και πάντα με χαμόγελο. Το κρουασάν βγαίνει ζεστό στις 8, μην το χάσετε.</p></blockquote>
+            <p class="review__by"><span class="review__avatar review__avatar--1" aria-hidden="true" data-i18n="reviews.r1i">Κ</span><span data-i18n="reviews.r1n">Κατερίνα Μ.</span></p>
+          </li>
+          <li class="review" data-reveal>
+            <p class="stars" role="img" aria-label="5 από 5 αστέρια" data-i18n-attr="aria-label:reviews.five"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></p>
+            <blockquote class="review__text"><p data-i18n="reviews.r2">Ήρθα για ένα espresso και έφυγα με ένα σακουλάκι Αιθιοπία και οδηγίες για το V60 μου. Ξέρουν τι κάνουν.</p></blockquote>
+            <p class="review__by"><span class="review__avatar review__avatar--2" aria-hidden="true" data-i18n="reviews.r2i">Π</span><span data-i18n="reviews.r2n">Πέτρος Λ.</span></p>
+          </li>
+          <li class="review" data-reveal>
+            <p class="stars" role="img" aria-label="4 από 5 αστέρια" data-i18n-attr="aria-label:reviews.four"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg class="is-off" aria-hidden="true"><use href="#i-star"/></svg></p>
+            <blockquote class="review__text"><p data-i18n="reviews.r3">Ήσυχο πρωί, καλή μουσική και wifi που δουλεύει. Το Σάββατο γεμίζει, αλλά αξίζει την αναμονή.</p></blockquote>
+            <p class="review__by"><span class="review__avatar review__avatar--3" aria-hidden="true" data-i18n="reviews.r3i">Ε</span><span data-i18n="reviews.r3n">Έλενα Ρ.</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΩΡΑΡΙΟ & ΤΟΠΟΘΕΣΙΑ ================= -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit__grid">
+        <div class="visit__info" data-reveal>
+          <p class="eyebrow" data-i18n="visit.eyebrow">Ωράριο & τοποθεσία</p>
+          <h2 class="section-title" id="visit-title" data-i18n-html="visit.title">Περάστε <em>για έναν καφέ.</em></h2>
+          <p class="open-status open-status--lg" data-open-status><span class="open-status__dot" aria-hidden="true"></span><span data-status-text>Δείτε το ωράριο παρακάτω</span></p>
+
+          <table class="hours">
+            <caption class="visually-hidden" data-i18n="visit.hoursCaption">Ωράριο λειτουργίας</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row" data-i18n="day.1">Δευτέρα</th><td>07:00 – 21:00</td></tr>
+              <tr data-day="2"><th scope="row" data-i18n="day.2">Τρίτη</th><td>07:00 – 21:00</td></tr>
+              <tr data-day="3"><th scope="row" data-i18n="day.3">Τετάρτη</th><td>07:00 – 21:00</td></tr>
+              <tr data-day="4"><th scope="row" data-i18n="day.4">Πέμπτη</th><td>07:00 – 21:00</td></tr>
+              <tr data-day="5"><th scope="row" data-i18n="day.5">Παρασκευή</th><td>07:00 – 21:00</td></tr>
+              <tr data-day="6"><th scope="row" data-i18n="day.6">Σάββατο</th><td>08:00 – 21:00</td></tr>
+              <tr data-day="0"><th scope="row" data-i18n="day.0">Κυριακή</th><td>09:00 – 18:00</td></tr>
+            </tbody>
+          </table>
+
+          <ul class="perks">
+            <li><svg aria-hidden="true"><use href="#i-wifi"/></svg><span data-i18n="visit.wifi">Δωρεάν wifi</span></li>
+            <li><svg aria-hidden="true"><use href="#i-paw"/></svg><span data-i18n="visit.dogs">Τα σκυλιά είναι ευπρόσδεκτα</span></li>
+            <li><svg aria-hidden="true"><use href="#i-bike"/></svg><span data-i18n="visit.bikes">Θέσεις για ποδήλατα</span></li>
+          </ul>
+        </div>
+
+        <div class="visit__map" data-reveal>
+          <div class="map">
+            <svg class="map__svg" viewBox="0 0 640 480" role="img" aria-label="Σχηματικός χάρτης: ο Κόκκος βρίσκεται δίπλα στο πάρκο της γειτονιάς" data-i18n-attr="aria-label:visit.mapLabel" preserveAspectRatio="xMidYMid slice">
+              <rect width="640" height="480" fill="#EADCC6"/>
+              <g fill="#E2D1B6">
+                <rect x="20" y="20" width="150" height="120" rx="8"/><rect x="200" y="20" width="170" height="120" rx="8"/><rect x="400" y="20" width="220" height="120" rx="8"/>
+                <rect x="20" y="170" width="150" height="130" rx="8"/><rect x="400" y="170" width="220" height="130" rx="8"/>
+                <rect x="20" y="330" width="150" height="130" rx="8"/><rect x="200" y="330" width="170" height="130" rx="8"/><rect x="400" y="330" width="100" height="130" rx="8"/><rect x="520" y="330" width="100" height="130" rx="8"/>
+              </g>
+              <rect x="200" y="170" width="170" height="130" rx="14" fill="#B9C4AB"/>
+              <g fill="#8C9C7C"><circle cx="232" cy="204" r="13"/><circle cx="262" cy="196" r="10"/><circle cx="338" cy="210" r="14"/><circle cx="246" cy="262" r="12"/><circle cx="322" cy="268" r="11"/><circle cx="292" cy="236" r="9"/></g>
+              <path d="M228 236h112M285 186v98" stroke="#D9CDBC" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>
+              <path d="M-20 455 660 25" stroke="#F4EADB" stroke-width="20"/>
+              <path d="M-20 455 660 25" stroke="#D9C6A8" stroke-width="2" stroke-dasharray="14 14"/>
+              <g stroke="#FBF6EE" stroke-width="12" stroke-linecap="round"><path d="M185 0v480M385 0v480M0 155h640M0 315h640"/></g>
+              <g transform="translate(455 248)">
+                <circle r="44" fill="#B4532A" opacity=".16"/>
+                <path d="M0 26C-14 10-24 0-24-12a24 24 0 0 1 48 0C24 0 14 10 0 26z" fill="#B4532A" stroke="#2A1A11" stroke-width="2.5"/>
+                <circle cy="-12" r="11" fill="#FBF6EE"/>
+                <path d="M-5-16h10v5a5 5 0 0 1-10 0z" fill="#5A2F17"/><path d="M5-14a3 3 0 0 1 0 5" fill="none" stroke="#5A2F17" stroke-width="1.6"/>
+              </g>
+              <g transform="translate(104 404)"><circle r="16" fill="#FBF6EE" stroke="#2A1A11" stroke-width="2"/><path d="M-7 5V-6l7 7 7-7v11" fill="none" stroke="#B4532A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <path d="M120 396C180 360 260 330 330 318S430 290 440 270" fill="none" stroke="#2A1A11" stroke-width="2.4" stroke-dasharray="1 8" stroke-linecap="round"/>
+            </svg>
+            <p class="map__chip" data-i18n="visit.walk">6 λεπτά με τα πόδια από το μετρό</p>
+          </div>
+          <address class="contact-card">
+            <p class="contact-card__row"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="visit.address">Οδός Παραδείγματος 12, Παγκράτι, 116 35 Αθήνα</span></p>
+            <p class="contact-card__row"><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+302100000000" data-i18n="visit.phone">210 000 0000</a></p>
+            <p class="contact-card__row"><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@example.com">hello@example.com</a></p>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΚΑΡΤΑ & NEWSLETTER ================= -->
+    <section class="section club" aria-labelledby="club-title">
+      <div class="wrap club__grid">
+        <div class="club__card-wrap" data-reveal>
+          <div class="loyalty" data-loyalty>
+            <div class="loyalty__top">
+              <p class="loyalty__brand"><svg aria-hidden="true"><use href="#i-bean"/></svg><span data-keep-lang>Κόκκος</span></p>
+              <p class="loyalty__title" data-i18n="club.cardTitle">Κάρτα επιβράβευσης</p>
+            </div>
+            <ol class="loyalty__stamps" aria-hidden="true" data-stamps>
+              <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li class="loyalty__free"></li>
+            </ol>
+            <p class="loyalty__count" aria-live="polite" data-stamp-count>6 / 10</p>
+            <button type="button" class="btn btn--light btn--sm" data-stamp-btn><svg class="btn__icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="club.stamp">Βάλτε μια σφραγίδα</span></button>
+            <p class="loyalty__demo" data-i18n="club.demo">Demo: δοκιμάστε την κάρτα</p>
+          </div>
+        </div>
+
+        <div class="club__copy" data-reveal>
+          <p class="eyebrow" data-i18n="club.eyebrow">Για τους τακτικούς μας</p>
+          <h2 class="section-title" id="club-title" data-i18n-html="club.title">Εννιά καφέδες, <em>ο δέκατος κερνάει.</em></h2>
+          <p class="club__text" data-i18n="club.text">Ζητήστε την κάρτα στον πάγκο, ή γραφτείτε στο newsletter μας: ένα email τον μήνα με τον καφέ του μήνα και τις βραδιές γευσιγνωσίας. Τίποτα άλλο.</p>
+
+          <form class="newsletter" novalidate data-newsletter>
+            <label class="newsletter__label" for="nl-email" data-i18n="club.label">Το email σας</label>
+            <div class="newsletter__row">
+              <input id="nl-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="onoma@example.com" aria-describedby="nl-error nl-note" data-i18n-attr="placeholder:club.placeholder">
+              <button type="submit" class="btn btn--primary"><span data-i18n="club.submit">Εγγραφή</span></button>
+            </div>
+            <p class="newsletter__error" id="nl-error" hidden></p>
+            <p class="newsletter__note" id="nl-note"><span class="newsletter__dot" aria-hidden="true"></span><span data-i18n="club.note">Demo φόρμα: δεν αποστέλλονται δεδομένα.</span></p>
+          </form>
+          <div class="newsletter__done" tabindex="-1" data-newsletter-done hidden>
+            <svg aria-hidden="true"><use href="#i-check"/></svg>
+            <div>
+              <p class="newsletter__done-title" data-i18n="club.doneTitle">Είστε μέσα!</p>
+              <p data-i18n="club.doneText">Θα τα πούμε στο επόμενο ψήσιμο. (Demo: δεν στάλθηκε τίποτα.)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo logo--light" href="#top" aria-label="Κόκκος Coffee Roasters, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+            <span class="logo__mark" aria-hidden="true"><svg><use href="#i-bean"/></svg></span>
+            <span class="logo__text" aria-hidden="true">
+              <span class="logo__name" data-keep-lang>Κόκκος</span>
+              <span class="logo__sub">coffee roasters</span>
+            </span>
+          </a>
+          <p class="footer__tag" data-i18n="footer.tag">Specialty καφές και καβουρδιστήριο στο Παγκράτι, από το 2016.</p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title" data-i18n="footer.visit">Επισκεφθείτε μας</h2>
+          <p data-i18n="visit.address">Οδός Παραδείγματος 12, Παγκράτι, 116 35 Αθήνα</p>
+          <p data-i18n="footer.hours">Καθημερινά από τις 07:00 · Κυριακή 09:00 – 18:00</p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title" data-i18n="footer.contact">Επικοινωνία</h2>
+          <p><a href="tel:+302100000000" data-i18n="visit.phone">210 000 0000</a></p>
+          <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title" data-i18n="footer.explore">Εξερευνήστε</h2>
+          <ul class="footer__links">
+            <li><a href="#menu" data-i18n="nav.menu">Μενού</a></li>
+            <li><a href="#roast" data-i18n="nav.roast">Καφές του μήνα</a></li>
+            <li><a href="#story" data-i18n="nav.story">Η ιστορία μας</a></li>
+            <li><a href="#visit" data-i18n="nav.visit">Ωράριο & τοποθεσία</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> <span data-keep-lang>Κόκκος</span> Coffee Roasters · <span data-i18n="footer.fictional">Εικονική επιχείρηση</span></p>
+        <p class="footer__template" data-i18n="footer.template">Template από την Akamas · Όλα τα στοιχεία είναι ενδεικτικά</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

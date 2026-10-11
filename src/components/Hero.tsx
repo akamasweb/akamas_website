@@ -184,7 +184,7 @@ export function Hero() {
         </div>
       </div>
       <a className="hero__scroll" href="#services" aria-label={h.scroll}>
-        <span>{h.scroll}</span>
+        {/*<span>{h.scroll}</span>*/}
         <span className="hero__scroll-line" />
       </a>
     </section>

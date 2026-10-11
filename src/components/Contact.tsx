@@ -105,7 +105,7 @@ export function Contact() {
             <legend>{c.type}</legend>
             <div className="chips">
               {c.types.map((type, i) => (
-                <label key={type} className="chip">
+                <label key={i} className="chip">
                   <input type="radio" name="type" value={type} defaultChecked={i === 0} />
                   <span>{type}</span>
                 </label>
@@ -117,7 +117,7 @@ export function Contact() {
             <legend>{c.budget}</legend>
             <div className="chips">
               {c.budgets.map((budget, i) => (
-                <label key={budget} className="chip">
+                <label key={i} className="chip">
                   <input type="radio" name="budget" value={budget} defaultChecked={i === c.budgets.length - 1} />
                   <span>{budget}</span>
                 </label>

@@ -22,6 +22,8 @@
   --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
   --grain-opacity: 0.05;
   --glow: rgba(196, 177, 128, 0.1);
+  --scrollbar: #c4b180;
+  --scrollbar-hover: #d6c699;
 }
 
 :root[data-theme='light'] {
@@ -43,6 +45,8 @@
   --shadow: 0 30px 60px -30px rgba(12, 24, 50, 0.35);
   --grain-opacity: 0.035;
   --glow: rgba(158, 152, 99, 0.16);
+  --scrollbar: #0c1832;
+  --scrollbar-hover: #1c2b4f;
 }
 
 :root {
@@ -97,6 +101,41 @@ body::before {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+/* Scrollbar: χρυσό στο σκούρο θέμα, μπλε στο φωτεινό, χωρίς βελάκια.
+   Chrome / Edge / Safari: ::-webkit-scrollbar (μόνο έτσι κρύβονται τα βελάκια).
+   Firefox: scrollbar-color (δεν έχει βελάκια). */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border: 2px solid var(--bg);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-color: var(--scrollbar) var(--bg);
+  }
 }
 
 ::selection {
@@ -1016,6 +1055,7 @@ ul {
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1.15;
+  transition: color 0.25s var(--ease);
 }
 
 .project__text {
@@ -1024,19 +1064,45 @@ ul {
 }
 
 .project__badge {
+  display: inline-flex;
   flex-shrink: 0;
+  align-items: center;
+  gap: 0.35rem;
   padding: 0.25rem 0.65rem;
-  border: 1px solid var(--line-strong);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
   border-radius: 999px;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent-ink);
+  transition:
+    background-color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    color 0.25s var(--ease);
 }
 
-/* Μικρογραφία ιστοσελίδας φτιαγμένη μόνο με CSS */
+/* Κάθε κάρτα είναι link: προς το site του πελάτη (νέα καρτέλα) ή προς το template (ίδια καρτέλα) */
+.project {
+  display: block;
+  color: inherit;
+}
+
+.project:hover .project__badge,
+.project:focus-visible .project__badge {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.project:hover .project__name {
+  color: var(--accent-ink);
+}
+
+/* Screenshot μέσα σε πλαίσιο browser */
 .mock {
+  --m-bg: #1a2236;
+  --m-fg: #e8ecf3;
   width: 84%;
   overflow: hidden;
   border-radius: 10px;
@@ -1070,114 +1136,16 @@ ul {
   background: color-mix(in srgb, var(--m-fg) 35%, transparent);
 }
 
-.mock__url {
-  flex: 0 1 40%;
-  height: 8px;
-  margin-left: 10px;
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--m-fg) 14%, transparent);
-}
-
-.mock__page {
-  display: grid;
-  gap: 14px;
-  padding: 14px 16px 18px;
-}
-
-.mock__nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.mock__logo {
-  width: 22%;
-  height: 9px;
-  border-radius: 99px;
-  background: var(--m-fg);
-}
-
-.mock__links {
-  display: flex;
-  gap: 6px;
-}
-
-.mock__links i {
-  width: 22px;
-  height: 5px;
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--m-fg) 40%, transparent);
-}
-
-.mock__hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 14px;
-}
-
-.mock__copy {
-  display: grid;
-  gap: 7px;
-}
-
-.mock__line {
-  height: 6px;
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--m-fg) 35%, transparent);
-}
-
-.mock__line--lg {
-  height: 11px;
-  background: var(--m-fg);
-}
-
-.mock__line--short {
-  width: 65%;
-}
-
-.mock__btn {
-  width: 42%;
-  height: 14px;
-  margin-top: 6px;
-  border-radius: 99px;
-  background: var(--m-accent);
-}
-
-.mock__image {
-  aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--m-fg) 50%, transparent) 0 12%, transparent 13%),
-    linear-gradient(160deg, var(--m-accent), color-mix(in srgb, var(--m-accent) 40%, var(--m-bg)));
-}
-
-.mock__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.mock__cards i {
-  height: 34px;
-  border-radius: 6px;
-  background: color-mix(in srgb, var(--m-fg) 9%, transparent);
-  border: 1px solid color-mix(in srgb, var(--m-fg) 12%, transparent);
-}
-
-/* Screenshot πραγματικού έργου */
-.mock--shot {
-  --m-bg: #1a2236;
-  --m-fg: #e8ecf3;
-}
-
 .mock__host {
+  overflow: hidden;
   margin-left: 10px;
   padding: 1px 12px;
   border-radius: 99px;
   background: color-mix(in srgb, var(--m-fg) 10%, transparent);
   font-size: 0.62rem;
   letter-spacing: 0.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: color-mix(in srgb, var(--m-fg) 65%, transparent);
 }
 
@@ -1188,83 +1156,6 @@ ul {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top;
-}
-
-.project--live {
-  display: block;
-  color: inherit;
-}
-
-.project__badge--live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
-  color: var(--accent-ink);
-  transition:
-    background-color 0.25s var(--ease),
-    border-color 0.25s var(--ease),
-    color 0.25s var(--ease);
-}
-
-.project--live:hover .project__badge--live,
-.project--live:focus-visible .project__badge--live {
-  background: var(--btn-bg);
-  border-color: var(--btn-bg);
-  color: var(--btn-fg);
-}
-
-.project--live:hover .project__name {
-  color: var(--accent-ink);
-}
-
-.project__name {
-  transition: color 0.25s var(--ease);
-}
-
-.mock--1 .mock__copy {
-  order: 2;
-}
-
-.mock--1 .mock__image {
-  border-radius: 50% 50% 8px 8px;
-  aspect-ratio: 1;
-}
-
-.mock--2 .mock__hero {
-  grid-template-columns: 1fr;
-  justify-items: center;
-  text-align: center;
-}
-
-.mock--2 .mock__copy {
-  width: 70%;
-  justify-items: center;
-  padding-block: 10px;
-}
-
-.mock--2 .mock__line {
-  width: 100%;
-}
-
-.mock--2 .mock__line--short {
-  width: 60%;
-}
-
-.mock--2 .mock__image {
-  display: none;
-}
-
-.mock--2 .mock__cards i {
-  height: 46px;
-}
-
-.mock--3 .mock__hero {
-  grid-template-columns: 1fr 1.2fr;
-}
-
-.mock--3 .mock__cards {
-  grid-template-columns: 2fr 1fr;
 }
 
 /* ---------- Manifesto ---------- */

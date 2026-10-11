@@ -1,8 +1,15 @@
 export type Lang = 'el' | 'en'
 
-// Ένα έργο του portfolio. Με url και image είναι πραγματικό έργο (με screenshot και link),
-// χωρίς αυτά εμφανίζεται ως «Concept» με εικονογράφηση.
-export type WorkItem = { name: string; category: string; text: string; url?: string; image?: string }
+// Ένα έργο του portfolio: είτε site πελάτη (live, ανοίγει σε νέα καρτέλα)
+// είτε template της Akamas (ανοίγει στην ίδια καρτέλα, στο /template/<όνομα>/).
+export type WorkItem = {
+  kind: 'live' | 'template'
+  name: string
+  category: string
+  text: string
+  url: string
+  image: string // screenshot 1440x900 στο public/work/
+}
 
 const el = {
   // Το όνομα της εταιρείας όπως εμφανίζεται στο λογότυπο, στο hero και στο footer
@@ -99,11 +106,11 @@ const el = {
   work: {
     eyebrow: 'Επιλεγμένα έργα',
     title: 'Ας μιλήσει η δουλειά μας για εμάς.',
-    conceptLabel: 'Concept',
-    viewProject: 'Δείτε το έργο',
     visitLabel: 'Δείτε το site',
+    templateLabel: 'Δείτε το template',
     items: [
       {
+        kind: 'live',
         name: 'IMA — International Marine Automations',
         category: 'Ναυτιλία · Εταιρική ιστοσελίδα',
         text: 'Δίγλωσση ιστοσελίδα για εταιρεία ναυτιλιακών ηλεκτρολογικών επισκευών και αυτοματισμών στον Πειραιά, με αναφορά βλάβης 24/7.',
@@ -111,6 +118,7 @@ const el = {
         image: '/work/imagreece.webp',
       },
       {
+        kind: 'live',
         name: 'SePilateVo',
         category: 'Στούντιο Pilates · Ιστοσελίδα & κρατήσεις',
         text: 'Ιστοσελίδα για στούντιο Pilates στον Άγιο Ιωάννη Ρέντη, με υπηρεσίες, κριτικές, πρόγραμμα μαθημάτων και κρατήσεις.',
@@ -118,24 +126,28 @@ const el = {
         image: '/work/sepilatevo.webp',
       },
       {
-        name: 'Θάλασσα Suites',
-        category: 'Ξενοδοχείο · Σύστημα κρατήσεων',
-        text: 'Ιστοσελίδα με απευθείας κρατήσεις χωρίς προμήθειες, σε τρεις γλώσσες.',
+        kind: 'template',
+        name: 'Κόκκος Coffee Roasters',
+        category: 'Template · Καφετέρια & καβουρδιστήριο',
+        text: 'Ιστοσελίδα για specialty καφετέρια, με μενού σε καρτέλες, ζωντανή ένδειξη «ανοιχτά τώρα», καφέ του μήνα και κάρτα επιβράβευσης.',
+        url: '/template/coffee-shop/',
+        image: '/work/template-coffee-shop.webp',
       },
       {
-        name: 'Ελαιών',
-        category: 'E-shop · Ελαιόλαδο',
-        text: 'Ηλεκτρονικό κατάστημα για μικρό παραγωγό, με αποστολές σε όλη την Ευρώπη.',
+        kind: 'template',
+        name: 'Ξυράφι Barber Studio',
+        category: 'Template · Κουρείο',
+        text: 'Ιστοσελίδα για κουρείο, με τιμοκατάλογο, την ομάδα, στυλ και online κράτηση σε πέντε βήματα με διαθέσιμες ημέρες και ώρες.',
+        url: '/template/barbershop/',
+        image: '/work/template-barbershop.webp',
       },
       {
-        name: 'Κτήμα Αγέρι',
-        category: 'Οινοποιείο · Branding & Web',
-        text: 'Νέα ψηφιακή ταυτότητα και site με κρατήσεις για γευσιγνωσίες.',
-      },
-      {
-        name: 'Κίνηση Physio',
-        category: 'Υγεία · Web app',
-        text: 'Online ραντεβού και υπενθυμίσεις, που μείωσαν τα χαμένα ραντεβού.',
+        kind: 'template',
+        name: 'Στάθμη & Συνεργάτες',
+        category: 'Template · Λογιστικό γραφείο',
+        text: 'Ιστοσελίδα για λογιστικό γραφείο, με υπηρεσίες σε καρτέλες, ζωντανό ημερολόγιο προθεσμιών και φόρμα για ραντεβού.',
+        url: '/template/corporate/',
+        image: '/work/template-corporate.webp',
       },
     ] as WorkItem[],
   },
@@ -350,11 +362,11 @@ const en: Content = {
   work: {
     eyebrow: 'Selected work',
     title: 'Work that speaks for itself.',
-    conceptLabel: 'Concept',
-    viewProject: 'View project',
     visitLabel: 'Visit site',
+    templateLabel: 'View template',
     items: [
       {
+        kind: 'live',
         name: 'IMA — International Marine Automations',
         category: 'Maritime · Company website',
         text: 'A bilingual website for a Piraeus-based marine electrical and automation repair company, with 24/7 breakdown reporting.',
@@ -362,6 +374,7 @@ const en: Content = {
         image: '/work/imagreece.webp',
       },
       {
+        kind: 'live',
         name: 'SePilateVo',
         category: 'Pilates studio · Website & bookings',
         text: 'A website for a Pilates studio in Agios Ioannis Rentis, with services, reviews, class timetable and bookings.',
@@ -369,24 +382,28 @@ const en: Content = {
         image: '/work/sepilatevo.webp',
       },
       {
-        name: 'Thalassa Suites',
-        category: 'Hotel · Booking system',
-        text: 'Commission-free direct bookings, in three languages.',
+        kind: 'template',
+        name: 'Kokkos Coffee Roasters',
+        category: 'Template · Coffee shop & roastery',
+        text: 'A website for a specialty coffee shop, with a tabbed menu, a live “open now” status, a roast of the month and a loyalty card.',
+        url: '/template/coffee-shop/',
+        image: '/work/template-coffee-shop.webp',
       },
       {
-        name: 'Elaion',
-        category: 'E-shop · Olive oil',
-        text: 'An online store for a small producer, shipping across Europe.',
+        kind: 'template',
+        name: 'Xyrafi Barber Studio',
+        category: 'Template · Barbershop',
+        text: 'A website for a barbershop, with a price list, the team, a style gallery and five-step online booking with live availability.',
+        url: '/template/barbershop/',
+        image: '/work/template-barbershop.webp',
       },
       {
-        name: 'Ktima Ageri',
-        category: 'Winery · Branding & Web',
-        text: 'A new digital identity and a site with tasting reservations.',
-      },
-      {
-        name: 'Kinisi Physio',
-        category: 'Health · Web app',
-        text: 'Online appointments and reminders that cut down on no-shows.',
+        kind: 'template',
+        name: 'Stathmi & Partners',
+        category: 'Template · Accounting firm',
+        text: 'A website for an accounting firm, with tabbed services, a live compliance calendar and a meeting request form.',
+        url: '/template/corporate/',
+        image: '/work/template-corporate.webp',
       },
     ],
   },

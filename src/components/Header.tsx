@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type MouseEvent } from 'react'
+import type { Lang } from '../i18n/content'
 import { useLanguage } from '../i18n/LanguageContext'
 import { toggleTheme } from '../theme'
 import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from './Icons'
 
 export function Header() {
-  const { t, lang, page, pathFor } = useLanguage()
+  const { t, lang, page, pathFor, switchLanguage } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -37,6 +38,14 @@ export function Header() {
 
   const close = () => setOpen(false)
 
+  // Αλλαγή γλώσσας επιτόπου, χωρίς ανανέωση και στο ίδιο σημείο της σελίδας.
+  // Τα links έχουν κανονικό href (/ ή /en/) για Google, νέα καρτέλα και Ctrl/Cmd-κλικ.
+  const onLanguageClick = (e: MouseEvent<HTMLAnchorElement>, next: Lang) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+    e.preventDefault()
+    switchLanguage(next)
+  }
+
   return (
     <header className={`header${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}`}>
       <a className="skip-link" href="#main">
@@ -65,10 +74,22 @@ export function Header() {
         <div className="header__tools">
           {/* Κάθε γλώσσα έχει δική της διεύθυνση (/ και /en/), για να την βρίσκει η Google */}
           <div className="lang-switch" role="group" aria-label={t.nav.language}>
-            <a href={pathFor(page, 'el')} hrefLang="el" lang="el" aria-current={lang === 'el' ? 'true' : undefined}>
+            <a
+              href={pathFor(page, 'el')}
+              hrefLang="el"
+              lang="el"
+              aria-current={lang === 'el' ? 'true' : undefined}
+              onClick={(e) => onLanguageClick(e, 'el')}
+            >
               ΕΛ
             </a>
-            <a href={pathFor(page, 'en')} hrefLang="en" lang="en" aria-current={lang === 'en' ? 'true' : undefined}>
+            <a
+              href={pathFor(page, 'en')}
+              hrefLang="en"
+              lang="en"
+              aria-current={lang === 'en' ? 'true' : undefined}
+              onClick={(e) => onLanguageClick(e, 'en')}
+            >
               EN
             </a>
           </div>

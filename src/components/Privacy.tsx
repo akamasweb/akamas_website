@@ -19,7 +19,7 @@ export function Privacy() {
         <p className="legal__intro">{p.intro}</p>
 
         {p.sections.map((section, i) => (
-          <section key={section.title} className="legal__section">
+          <section key={i} className="legal__section">
             <h2>
               <span className="legal__num">{i + 1}.</span> {section.title}
             </h2>

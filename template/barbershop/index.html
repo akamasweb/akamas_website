@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ξυράφι Barber Studio — Κουρείο στου Ψυρρή</title>
+  <meta name="description" content="Κουρέματα, skin fades, περιποίηση γενειάδας και ξύρισμα με ζεστή πετσέτα στου Ψυρρή. Online κράτηση σε λίγα δευτερόλεπτα. Template από την Akamas με ενδεικτικό περιεχόμενο.">
+  <meta name="theme-color" content="#121011">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23121011'/%3E%3Cpath d='M14 38 44 14c4-3 9 1 6 6L28 44z' fill='%23EFE8DC'/%3E%3Cpath d='M28 44l-6 8c-2 3-7 1-6-3l2-9z' fill='%23C2302B'/%3E%3C/svg%3E">
+  <script>if (/[?&]lang=en(&|$)/.test(location.search)) document.documentElement.classList.add('lang-pending')</script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <!-- Κοινά σχήματα: προφίλ κεφαλιού, εικονίδια -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="h-head" d="M84 300C86 272 88 248 92 230C76 220 60 204 52 178C42 146 46 104 70 76C96 46 146 38 172 58C186 70 192 96 190 122C190 130 186 136 186 142C192 152 200 162 205 170C206 174 200 178 192 178C194 182 196 186 194 189C191 191 189 192 189 194C192 196 194 200 191 203C187 206 186 208 187 212C191 220 190 230 180 236C168 242 152 242 146 246C144 262 146 284 148 300Z"/>
+      <path id="h-ear" d="M118 134C131 129 140 140 138 154C136 167 130 175 122 176C116 177 113 172 115 166C117 160 112 156 112 148C112 141 113 136 118 134Z"/>
+      <path id="h-side" d="M20 30L182 30L178 80C170 85 164 92 161 102C157 114 151 126 149 140L148 160C145 162 142 162 139 160C139 146 134 136 125 132C115 129 108 136 106 150C103 168 100 190 97 208C93 216 86 220 76 220L20 220Z"/>
+      <clipPath id="h-clip"><use href="#h-head"/></clipPath>
+      <linearGradient id="h-skin" gradientUnits="userSpaceOnUse" x1="0" y1="118" x2="0" y2="194"><stop offset="0" stop-color="#121011"/><stop offset="1" stop-color="#121011" stop-opacity="0"/></linearGradient>
+      <linearGradient id="h-mid" gradientUnits="userSpaceOnUse" x1="0" y1="126" x2="0" y2="216"><stop offset="0" stop-color="#121011"/><stop offset="1" stop-color="#121011" stop-opacity=".16"/></linearGradient>
+      <linearGradient id="h-taper" gradientUnits="userSpaceOnUse" x1="0" y1="150" x2="0" y2="218"><stop offset="0" stop-color="#121011"/><stop offset="1" stop-color="#121011" stop-opacity=".4"/></linearGradient>
+      <pattern id="h-dots" width="3.5" height="3.5" patternUnits="userSpaceOnUse"><circle cx="1.75" cy="1.75" r="1.1" fill="#121011"/></pattern>
+
+      <!-- Κομμώσεις (ίδιο προφίλ, διαφορετικό κούρεμα) -->
+      <g id="cut-fade">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="url(#h-skin)"/></g>
+        <path fill="#121011" d="M54 112C50 74 84 40 132 34C162 30 186 40 194 58C197 66 196 76 190 84C184 80 176 80 170 84C166 88 163 94 162 100C142 94 96 100 54 112Z"/>
+        <path fill="none" stroke="#3a3334" stroke-width="1.8" stroke-linecap="round" d="M98 50C122 42 152 40 176 48M84 70C110 60 146 56 184 66"/>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+      <g id="cut-crop">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="url(#h-mid)"/></g>
+        <path fill="#121011" d="M52 116C46 76 80 38 130 32C160 28 182 38 190 56C194 66 195 80 194 94C191 92 189 93 187 97C185 92 182 91 179 95C177 90 173 89 170 93C168 89 165 88 162 92C160 96 160 100 160 102C140 96 96 102 52 116Z"/>
+        <path fill="none" stroke="#3a3334" stroke-width="1.8" stroke-linecap="round" d="M110 44C134 38 160 40 180 52M92 62C122 54 156 54 186 70M80 84C108 74 140 72 170 80"/>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+      <g id="cut-pomp">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="url(#h-taper)"/></g>
+        <path fill="#121011" d="M56 114C46 70 74 30 120 16C150 6 184 4 200 20C210 30 208 46 198 54C192 60 186 70 182 80C176 76 168 78 164 84C161 90 160 96 160 102C140 96 96 102 56 114Z"/>
+        <path fill="none" stroke="#3a3334" stroke-width="1.8" stroke-linecap="round" d="M120 30C146 18 178 14 196 26M100 48C130 32 166 28 190 40M82 70C112 54 150 48 178 58"/>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+      <g id="cut-part">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="#121011"/></g>
+        <path fill="#121011" d="M50 120C42 76 76 36 128 28C162 22 190 34 196 58C198 70 194 80 188 86C180 82 172 84 167 90C163 94 162 98 161 104C140 98 92 106 50 120Z"/>
+        <path fill="none" stroke="#EFE8DC" stroke-width="1.6" stroke-linecap="round" d="M180 44C158 35 128 37 102 50" opacity=".85"/>
+        <path fill="none" stroke="#3a3334" stroke-width="1.8" stroke-linecap="round" d="M104 58C130 50 160 50 186 62M88 78C116 68 146 66 170 74"/>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+      <g id="cut-buzz">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="url(#h-dots)"/></g>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+      <g id="cut-beard">
+        <use href="#h-head" fill="#EFE8DC"/>
+        <g clip-path="url(#h-clip)"><use href="#h-side" fill="url(#h-mid)"/></g>
+        <path fill="#121011" d="M56 110C52 76 86 44 132 38C160 36 180 44 186 60C189 70 186 80 180 86C174 84 168 86 164 92C162 96 162 100 161 102C140 96 98 100 56 110Z"/>
+        <path fill="#121011" d="M146 148L150 148C156 164 168 178 184 186C186 182 189 180 193 180C196 181 198 184 197 188C196 192 193 193 190 193C192 196 196 199 198 204C201 212 202 224 200 236C198 246 192 252 184 254C172 256 160 254 150 250C146 248 144 240 143 230C141 214 141 196 142 180C143 168 144 158 146 148Z"/>
+        <path fill="none" stroke="#EFE8DC" stroke-width="1.4" stroke-linecap="round" d="M186 194C189 195 192 195 195 194" opacity=".7"/>
+        <use href="#h-ear" fill="#D8CDBC"/>
+      </g>
+
+      <symbol id="i-razor" viewBox="0 0 32 32">
+        <path d="M5 21 22.5 6.2c2.2-1.9 5.3.8 3.6 3.2L14.4 25z" fill="currentColor"/>
+        <path d="M14.4 25 11 29.4c-1.1 1.5-3.6.6-3.2-1.3l1-5.4z" fill="var(--razor-handle, #C2302B)"/>
+        <path d="M8.5 19.6 23 7.5" stroke="var(--razor-edge, #121011)" stroke-width="1.2" opacity=".5"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+      <symbol id="i-back" viewBox="0 0 20 20"><path d="M16.5 10H4M9 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+      <symbol id="i-star" viewBox="0 0 20 20"><path d="m10 1.8 2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.7l-5.1 2.8L6 11.8l-4.3-4 5.8-.7z" fill="currentColor"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4.3l2.8 1.8" stroke-linecap="round"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 18s-5.5-5.2-5.5-9.5a5.5 5.5 0 0 1 11 0C15.5 12.8 10 18 10 18z"/><circle cx="10" cy="8.5" r="2"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 20 20"><path d="M6.2 3.5 8 7.2 6.6 8.6a9.4 9.4 0 0 0 4.8 4.8L12.8 12l3.7 1.8-.6 2.7c-.1.5-.6.9-1.1.9A13.3 13.3 0 0 1 2.6 5.2c0-.5.4-1 .9-1.1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.75" y="4.75" width="14.5" height="10.5" rx="1"/><path d="m3.5 5.5 6.5 5.25 6.5-5.25"/></g></symbol>
+      <symbol id="i-metro" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M6 13.5V6.5l4 4.5 4-4.5v7" stroke-linecap="round"/></g></symbol>
+      <symbol id="i-check" viewBox="0 0 20 20"><path d="M4.5 10.5l3.6 3.5L15.5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.4 7.8 20 18M8.4 16.2 20 6"/></g></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top" aria-label="Ξυράφι Barber Studio, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+        <svg class="logo__icon" aria-hidden="true"><use href="#i-razor"/></svg>
+        <span class="logo__text" aria-hidden="true"><span class="logo__name" data-keep-lang>Ξυράφι</span><span class="logo__sub">Barber studio</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση" data-i18n-attr="aria-label:nav.label">
+        <ul class="nav__list">
+          <li><a href="#services" data-i18n="nav.services">Υπηρεσίες</a></li>
+          <li><a href="#barbers" data-i18n="nav.barbers">Οι barbers</a></li>
+          <li><a href="#styles" data-i18n="nav.styles">Στυλ</a></li>
+          <li><a href="#shop" data-i18n="nav.shop">Προϊόντα</a></li>
+          <li><a href="#visit" data-i18n="nav.visit">Επικοινωνία</a></li>
+          <li class="nav__book"><a href="#booking" data-i18n="nav.book">Κράτηση</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <div class="lang" role="group" aria-label="Γλώσσα" data-i18n-attr="aria-label:lang.label">
+          <button type="button" class="lang__btn" data-set-lang="el" aria-pressed="true" lang="el" aria-label="Ελληνικά">EL</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="btn btn--red btn--sm header-cta" href="#booking" data-i18n="nav.book">Κράτηση</a>
+        <button type="button" class="burger" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα πλοήγησης" data-burger><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="hero__est"><span data-i18n="hero.est">Barber studio στου Ψυρρή</span><span class="hero__est-line" aria-hidden="true"></span><span class="hero__est-year">est. 2015</span></p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">Καθαρές γραμμές. <span>Σταθερό χέρι.</span></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Κουρέματα, fades και περιποίηση γενειάδας από barbers που δουλεύουν χωρίς βιασύνη. Με ζεστή πετσέτα, καλό καφέ και την καλύτερη playlist της πόλης.</p>
+          <div class="hero__actions">
+            <a class="btn btn--red" href="#booking"><span data-i18n="hero.cta1">Κλείστε ραντεβού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--line" href="#services" data-i18n="hero.cta2">Τιμοκατάλογος</a>
+          </div>
+          <ul class="hero__chips">
+            <li class="walkin" data-walkin><span class="walkin__dot" aria-hidden="true"></span><span data-walkin-text>Walk-ins ευπρόσδεκτοι</span></li>
+            <li class="hero__rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span data-i18n="hero.rating">4,9 · 860 κριτικές</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="portrait">
+            <svg class="portrait__svg" viewBox="0 0 240 300" role="img" aria-label="Εικονογράφηση: προφίλ με skin fade" data-i18n-attr="aria-label:hero.artLabel">
+              <use href="#cut-fade"/>
+              <g stroke="rgba(239,232,220,.55)" stroke-width="1" stroke-dasharray="2 3"><path d="M30 128H62M30 158H50M30 188H54"/></g>
+              <g class="portrait__ticks"><text x="18" y="131">2</text><text x="18" y="161">1</text><text x="18" y="191">0</text></g>
+            </svg>
+            <figcaption class="portrait__cap"><span class="portrait__cap-k" data-i18n="hero.capK">Το πιο δημοφιλές</span><span class="portrait__cap-v">Skin fade · <span data-price="20">20 €</span></span></figcaption>
+          </figure>
+
+          <svg class="pole" viewBox="0 0 170 640" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="p-chrome" x1="0" x2="1"><stop offset="0" stop-color="#2a2526"/><stop offset=".16" stop-color="#857b79"/><stop offset=".36" stop-color="#f4eee4"/><stop offset=".52" stop-color="#a39a96"/><stop offset=".76" stop-color="#4a4344"/><stop offset="1" stop-color="#1c1819"/></linearGradient>
+              <radialGradient id="p-ball" cx=".36" cy=".3" r=".8"><stop offset="0" stop-color="#fbf7f0"/><stop offset=".3" stop-color="#bdb4ae"/><stop offset=".75" stop-color="#3d3738"/><stop offset="1" stop-color="#1a1617"/></radialGradient>
+              <linearGradient id="p-shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".66"/><stop offset=".18" stop-color="#000" stop-opacity=".1"/><stop offset=".3" stop-color="#fff" stop-opacity=".32"/><stop offset=".37" stop-color="#fff" stop-opacity="0"/><stop offset=".68" stop-color="#000" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></linearGradient>
+              <clipPath id="p-glass"><rect x="25" y="118" width="120" height="404"/></clipPath>
+              <g id="p-period">
+                <path fill="#C2302B" d="M0 0L1.2 -4.4L4.6 -8.8L10.1 -13.1L17.6 -17.5L26.7 -21.9L37 -26.3L48.3 -30.6L60 -35L71.7 -39.4L83 -43.7L93.3 -48.1L102.4 -52.5L109.9 -56.9L115.4 -61.3L118.8 -65.6L120 -70L120 -36L118.8 -31.6L115.4 -27.3L109.9 -22.9L102.4 -18.5L93.3 -14.1L83 -9.7L71.7 -5.4L60 -1L48.3 3.4L37 7.8L26.7 12.1L17.6 16.5L10.1 20.9L4.6 25.3L1.2 29.6L0 34Z"/>
+                <path fill="#1b1718" d="M0 46L1.2 41.6L4.6 37.3L10.1 32.9L17.6 28.5L26.7 24.1L37 19.8L48.3 15.4L60 11L71.7 6.6L83 2.3L93.3 -2.1L102.4 -6.5L109.9 -10.9L115.4 -15.3L118.8 -19.6L120 -24L120 -2L118.8 2.4L115.4 6.8L109.9 11.1L102.4 15.5L93.3 19.9L83 24.3L71.7 28.6L60 33L48.3 37.4L37 41.8L26.7 46.1L17.6 50.5L10.1 54.9L4.6 59.3L1.2 63.6L0 68Z"/>
+              </g>
+            </defs>
+            <circle cx="85" cy="22" r="15" fill="url(#p-ball)"/>
+            <rect x="78" y="34" width="14" height="14" fill="url(#p-chrome)"/>
+            <path d="M27 104C27 66 143 66 143 104Z" fill="url(#p-chrome)"/>
+            <rect x="19" y="100" width="132" height="18" rx="3" fill="url(#p-chrome)"/>
+            <rect x="25" y="118" width="120" height="404" fill="#EFE8DC"/>
+            <g clip-path="url(#p-glass)">
+              <g class="pole__stripes">
+                <use href="#p-period" x="25" y="118"/><use href="#p-period" x="25" y="198"/><use href="#p-period" x="25" y="278"/><use href="#p-period" x="25" y="358"/><use href="#p-period" x="25" y="438"/><use href="#p-period" x="25" y="518"/><use href="#p-period" x="25" y="598"/><use href="#p-period" x="25" y="678"/>
+              </g>
+            </g>
+            <rect x="25" y="118" width="120" height="404" fill="url(#p-shade)"/>
+            <rect x="58" y="118" width="5" height="404" fill="#fff" opacity=".22"/>
+            <rect x="19" y="522" width="132" height="18" rx="3" fill="url(#p-chrome)"/>
+            <path d="M27 536C27 574 143 574 143 536Z" fill="url(#p-chrome)"/>
+            <rect x="78" y="566" width="14" height="12" fill="url(#p-chrome)"/>
+            <circle cx="85" cy="590" r="13" fill="url(#p-ball)"/>
+          </svg>
+
+          <p class="seal" aria-hidden="true"><span class="seal__top" data-i18n="hero.seal1">Ζεστή πετσέτα</span><svg><use href="#i-razor"/></svg><span class="seal__bot" data-i18n="hero.seal2">σε κάθε ξύρισμα</span></p>
+        </div>
+      </div>
+      <div class="stripe-band" aria-hidden="true"></div>
+    </section>
+
+    <!-- ================= ΥΠΗΡΕΣΙΕΣ ================= -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow__num">01</span><span data-i18n="services.eyebrow">Υπηρεσίες & τιμές</span></p>
+          <h2 class="section-title" id="services-title" data-i18n="services.title">Τι κάνουμε στην καρέκλα</h2>
+          <p class="section-lead" data-i18n="services.lead">Κάθε υπηρεσία ξεκινά με μια σύντομη κουβέντα για το τι θέλετε, και τελειώνει με styling και συμβουλές για το σπίτι.</p>
+        </header>
+
+        <ul class="menu-list">
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name" data-i18n="svc.cut.name">Κούρεμα</h3><p class="svc__desc" data-i18n="svc.cut.desc">Ψαλίδι ή μηχανή, λούσιμο και styling.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>45′</p>
+            <p class="svc__price" data-price="18">18 €</p>
+            <a class="svc__book" href="#booking" data-book-service="cut"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc svc--hot">
+            <div class="svc__main"><h3 class="svc__name">Skin fade <span class="badge" data-i18n="svc.popular">Δημοφιλές</span></h3><p class="svc__desc" data-i18n="svc.fade.desc">Fade από το μηδέν, με ξυράφι στο περίγραμμα.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>50′</p>
+            <p class="svc__price" data-price="20">20 €</p>
+            <a class="svc__book" href="#booking" data-book-service="fade"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name" data-i18n="svc.combo.name">Κούρεμα & γένια</h3><p class="svc__desc" data-i18n="svc.combo.desc">Το πλήρες πακέτο, με ζεστή πετσέτα στο τέλος.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>75′</p>
+            <p class="svc__price" data-price="30">30 €</p>
+            <a class="svc__book" href="#booking" data-book-service="combo"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name" data-i18n="svc.beard.name">Περιποίηση γενειάδας</h3><p class="svc__desc" data-i18n="svc.beard.desc">Σχήμα, περίγραμμα με ξυράφι και λάδι γενειάδας.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>30′</p>
+            <p class="svc__price" data-price="14">14 €</p>
+            <a class="svc__book" href="#booking" data-book-service="beard"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name" data-i18n="svc.shave.name">Ξύρισμα με ζεστή πετσέτα</h3><p class="svc__desc" data-i18n="svc.shave.desc">Παραδοσιακό ξύρισμα με ξυράφι, ζεστές πετσέτες και after-shave.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>40′</p>
+            <p class="svc__price" data-price="18">18 €</p>
+            <a class="svc__book" href="#booking" data-book-service="shave"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name" data-i18n="svc.kids.name">Παιδικό κούρεμα</h3><p class="svc__desc" data-i18n="svc.kids.desc">Για ηλικίες έως 12, με υπομονή και καραμέλα στο τέλος.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>30′</p>
+            <p class="svc__price" data-price="12">12 €</p>
+            <a class="svc__book" href="#booking" data-book-service="kids"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name">Buzz cut</h3><p class="svc__desc" data-i18n="svc.buzz.desc">Ένα μήκος παντού, γρήγορα και καθαρά.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>20′</p>
+            <p class="svc__price" data-price="10">10 €</p>
+            <a class="svc__book" href="#booking" data-book-service="buzz"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc">
+            <div class="svc__main"><h3 class="svc__name">Grey blending</h3><p class="svc__desc" data-i18n="svc.grey.desc">Διακριτική κάλυψη των λευκών, με φυσικό αποτέλεσμα.</p></div>
+            <p class="svc__time"><svg aria-hidden="true"><use href="#i-clock"/></svg>30′</p>
+            <p class="svc__price" data-price="22">22 €</p>
+            <a class="svc__book" href="#booking" data-book-service="grey"><span data-i18n="svc.book">Κράτηση</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+        <p class="services__note" data-i18n="services.note">Πληρωμή με κάρτα ή μετρητά · Δωροκάρτες διαθέσιμες στο κατάστημα</p>
+      </div>
+    </section>
+
+    <!-- ================= BARBERS ================= -->
+    <section class="section barbers" id="barbers" aria-labelledby="barbers-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">02</span><span data-i18n="barbers.eyebrow">Η ομάδα</span></p>
+            <h2 class="section-title" id="barbers-title" data-i18n="barbers.title">Τέσσερις καρέκλες, τέσσερα στυλ</h2>
+          </div>
+          <p class="section-lead" data-i18n="barbers.lead">Διαλέξτε τον barber σας κατά την κράτηση, ή αφήστε μας να σας προτείνουμε τον καταλληλότερο για αυτό που θέλετε.</p>
+        </header>
+        <ul class="team">
+          <li class="barber" data-reveal>
+            <div class="barber__art barber__art--1" aria-hidden="true"><svg viewBox="0 0 240 300"><use href="#cut-part"/></svg><span class="barber__mono">ΣΚ</span></div>
+            <h3 class="barber__name" data-i18n="b1.name">Στέλιος Καρράς</h3>
+            <p class="barber__role" data-i18n="b1.role">Ιδρυτής · Master barber</p>
+            <p class="barber__spec" data-i18n="b1.spec">Κλασικά κουρέματα, side parts, ξύρισμα</p>
+            <p class="barber__years"><strong>14</strong> <span data-i18n="barbers.years">χρόνια στην καρέκλα</span></p>
+          </li>
+          <li class="barber" data-reveal>
+            <div class="barber__art barber__art--2" aria-hidden="true"><svg viewBox="0 0 240 300"><use href="#cut-crop"/></svg><span class="barber__mono">ΜΛ</span></div>
+            <h3 class="barber__name" data-i18n="b2.name">Μαρίνα Λαμπράκη</h3>
+            <p class="barber__role" data-i18n="b2.role">Senior barber</p>
+            <p class="barber__spec" data-i18n="b2.spec">Textured crops, δουλειά με ψαλίδι</p>
+            <p class="barber__years"><strong>9</strong> <span data-i18n="barbers.years">χρόνια στην καρέκλα</span></p>
+          </li>
+          <li class="barber" data-reveal>
+            <div class="barber__art barber__art--3" aria-hidden="true"><svg viewBox="0 0 240 300"><use href="#cut-beard"/></svg><span class="barber__mono">ΑΠ</span></div>
+            <h3 class="barber__name" data-i18n="b3.name">Άρης Παππάς</h3>
+            <p class="barber__role">Barber</p>
+            <p class="barber__spec" data-i18n="b3.spec">Γενειάδες, ξύρισμα με ζεστή πετσέτα</p>
+            <p class="barber__years"><strong>7</strong> <span data-i18n="barbers.years">χρόνια στην καρέκλα</span></p>
+          </li>
+          <li class="barber" data-reveal>
+            <div class="barber__art barber__art--4" aria-hidden="true"><svg viewBox="0 0 240 300"><use href="#cut-fade"/></svg><span class="barber__mono">ΘΚ</span></div>
+            <h3 class="barber__name" data-i18n="b4.name">Θοδωρής Κωστάκης</h3>
+            <p class="barber__role">Barber</p>
+            <p class="barber__spec" data-i18n="b4.spec">Skin fades, σχέδια με ξυράφι</p>
+            <p class="barber__years"><strong>5</strong> <span data-i18n="barbers.years">χρόνια στην καρέκλα</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΚΡΑΤΗΣΗ ================= -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow__num">03</span><span data-i18n="booking.eyebrow">Online κράτηση</span></p>
+          <h2 class="section-title" id="booking-title" data-i18n="booking.title">Κλείστε θέση στην καρέκλα</h2>
+          <p class="section-lead" data-i18n="booking.lead">Πέντε βήματα, λιγότερο από ένα λεπτό. Θα λάβετε υπενθύμιση με SMS την προηγούμενη μέρα.</p>
+        </header>
+
+        <div class="booker" data-booker>
+          <ol class="steps" aria-label="Βήματα κράτησης" data-i18n-attr="aria-label:bk.stepsLabel">
+            <li class="steps__item" data-step-ind="1" aria-current="step"><span class="steps__num">1</span><span class="steps__label" data-i18n="bk.s1">Υπηρεσία</span></li>
+            <li class="steps__item" data-step-ind="2"><span class="steps__num">2</span><span class="steps__label">Barber</span></li>
+            <li class="steps__item" data-step-ind="3"><span class="steps__num">3</span><span class="steps__label" data-i18n="bk.s3">Ημέρα</span></li>
+            <li class="steps__item" data-step-ind="4"><span class="steps__num">4</span><span class="steps__label" data-i18n="bk.s4">Ώρα</span></li>
+            <li class="steps__item" data-step-ind="5"><span class="steps__num">5</span><span class="steps__label" data-i18n="bk.s5">Στοιχεία</span></li>
+          </ol>
+
+          <div class="booker__grid">
+            <form class="booker__form" novalidate data-booking-form>
+              <p class="booker__mini" data-mini aria-hidden="true"></p>
+
+              <fieldset class="bstep" data-step="1">
+                <legend class="bstep__title" tabindex="-1"><span class="bstep__count">1/5</span><span data-i18n="bk.t1">Τι θα κάνουμε σήμερα;</span></legend>
+                <div class="opts opts--2">
+                  <label class="opt"><input type="radio" name="service" value="cut"><span class="opt__body"><span class="opt__name" data-i18n="svc.cut.name">Κούρεμα</span><span class="opt__meta">45′ · <span data-price="18">18 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="fade"><span class="opt__body"><span class="opt__name">Skin fade</span><span class="opt__meta">50′ · <span data-price="20">20 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="combo"><span class="opt__body"><span class="opt__name" data-i18n="svc.combo.name">Κούρεμα & γένια</span><span class="opt__meta">75′ · <span data-price="30">30 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="beard"><span class="opt__body"><span class="opt__name" data-i18n="svc.beard.name">Περιποίηση γενειάδας</span><span class="opt__meta">30′ · <span data-price="14">14 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="shave"><span class="opt__body"><span class="opt__name" data-i18n="svc.shave.name">Ξύρισμα με ζεστή πετσέτα</span><span class="opt__meta">40′ · <span data-price="18">18 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="kids"><span class="opt__body"><span class="opt__name" data-i18n="svc.kids.name">Παιδικό κούρεμα</span><span class="opt__meta">30′ · <span data-price="12">12 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="buzz"><span class="opt__body"><span class="opt__name">Buzz cut</span><span class="opt__meta">20′ · <span data-price="10">10 €</span></span></span></label>
+                  <label class="opt"><input type="radio" name="service" value="grey"><span class="opt__body"><span class="opt__name">Grey blending</span><span class="opt__meta">30′ · <span data-price="22">22 €</span></span></span></label>
+                </div>
+                <p class="bstep__error" data-step-error hidden></p>
+              </fieldset>
+
+              <fieldset class="bstep" data-step="2">
+                <legend class="bstep__title" tabindex="-1"><span class="bstep__count">2/5</span><span data-i18n="bk.t2">Με ποιον barber;</span></legend>
+                <div class="opts opts--barbers">
+                  <label class="opt opt--any"><input type="radio" name="barber" value="any"><span class="opt__body"><span class="opt__avatar opt__avatar--any" aria-hidden="true"><svg><use href="#i-scissors"/></svg></span><span class="opt__name" data-i18n="bk.any">Οποιοσδήποτε</span><span class="opt__meta" data-i18n="bk.anyMeta">Η πιο κοντινή διαθέσιμη ώρα</span></span></label>
+                  <label class="opt"><input type="radio" name="barber" value="stelios"><span class="opt__body"><span class="opt__avatar opt__avatar--1" aria-hidden="true">ΣΚ</span><span class="opt__name" data-i18n="b1.short">Στέλιος</span><span class="opt__meta" data-i18n="b1.role">Ιδρυτής · Master barber</span></span></label>
+                  <label class="opt"><input type="radio" name="barber" value="marina"><span class="opt__body"><span class="opt__avatar opt__avatar--2" aria-hidden="true">ΜΛ</span><span class="opt__name" data-i18n="b2.short">Μαρίνα</span><span class="opt__meta" data-i18n="b2.role">Senior barber</span></span></label>
+                  <label class="opt"><input type="radio" name="barber" value="aris"><span class="opt__body"><span class="opt__avatar opt__avatar--3" aria-hidden="true">ΑΠ</span><span class="opt__name" data-i18n="b3.short">Άρης</span><span class="opt__meta">Barber</span></span></label>
+                  <label class="opt"><input type="radio" name="barber" value="thodoris"><span class="opt__body"><span class="opt__avatar opt__avatar--4" aria-hidden="true">ΘΚ</span><span class="opt__name" data-i18n="b4.short">Θοδωρής</span><span class="opt__meta">Barber</span></span></label>
+                </div>
+                <p class="bstep__error" data-step-error hidden></p>
+              </fieldset>
+
+              <fieldset class="bstep" data-step="3">
+                <legend class="bstep__title" tabindex="-1"><span class="bstep__count">3/5</span><span data-i18n="bk.t3">Ποια μέρα σας βολεύει;</span></legend>
+                <div class="opts opts--days" data-days></div>
+                <p class="bstep__hint" data-i18n="bk.closedHint">Κυριακή και Δευτέρα είμαστε κλειστά.</p>
+                <p class="bstep__error" data-step-error hidden></p>
+              </fieldset>
+
+              <fieldset class="bstep" data-step="4">
+                <legend class="bstep__title" tabindex="-1"><span class="bstep__count">4/5</span><span data-i18n="bk.t4">Τι ώρα;</span></legend>
+                <p class="bstep__context" data-times-context></p>
+                <div class="opts opts--times" data-times></div>
+                <p class="bstep__error" data-step-error hidden></p>
+              </fieldset>
+
+              <fieldset class="bstep" data-step="5">
+                <legend class="bstep__title" tabindex="-1"><span class="bstep__count">5/5</span><span data-i18n="bk.t5">Σχεδόν έτοιμοι</span></legend>
+                <div class="fields">
+                  <div class="field">
+                    <label for="bk-name" data-i18n="bk.name">Όνομα</label>
+                    <input id="bk-name" name="name" type="text" autocomplete="given-name" required aria-describedby="bk-name-err">
+                    <p class="field__error" id="bk-name-err" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="bk-phone" data-i18n="bk.phone">Κινητό</label>
+                    <input id="bk-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="69Χ ΧΧΧ ΧΧΧΧ" aria-describedby="bk-phone-err bk-phone-hint" data-i18n-attr="placeholder:bk.phonePh">
+                    <p class="field__hint" id="bk-phone-hint" data-i18n="bk.phoneHint">Μόνο για την υπενθύμιση με SMS.</p>
+                    <p class="field__error" id="bk-phone-err" hidden></p>
+                  </div>
+                  <div class="field field--wide">
+                    <label for="bk-note"><span data-i18n="bk.note">Κάτι που πρέπει να ξέρουμε;</span> <span class="field__opt" data-i18n="bk.optional">(προαιρετικό)</span></label>
+                    <textarea id="bk-note" name="note" rows="2" placeholder="π.χ. Θέλω να κρατήσω μήκος από πάνω." data-i18n-attr="placeholder:bk.notePh"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="booker__nav">
+                <button type="button" class="btn btn--line btn--sm" data-back hidden><svg class="btn__icon btn__icon--back" aria-hidden="true"><use href="#i-back"/></svg><span data-i18n="bk.back">Πίσω</span></button>
+                <button type="button" class="btn btn--red" data-next><span data-i18n="bk.next">Συνέχεια</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <button type="submit" class="btn btn--red" data-submit hidden><span data-i18n="bk.confirm">Επιβεβαίωση κράτησης</span><svg class="btn__icon" aria-hidden="true"><use href="#i-check"/></svg></button>
+              </div>
+              <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="bk.demo">Demo κράτηση: δεν αποστέλλονται δεδομένα.</span></p>
+              <p class="visually-hidden" aria-live="polite" data-step-status></p>
+            </form>
+
+            <aside class="summary" aria-labelledby="summary-title">
+              <h3 class="summary__title" id="summary-title" data-i18n="bk.summary">Η κράτησή σας</h3>
+              <dl class="summary__list">
+                <div><dt data-i18n="bk.s1">Υπηρεσία</dt><dd data-sum="service">—</dd></div>
+                <div><dt>Barber</dt><dd data-sum="barber">—</dd></div>
+                <div><dt data-i18n="bk.s3">Ημέρα</dt><dd data-sum="day">—</dd></div>
+                <div><dt data-i18n="bk.s4">Ώρα</dt><dd data-sum="time">—</dd></div>
+                <div><dt data-i18n="bk.duration">Διάρκεια</dt><dd data-sum="duration">—</dd></div>
+              </dl>
+              <p class="summary__total"><span data-i18n="bk.total">Σύνολο</span><strong data-sum="price">—</strong></p>
+              <p class="summary__note" data-i18n="bk.payNote">Πληρώνετε στο κατάστημα. Δωρεάν ακύρωση έως 3 ώρες πριν.</p>
+            </aside>
+          </div>
+
+          <div class="booker__done" tabindex="-1" data-booking-done hidden>
+            <div class="booker__done-icon" aria-hidden="true"><svg><use href="#i-check"/></svg></div>
+            <h3 class="booker__done-title" data-done-title>Κλείστηκε!</h3>
+            <p class="booker__done-text" data-done-text></p>
+            <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="bk.demoDone">Demo: δεν στάλθηκε καμία κράτηση.</span></p>
+            <button type="button" class="btn btn--line btn--sm" data-booking-again><span data-i18n="bk.again">Νέα κράτηση</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΣΤΥΛ ================= -->
+    <section class="section styles" id="styles" aria-labelledby="styles-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">04</span><span data-i18n="styles.eyebrow">Στυλ</span></p>
+            <h2 class="section-title" id="styles-title" data-i18n="styles.title">Βρείτε το κούρεμά σας</h2>
+          </div>
+          <p class="section-lead" data-i18n="styles.lead">Δεν ξέρετε πώς να το ζητήσετε; Δείξτε μας ένα από αυτά, και το προσαρμόζουμε στο πρόσωπο και στα μαλλιά σας.</p>
+        </header>
+        <ul class="looks">
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-fade"/></svg><div class="look__info"><h3 class="look__name">Skin fade</h3><p class="look__desc" data-i18n="look.fade">Από το δέρμα στο μήκος, χωρίς ορατή γραμμή.</p><a class="look__link" href="#booking" data-book-service="fade"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-crop"/></svg><div class="look__info"><h3 class="look__name">Textured crop</h3><p class="look__desc" data-i18n="look.crop">Κοντά στα πλάγια, ακατάστατη υφή από πάνω.</p><a class="look__link" href="#booking" data-book-service="cut"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-pomp"/></svg><div class="look__info"><h3 class="look__name">Pompadour</h3><p class="look__desc" data-i18n="look.pomp">Όγκος μπροστά, γυαλιστερό φινίρισμα, πολύ στυλ.</p><a class="look__link" href="#booking" data-book-service="cut"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-part"/></svg><div class="look__info"><h3 class="look__name">Side part</h3><p class="look__desc" data-i18n="look.part">Η κλασική χωρίστρα, χαραγμένη με ξυράφι.</p><a class="look__link" href="#booking" data-book-service="cut"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-buzz"/></svg><div class="look__info"><h3 class="look__name">Buzz cut</h3><p class="look__desc" data-i18n="look.buzz">Ένα νούμερο παντού. Μηδέν πρωινό styling.</p><a class="look__link" href="#booking" data-book-service="buzz"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+          <li class="look" data-reveal><svg class="look__art" viewBox="0 0 240 300" aria-hidden="true"><use href="#cut-beard"/></svg><div class="look__info"><h3 class="look__name">Full beard</h3><p class="look__desc" data-i18n="look.beard">Γεμάτη γενειάδα με καθαρό περίγραμμα.</p><a class="look__link" href="#booking" data-book-service="beard"><span data-i18n="look.ask">Ζητήστε το</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΠΡΟΪΟΝΤΑ ================= -->
+    <section class="section shop" id="shop" aria-labelledby="shop-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">05</span><span data-i18n="shop.eyebrow">Για το σπίτι</span></p>
+            <h2 class="section-title" id="shop-title" data-i18n="shop.title">Τα προϊόντα του πάγκου</h2>
+          </div>
+          <p class="section-lead" data-i18n="shop.lead">Αυτά χρησιμοποιούμε και στην καρέκλα. Θα σας δείξουμε πώς να τα βάζετε, για να κρατάει το στυλ ως την επόμενη επίσκεψη.</p>
+        </header>
+        <ul class="products">
+          <li class="product" data-reveal>
+            <svg class="product__art" viewBox="0 0 200 160" aria-hidden="true">
+              <ellipse cx="100" cy="138" rx="70" ry="8" fill="#000" opacity=".35"/>
+              <path d="M38 78h124v44c0 9-28 16-62 16s-62-7-62-16z" fill="#C2302B"/>
+              <ellipse cx="100" cy="78" rx="62" ry="16" fill="#E8DFD1"/>
+              <ellipse cx="100" cy="74" rx="62" ry="16" fill="#EFE8DC"/>
+              <path d="M38 74v4c0 9 28 16 62 16s62-7 62-16v-4c0 9-28 16-62 16S38 83 38 74z" fill="#BDB4A8"/>
+              <ellipse cx="100" cy="74" rx="34" ry="8" fill="none" stroke="#121011" stroke-width="2"/>
+              <path d="M84 72l14-6 4 8-14 4z" fill="#121011"/>
+              <path d="M48 100v14" stroke="#fff" stroke-width="3" opacity=".25" stroke-linecap="round"/>
+            </svg>
+            <h3 class="product__name" data-i18n="p1.name">Κερί matte clay</h3>
+            <p class="product__desc" data-i18n="p1.desc">Δυνατό κράτημα, ματ φινίρισμα · 50 g</p>
+            <p class="product__price" data-price="16">16 €</p>
+          </li>
+          <li class="product" data-reveal>
+            <svg class="product__art" viewBox="0 0 200 160" aria-hidden="true">
+              <ellipse cx="100" cy="146" rx="44" ry="6" fill="#000" opacity=".35"/>
+              <rect x="88" y="10" width="24" height="26" rx="10" fill="#121011" stroke="#EFE8DC" stroke-width="2"/>
+              <rect x="84" y="34" width="32" height="14" rx="3" fill="#BDB4A8"/>
+              <path d="M74 56c0-6 6-10 12-10h28c6 0 12 4 12 10v80c0 6-4 10-10 10H84c-6 0-10-4-10-10z" fill="#7A3B12"/>
+              <rect x="80" y="76" width="40" height="44" rx="3" fill="#EFE8DC"/>
+              <path d="M88 88h24M88 96h18M88 104h22" stroke="#121011" stroke-width="2"/>
+              <path d="M80 62v70" stroke="#fff" stroke-width="3" opacity=".22" stroke-linecap="round"/>
+            </svg>
+            <h3 class="product__name" data-i18n="p2.name">Λάδι γενειάδας</h3>
+            <p class="product__desc" data-i18n="p2.desc">Κέδρος και περγαμόντο · 30 ml</p>
+            <p class="product__price" data-price="18">18 €</p>
+          </li>
+          <li class="product" data-reveal>
+            <svg class="product__art" viewBox="0 0 200 160" aria-hidden="true">
+              <ellipse cx="104" cy="140" rx="74" ry="7" fill="#000" opacity=".35"/>
+              <path d="M30 110 150 52l14 28-120 58z" fill="#EFE8DC"/>
+              <path d="M150 52l22-10 12 26-20 12z" fill="#121011" stroke="#BDB4A8" stroke-width="2"/>
+              <path d="M30 110l-8 4 14 28 8-4z" fill="#BDB4A8"/>
+              <path d="M58 104 128 70" stroke="#C2302B" stroke-width="10"/>
+              <path d="M66 112l62-30" stroke="#121011" stroke-width="2" opacity=".5"/>
+            </svg>
+            <h3 class="product__name" data-i18n="p3.name">Κρέμα ξυρίσματος</h3>
+            <p class="product__desc" data-i18n="p3.desc">Πλούσιος, κρεμώδης αφρός · 150 ml</p>
+            <p class="product__price" data-price="14">14 €</p>
+          </li>
+          <li class="product" data-reveal>
+            <svg class="product__art" viewBox="0 0 200 160" aria-hidden="true">
+              <ellipse cx="100" cy="132" rx="76" ry="6" fill="#000" opacity=".35"/>
+              <path d="M26 60h148c4 0 6 3 6 6v10H20V66c0-3 2-6 6-6z" fill="#B87A45"/>
+              <g fill="#B87A45"><rect x="24" y="74" width="5" height="44" rx="2"/><rect x="34" y="74" width="5" height="44" rx="2"/><rect x="44" y="74" width="5" height="44" rx="2"/><rect x="54" y="74" width="5" height="44" rx="2"/><rect x="64" y="74" width="5" height="44" rx="2"/><rect x="74" y="74" width="5" height="44" rx="2"/><rect x="84" y="74" width="5" height="44" rx="2"/><rect x="94" y="74" width="5" height="44" rx="2"/><rect x="104" y="74" width="4" height="36" rx="2"/><rect x="113" y="74" width="4" height="36" rx="2"/><rect x="122" y="74" width="4" height="36" rx="2"/><rect x="131" y="74" width="4" height="36" rx="2"/><rect x="140" y="74" width="4" height="36" rx="2"/><rect x="149" y="74" width="4" height="36" rx="2"/><rect x="158" y="74" width="4" height="36" rx="2"/><rect x="167" y="74" width="4" height="36" rx="2"/></g>
+              <path d="M30 66h140" stroke="#fff" stroke-width="2" opacity=".3"/>
+            </svg>
+            <h3 class="product__name" data-i18n="p4.name">Ξύλινη χτένα</h3>
+            <p class="product__desc" data-i18n="p4.desc">Χειροποίητη, από ξύλο οξιάς</p>
+            <p class="product__price" data-price="9">9 €</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΚΡΙΤΙΚΕΣ ================= -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="reviews__grid">
+          <div class="reviews__score" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__num">06</span><span data-i18n="reviews.eyebrow">Κριτικές</span></p>
+            <h2 class="section-title" id="reviews-title"><span class="reviews__big">4,9</span><span class="visually-hidden" data-i18n="reviews.titleSr">μέση βαθμολογία</span></h2>
+            <p class="stars stars--lg" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+            <p class="reviews__count" data-i18n="reviews.count">από 860 κριτικές · ενδεικτικά</p>
+          </div>
+          <ul class="quotes">
+            <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r1">«Το καλύτερο fade που έχω κάνει. Ο Θοδωρής είναι καλλιτέχνης.»</p></blockquote><p class="quote__by" data-i18n="reviews.r1n">Γιώργος Α.</p></li>
+            <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r2">«Μισή ώρα ξύρισμα με ζεστή πετσέτα αξίζει όσο ένα Σαββατοκύριακο διακοπές.»</p></blockquote><p class="quote__by" data-i18n="reviews.r2n">Κώστας Μ.</p></li>
+            <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r3">«Φέρνω τον γιο μου εδώ πέντε χρόνια. Υπομονή, χιούμορ και πάντα στην ώρα τους.»</p></blockquote><p class="quote__by" data-i18n="reviews.r3n">Άννα Φ.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΩΡΑΡΙΟ & ΤΟΠΟΘΕΣΙΑ ================= -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit__grid">
+        <div class="visit__info">
+          <p class="eyebrow"><span class="eyebrow__num">07</span><span data-i18n="visit.eyebrow">Ωράριο & τοποθεσία</span></p>
+          <h2 class="section-title" id="visit-title" data-i18n="visit.title">Περάστε από την καρέκλα</h2>
+          <table class="hours">
+            <caption class="visually-hidden" data-i18n="visit.hoursCaption">Ωράριο λειτουργίας</caption>
+            <tbody>
+              <tr data-day="2"><th scope="row" data-i18n="day.2">Τρίτη</th><td>10:00 – 21:00</td></tr>
+              <tr data-day="3"><th scope="row" data-i18n="day.3">Τετάρτη</th><td>10:00 – 21:00</td></tr>
+              <tr data-day="4"><th scope="row" data-i18n="day.4">Πέμπτη</th><td>10:00 – 21:00</td></tr>
+              <tr data-day="5"><th scope="row" data-i18n="day.5">Παρασκευή</th><td>10:00 – 21:00</td></tr>
+              <tr data-day="6"><th scope="row" data-i18n="day.6">Σάββατο</th><td>09:00 – 18:00</td></tr>
+              <tr data-day="0" class="is-off"><th scope="row" data-i18n="day.0">Κυριακή</th><td data-i18n="visit.closed">Κλειστά</td></tr>
+              <tr data-day="1" class="is-off"><th scope="row" data-i18n="day.1">Δευτέρα</th><td data-i18n="visit.closed">Κλειστά</td></tr>
+            </tbody>
+          </table>
+          <ul class="contact">
+            <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="visit.address">Οδός Παραδείγματος 12, Ψυρρή, 105 54 Αθήνα</span></li>
+            <li><svg aria-hidden="true"><use href="#i-metro"/></svg><span data-i18n="visit.metro">3 λεπτά από το μετρό Μοναστηράκι</span></li>
+            <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+302100000000" data-i18n="visit.phone">210 000 0000</a></li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:book@example.com">book@example.com</a></li>
+          </ul>
+        </div>
+        <div class="visit__map">
+          <svg viewBox="0 0 600 520" role="img" aria-label="Σχηματικός χάρτης της περιοχής γύρω από το κουρείο, κοντά στο μετρό" data-i18n-attr="aria-label:visit.mapLabel" preserveAspectRatio="xMidYMid slice">
+            <rect width="600" height="520" fill="#1A1718"/>
+            <g fill="#221E1F"><rect x="18" y="18" width="160" height="130"/><rect x="206" y="18" width="190" height="130"/><rect x="424" y="18" width="158" height="130"/><rect x="18" y="176" width="160" height="150"/><rect x="206" y="176" width="190" height="150"/><rect x="424" y="176" width="158" height="150"/><rect x="18" y="354" width="160" height="148"/><rect x="206" y="354" width="190" height="148"/><rect x="424" y="354" width="158" height="148"/></g>
+            <g stroke="#2E292A" stroke-width="20"><path d="M192 0v520M410 0v520M0 162h600M0 340h600"/></g>
+            <path d="M-20 520 620 40" stroke="#3A3435" stroke-width="26"/>
+            <g stroke="#EFE8DC" stroke-opacity=".08" stroke-width="1"><path d="M192 0v520M410 0v520M0 162h600M0 340h600"/></g>
+            <g transform="translate(110 438)"><circle r="20" fill="#121011" stroke="#EFE8DC" stroke-width="2"/><path d="M-8 6V-6l8 8 8-8V6" fill="none" stroke="#EFE8DC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <path d="M128 424C200 380 250 352 300 330s60-40 80-80" fill="none" stroke="#EFE8DC" stroke-width="2.4" stroke-dasharray="1 9" stroke-linecap="round"/>
+            <g transform="translate(386 236)">
+              <circle r="50" fill="#C2302B" opacity=".14"/>
+              <circle r="30" fill="#C2302B" opacity=".24"/>
+              <rect x="-11" y="-34" width="22" height="58" rx="4" fill="#EFE8DC"/>
+              <path d="M-11-24 11-34v10L-11-14zM-11-4 11-14v10L-11 6zM-11 16 11 6v10L-11 24z" fill="#C2302B"/>
+              <rect x="-14" y="-40" width="28" height="7" rx="2" fill="#BDB4A8"/><rect x="-14" y="23" width="28" height="7" rx="2" fill="#BDB4A8"/>
+            </g>
+          </svg>
+          <p class="visit__chip"><svg aria-hidden="true"><use href="#i-razor"/></svg><span data-keep-lang>Ξυράφι</span> · <span data-i18n="visit.chip">ακολουθήστε τον στύλο</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripe-band stripe-band--thin" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__big" data-i18n-html="footer.big">Η καρέκλα <span>σας περιμένει.</span></p>
+        <a class="btn btn--red" href="#booking"><span data-i18n="hero.cta1">Κλείστε ραντεβού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a class="logo" href="#top" aria-label="Ξυράφι Barber Studio, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+            <svg class="logo__icon" aria-hidden="true"><use href="#i-razor"/></svg>
+            <span class="logo__text" aria-hidden="true"><span class="logo__name" data-keep-lang>Ξυράφι</span><span class="logo__sub">Barber studio</span></span>
+          </a>
+          <p class="footer__tag" data-i18n="footer.tag">Κουρείο για όσους νοιάζονται για τις λεπτομέρειες. Ψυρρή, από το 2015.</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="footer.hours">Ωράριο</h2>
+          <p data-i18n="footer.hours1">Τρίτη – Παρασκευή 10:00 – 21:00</p>
+          <p data-i18n="footer.hours2">Σάββατο 09:00 – 18:00</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="footer.contact">Επικοινωνία</h2>
+          <p data-i18n="visit.address">Οδός Παραδείγματος 12, Ψυρρή, 105 54 Αθήνα</p>
+          <p><a href="tel:+302100000000" data-i18n="visit.phone">210 000 0000</a> · <a href="mailto:book@example.com">book@example.com</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> <span data-keep-lang>Ξυράφι</span> Barber Studio · <span data-i18n="footer.fictional">Εικονική επιχείρηση</span></p>
+        <p class="footer__template" data-i18n="footer.template">Template από την Akamas · Όλα τα στοιχεία είναι ενδεικτικά</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

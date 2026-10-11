@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Στάθμη & Συνεργάτες — Λογιστικό γραφείο & σύμβουλοι επιχειρήσεων</title>
+  <meta name="description" content="Λογιστική, φοροτεχνική και συμβουλευτική υποστήριξη για μικρομεσαίες επιχειρήσεις και ελεύθερους επαγγελματίες στην Αθήνα. Template από την Akamas με ενδεικτικό περιεχόμενο.">
+  <meta name="theme-color" content="#F5F2EA">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E3B32'/%3E%3Cellipse cx='32' cy='32' rx='14' ry='20' fill='none' stroke='%23F2EEE4' stroke-width='3.2'/%3E%3Cpath d='M18 32h28' stroke='%23F2EEE4' stroke-width='3.2'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23DE9C74'/%3E%3C/svg%3E">
+  <script>if (/[?&]lang=en(&|$)/.test(location.search)) document.documentElement.classList.add('lang-pending')</script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-logo" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="20" rx="12.5" ry="17.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M4 20h32" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="20" cy="20" r="3.6" fill="#B0643A"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 20 20">
+        <path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 20 20">
+        <path d="M4.5 10.5l3.6 3.5L15.5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4.3l2.8 1.8"/></g>
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 12 12">
+        <path d="M6 10V2.5M2.75 5.5 6 2.25 9.25 5.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 18s-5.5-5.2-5.5-9.5a5.5 5.5 0 0 1 11 0C15.5 12.8 10 18 10 18z"/><circle cx="10" cy="8.5" r="2"/></g>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 20 20">
+        <path d="M6.2 3.5 8 7.2 6.6 8.6a9.4 9.4 0 0 0 4.8 4.8L12.8 12l3.7 1.8-.6 2.7c-.1.5-.6.9-1.1.9A13.3 13.3 0 0 1 2.6 5.2c0-.5.4-1 .9-1.1z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="2.75" y="4.75" width="14.5" height="10.5" rx="1.5"/><path d="m3.5 5.5 6.5 5.25 6.5-5.25"/></g>
+      </symbol>
+      <symbol id="i-hours" viewBox="0 0 20 20">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="4.5" width="14" height="12.5" rx="1.5"/><path d="M3 8.5h14M7 2.75v3.5M13 2.75v3.5"/></g>
+      </symbol>
+
+      <!-- Υπηρεσίες: εικονίδια γραμμής 48×48 -->
+      <symbol id="s-accounting" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6.5" width="30" height="35" rx="2"/><path d="M9 14.5h30M18.5 6.5v35M23 21h11M23 27h11M23 33h7M12.5 21h2.5M12.5 27h2.5M12.5 33h2.5"/></g>
+      </symbol>
+      <symbol id="s-payroll" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 6h19l7 7v29H11z"/><path d="M30 6v7h7"/><circle cx="24" cy="21" r="4.5"/><path d="M16.5 33c1.5-3.8 4.2-5.8 7.5-5.8s6 2 7.5 5.8M17 37.5h14"/></g>
+      </symbol>
+      <symbol id="s-formation" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h20l7 7v29H10z"/><path d="M30 6v7h7M16 18h14M16 23h14M16 28h7"/><circle cx="29" cy="33" r="4.5"/><path d="m26.6 36.8-1 5.2 3.4-1.8 3.4 1.8-1-5.2"/></g>
+      </symbol>
+      <symbol id="s-planning" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7v33h34"/><path d="m12.5 33 8-9 6 4.5 11-13.5M32 15h5.5v5.5"/><path d="M7 22h34" stroke-dasharray="1.5 3.5"/></g>
+      </symbol>
+      <symbol id="s-funding" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="17" cy="13" rx="9" ry="3.5"/><path d="M8 13v6c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-6M8 19v6c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-6M8 25v6c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-6M8 31v6c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-6M36 40V15M31 20l5-5 5 5"/></g>
+      </symbol>
+      <symbol id="s-einvoicing" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h21v37l-3.5-2.5-3.5 2.5-3.5-2.5-3.5 2.5-3.5-2.5L9 42z"/><path d="M14 13h11M14 18h11M14 23h7"/><rect x="27" y="24" width="13" height="13" rx="1.5" fill="#FBF9F4"/><path d="M30.5 27.5h2v2h-2zM34.5 31.5h2v2h-2zM30.5 32.5v1M35.5 27.5h1"/></g>
+      </symbol>
+
+      <!-- Κλάδοι: εικονίδια γραμμής 32×32 -->
+      <symbol id="ind-tourism" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 23.5a9.5 9.5 0 0 1 19 0M16 14v-2.5M13.5 11.5h5M4.5 23.5h23M6 27h20"/></g>
+      </symbol>
+      <symbol id="ind-food" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5h16v6a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7z"/><path d="M22 14.5h2.5a3 3 0 0 1 0 6H22M11 4.5c-1.3 1.4 1.3 2.6 0 4.2M16 4.5c-1.3 1.4 1.3 2.6 0 4.2M5 28.5h18"/></g>
+      </symbol>
+      <symbol id="ind-retail" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 11h19l-1.4 16.5H7.9z"/><path d="M11.5 14.5V9a4.5 4.5 0 0 1 9 0v5.5"/></g>
+      </symbol>
+      <symbol id="ind-agri" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 27.5C11 21.5 17 14 27 5"/><path d="M11.8 21.2c-3.6-.2-6-2.5-6.3-6.2 3.5.3 5.9 2.6 6.3 6.2zM16.6 15.6c-.3-3.6 1.8-6.2 5.4-6.9 0 3.7-2 6.1-5.4 6.9zM21.2 11.4c3.3-1.1 6.4.1 7.8 3.2-3.4 1.1-6.3-.1-7.8-3.2z"/><ellipse cx="12.5" cy="26" rx="2.1" ry="2.9" transform="rotate(-35 12.5 26)"/></g>
+      </symbol>
+      <symbol id="ind-tech" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="14" height="14" rx="2"/><rect x="13" y="13" width="6" height="6" rx=".5"/><path d="M13 5v4M19 5v4M13 23v4M19 23v4M5 13h4M5 19h4M23 13h4M23 19h4"/></g>
+      </symbol>
+      <symbol id="ind-build" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 27.5h24M7 27.5V7.5h10v20M17 13.5h8v14M10.5 11.5h3M10.5 15.5h3M10.5 19.5h3M10.5 23.5h3M20.5 17.5h2M20.5 21.5h2"/></g>
+      </symbol>
+      <symbol id="ind-pro" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10" width="23" height="15.5" rx="2"/><path d="M12 10V7.5C12 6.7 12.7 6 13.5 6h5c.8 0 1.5.7 1.5 1.5V10M4.5 16.5h23M14 16.5v2.5h4v-2.5"/></g>
+      </symbol>
+      <symbol id="ind-transport" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5h16v14H3zM19 11.5h5.5l4.5 5.5v4.5H19"/><circle cx="8.5" cy="23.5" r="2.5" fill="currentColor" fill-opacity=".001"/><circle cx="23.5" cy="23.5" r="2.5"/></g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Μετάβαση στο κύριο περιεχόμενο</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg>
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Στάθμη</span>
+          <span class="brand__sub" data-i18n="brand.sub">& Συνεργάτες</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Κύρια πλοήγηση" data-i18n-attr="aria-label:nav.label">
+        <ul class="site-nav__list">
+          <li><a href="#services" data-nav="services"><span class="site-nav__num" aria-hidden="true">01</span><span data-i18n="nav.services">Υπηρεσίες</span></a></li>
+          <li><a href="#industries" data-nav="industries"><span class="site-nav__num" aria-hidden="true">02</span><span data-i18n="nav.industries">Κλάδοι</span></a></li>
+          <li><a href="#team" data-nav="team"><span class="site-nav__num" aria-hidden="true">03</span><span data-i18n="nav.team">Η ομάδα</span></a></li>
+          <li><a href="#insights" data-nav="insights"><span class="site-nav__num" aria-hidden="true">04</span><span data-i18n="nav.insights">Insights</span></a></li>
+          <li><a href="#contact" data-nav="contact"><span class="site-nav__num" aria-hidden="true">05</span><span data-i18n="nav.contact">Επικοινωνία</span></a></li>
+        </ul>
+        <div class="site-nav__extra">
+          <a class="btn btn--primary btn--block" href="#contact"><span data-i18n="header.cta">Κλείστε ραντεβού</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          <ul class="site-nav__contact">
+            <li><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:+302100000000" data-i18n="contact.phoneVal">210 000 0000</a></li>
+            <li><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:info@example.com">info@example.com</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="site-header__tools">
+        <div class="lang" role="group" aria-label="Γλώσσα" data-i18n-attr="aria-label:header.lang">
+          <button type="button" class="lang__btn" data-set-lang="el" aria-pressed="true" lang="el" aria-label="Ελληνικά">EL</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="btn btn--primary btn--sm site-header__cta" href="#contact"><span class="site-header__cta-long" data-i18n="header.cta">Κλείστε ραντεβού</span><span class="site-header__cta-short" data-i18n="header.ctaShort">Ραντεβού</span></a>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" data-menu-btn>
+          <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-btn__label" data-menu-label>Μενού</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__ledger" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Λογιστικό γραφείο & σύμβουλοι επιχειρήσεων · Αθήνα, από το 2009</span></p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">Κάθε αριθμός <em>στη θέση του<span class="hero__dot">.</span></em></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Λογιστική, φορολογική και συμβουλευτική υποστήριξη για μικρομεσαίες επιχειρήσεις και ελεύθερους επαγγελματίες. Ένας σταθερός συνεργάτης, ξεκάθαρες αμοιβές και προθεσμίες που δεν χάνονται.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#contact"><span data-i18n="hero.cta1">Κλείστε ραντεβού γνωριμίας</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="#services" data-i18n="hero.cta2">Οι υπηρεσίες μας</a>
+          </div>
+          <p class="hero__note"><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span data-i18n="hero.note">Η πρώτη συνάντηση των 30 λεπτών είναι δωρεάν, στο γραφείο ή online.</span></p>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__theta" aria-hidden="true"><span class="hero__bubble"></span></div>
+          <figure class="report" aria-labelledby="report-caption">
+            <div class="report__head">
+              <p class="report__kicker"><span data-i18n="report.label">Μηνιαία αναφορά</span><span class="tag" data-i18n="common.sample">Παράδειγμα</span></p>
+              <p class="report__period" data-report-period>Σεπτέμβριος 2026</p>
+            </div>
+            <div class="report__figure">
+              <p class="report__fig-label" data-i18n="report.figLabel">Καθαρό αποτέλεσμα από την αρχή του έτους</p>
+              <p class="report__fig"><span class="report__amount" data-i18n="report.fig">184.260 €</span><span class="report__delta"><svg aria-hidden="true" focusable="false"><use href="#i-up"/></svg><span data-i18n="report.delta">12,4% από πέρυσι</span></span></p>
+            </div>
+            <div class="report__chart">
+              <svg viewBox="0 0 360 168" role="img" aria-label="Ενδεικτικό γράφημα μηνιαίων εσόδων των τελευταίων 12 μηνών, με τη γραμμή του στόχου" data-i18n-attr="aria-label:report.chartLabel">
+                <g class="report__gridlines">
+                  <path d="M0 10.5h360M0 53.5h360M0 96.5h360M0 139.5h360"/>
+                </g>
+                <g class="report__bars">
+                  <rect x="8" y="77.6" width="14" height="62.4" rx="1.5" style="--i:0"/>
+                  <rect x="38" y="69.8" width="14" height="70.2" rx="1.5" style="--i:1"/>
+                  <rect x="68" y="75" width="14" height="65" rx="1.5" style="--i:2"/>
+                  <rect x="98" y="62" width="14" height="78" rx="1.5" style="--i:3"/>
+                  <rect x="128" y="54.2" width="14" height="85.8" rx="1.5" style="--i:4"/>
+                  <rect x="158" y="46.4" width="14" height="93.6" rx="1.5" style="--i:5"/>
+                  <rect x="188" y="33.4" width="14" height="106.6" rx="1.5" style="--i:6"/>
+                  <rect x="218" y="20.4" width="14" height="119.6" rx="1.5" style="--i:7"/>
+                  <rect x="248" y="28.2" width="14" height="111.8" rx="1.5" style="--i:8"/>
+                  <rect x="278" y="43.8" width="14" height="96.2" rx="1.5" style="--i:9"/>
+                  <rect x="308" y="38.6" width="14" height="101.4" rx="1.5" style="--i:10"/>
+                  <rect class="is-current" x="338" y="25.6" width="14" height="114.4" rx="1.5" style="--i:11"/>
+                </g>
+                <path class="report__target" d="M0 58.5h346"/>
+                <circle class="report__bubble" cx="346" cy="58.5" r="5"/>
+                <g class="report__months" data-report-months>
+                  <text x="15" y="162">Ο</text><text x="45" y="162">Ν</text><text x="75" y="162">Δ</text><text x="105" y="162">Ι</text><text x="135" y="162">Φ</text><text x="165" y="162">Μ</text><text x="195" y="162">Α</text><text x="225" y="162">Μ</text><text x="255" y="162">Ι</text><text x="285" y="162">Ι</text><text x="315" y="162">Α</text><text x="345" y="162">Σ</text>
+                </g>
+              </svg>
+            </div>
+            <ul class="report__legend" aria-hidden="true">
+              <li><span class="swatch swatch--bar"></span><span data-i18n="report.legendRevenue">Έσοδα ανά μήνα</span></li>
+              <li><span class="swatch swatch--target"></span><span data-i18n="report.legendTarget">Στόχος</span></li>
+            </ul>
+            <dl class="report__rows">
+              <div><dt data-i18n="report.revenue">Έσοδα</dt><dd data-i18n="report.revenueVal">412.900 €</dd></div>
+              <div><dt data-i18n="report.costs">Λειτουργικά έξοδα</dt><dd data-i18n="report.costsVal">228.640 €</dd></div>
+              <div><dt data-i18n="report.vat">ΦΠΑ προς απόδοση</dt><dd data-i18n="report.vatVal">14.380 €</dd></div>
+            </dl>
+            <figcaption class="visually-hidden" id="report-caption" data-i18n="report.caption">Παράδειγμα της μηνιαίας αναφοράς που λαμβάνουν οι πελάτες μας</figcaption>
+          </figure>
+
+          <div class="next-card" data-next-card>
+            <p class="next-card__label"><span class="next-card__pulse" aria-hidden="true"></span><span data-i18n="next.label">Επόμενη προθεσμία · παράδειγμα</span></p>
+            <p class="next-card__title" data-next-title>Διαβίβαση παραστατικών στο myDATA</p>
+            <p class="next-card__when" data-next-when>σε 3 ημέρες</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <dl class="stats">
+          <div class="stat"><dt data-i18n="stats.years">χρόνια στην πράξη, από το 2009</dt><dd>17</dd></div>
+          <div class="stat"><dt data-i18n="stats.clients">επιχειρήσεις και επαγγελματίες μάς εμπιστεύονται</dt><dd>420<span class="stat__unit">+</span></dd></div>
+          <div class="stat"><dt data-i18n="stats.renewals">των πελατών ανανεώνουν τη συνεργασία κάθε χρόνο</dt><dd>98<span class="stat__unit">%</span></dd></div>
+          <div class="stat"><dt data-i18n="stats.reply">μέσος χρόνος απάντησης σε εργάσιμες ημέρες</dt><dd>4<span class="stat__unit" data-i18n="stats.replyUnit">ώρες</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ 01 ΥΠΗΡΕΣΙΕΣ ============ -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">01</span><span data-i18n="services.label">Υπηρεσίες</span></p>
+          <h2 class="sec-head__title" id="services-title" data-i18n="services.title">Έξι τομείς. Μία ομάδα που βλέπει τη συνολική εικόνα.</h2>
+          <p class="sec-head__lead" data-i18n="services.lead">Αναλαμβάνουμε όσα σας απασχολούν σήμερα και σας προετοιμάζουμε για όσα έρχονται. Επιλέξτε έναν τομέα για να δείτε τι περιλαμβάνει.</p>
+        </div>
+
+        <div class="practice" data-practice data-reveal>
+          <div class="practice__tabs" role="tablist" aria-orientation="vertical" aria-label="Τομείς υπηρεσιών" data-i18n-attr="aria-label:services.tablist" hidden>
+            <button type="button" class="practice__tab" role="tab" id="tab-accounting" aria-controls="panel-accounting" aria-selected="true" data-key="accounting"><span class="practice__num">01</span><span class="practice__tab-label" data-i18n="svc.accounting.title">Λογιστική & φοροτεχνική υποστήριξη</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="practice__tab" role="tab" id="tab-payroll" aria-controls="panel-payroll" aria-selected="false" tabindex="-1" data-key="payroll"><span class="practice__num">02</span><span class="practice__tab-label" data-i18n="svc.payroll.title">Μισθοδοσία & ανθρώπινο δυναμικό</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="practice__tab" role="tab" id="tab-formation" aria-controls="panel-formation" aria-selected="false" tabindex="-1" data-key="formation"><span class="practice__num">03</span><span class="practice__tab-label" data-i18n="svc.formation.title">Σύσταση εταιρειών</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="practice__tab" role="tab" id="tab-planning" aria-controls="panel-planning" aria-selected="false" tabindex="-1" data-key="planning"><span class="practice__num">04</span><span class="practice__tab-label" data-i18n="svc.planning.title">Χρηματοοικονομικός σχεδιασμός</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="practice__tab" role="tab" id="tab-funding" aria-controls="panel-funding" aria-selected="false" tabindex="-1" data-key="funding"><span class="practice__num">05</span><span class="practice__tab-label" data-i18n="svc.funding.title">Χρηματοδοτήσεις & επιδοτήσεις</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="practice__tab" role="tab" id="tab-einvoicing" aria-controls="panel-einvoicing" aria-selected="false" tabindex="-1" data-key="einvoicing"><span class="practice__num">06</span><span class="practice__tab-label" data-i18n="svc.einvoicing.title">Ψηφιακή τιμολόγηση</span><svg class="practice__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+          </div>
+
+          <div class="practice__items">
+            <!-- 01 -->
+            <div class="practice__item" data-key="accounting">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-accounting" aria-expanded="true" aria-controls="panel-accounting"><span class="practice__num">01</span><span data-i18n="svc.accounting.title">Λογιστική & φοροτεχνική υποστήριξη</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-accounting" role="region" aria-labelledby="acc-accounting">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-accounting"/></svg>
+                  <span class="practice__bignum">01</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.accounting.title">Λογιστική & φοροτεχνική υποστήριξη</h3>
+                <p class="practice__desc" data-i18n="svc.accounting.desc">Τήρηση βιβλίων, δηλώσεις ΦΠΑ και φορολογίας εισοδήματος, οικονομικές καταστάσεις και επικοινωνία με τις αρμόδιες υπηρεσίες. Με έναν σταθερό υπεύθυνο λογιστή που γνωρίζει την επιχείρησή σας.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.accounting.i1">Τήρηση απλογραφικών και διπλογραφικών βιβλίων</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.accounting.i2">Περιοδικές δηλώσεις ΦΠΑ και παρακρατούμενων φόρων</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.accounting.i3">Ετήσιες δηλώσεις φορολογίας εισοδήματος</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.accounting.i4">Ισολογισμός και οικονομικές καταστάσεις</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.accounting.i5">Υποστήριξη σε φορολογικούς ελέγχους</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.accounting.for">Ατομικές επιχειρήσεις, ΟΕ, ΕΕ, ΙΚΕ και ΑΕ κάθε μεγέθους.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.accounting.fee">από <strong>120 €</strong> / μήνα</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="accounting"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="practice__item" data-key="payroll">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-payroll" aria-expanded="true" aria-controls="panel-payroll"><span class="practice__num">02</span><span data-i18n="svc.payroll.title">Μισθοδοσία & ανθρώπινο δυναμικό</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-payroll" role="region" aria-labelledby="acc-payroll">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-payroll"/></svg>
+                  <span class="practice__bignum">02</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.payroll.title">Μισθοδοσία & ανθρώπινο δυναμικό</h3>
+                <p class="practice__desc" data-i18n="svc.payroll.desc">Μισθοδοσία, ασφαλιστικές εισφορές, προσλήψεις, άδειες και αποχωρήσεις: σωστά υπολογισμένα και πάντα εμπρόθεσμα, για να εστιάζετε στους ανθρώπους σας.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.payroll.i1">Μηνιαία μισθοδοσία και εκκαθαριστικά</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.payroll.i2">Αναγγελίες προσλήψεων και ψηφιακή κάρτα εργασίας</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.payroll.i3">Ασφαλιστικές δηλώσεις και εισφορές</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.payroll.i4">Συμβάσεις, άδειες, υπερωρίες και αποχωρήσεις</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.payroll.i5">Κοστολόγηση νέων θέσεων εργασίας</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.payroll.for">Επιχειρήσεις με 1 έως 80 εργαζόμενους, και με εποχικό προσωπικό.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.payroll.fee">από <strong>18 €</strong> / εργαζόμενο / μήνα</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="payroll"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="practice__item" data-key="formation">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-formation" aria-expanded="true" aria-controls="panel-formation"><span class="practice__num">03</span><span data-i18n="svc.formation.title">Σύσταση εταιρειών</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-formation" role="region" aria-labelledby="acc-formation">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-formation"/></svg>
+                  <span class="practice__bignum">03</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.formation.title">Σύσταση εταιρειών</h3>
+                <p class="practice__desc" data-i18n="svc.formation.desc">Από την ιδέα στην πρώτη ημέρα λειτουργίας: επιλογή νομικής μορφής, καταστατικό, εγγραφή στο ΓΕΜΗ, έναρξη εργασιών και οργάνωση των πρώτων διαδικασιών.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.formation.i1">Σύγκριση νομικών μορφών και φορολογικού κόστους</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.formation.i2">Καταστατικό και εγγραφή στο ΓΕΜΗ, με συνεργάτες νομικούς</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.formation.i3">Έναρξη εργασιών και επιλογή ΚΑΔ</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.formation.i4">Ρύθμιση τιμολόγησης, τραπεζών και POS</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.formation.i5">Στενή υποστήριξη το πρώτο τρίμηνο</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.formation.for">Νέες επιχειρήσεις, startups και ατομικές επιχειρήσεις που γίνονται εταιρείες.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.formation.fee">από <strong>450 €</strong> εφάπαξ</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="formation"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="practice__item" data-key="planning">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-planning" aria-expanded="true" aria-controls="panel-planning"><span class="practice__num">04</span><span data-i18n="svc.planning.title">Χρηματοοικονομικός σχεδιασμός</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-planning" role="region" aria-labelledby="acc-planning">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-planning"/></svg>
+                  <span class="practice__bignum">04</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.planning.title">Χρηματοοικονομικός σχεδιασμός</h3>
+                <p class="practice__desc" data-i18n="svc.planning.desc">Προϋπολογισμοί, ταμειακές ροές και μια μηνιαία αναφορά με τους δείκτες που πραγματικά μετράνε, για αποφάσεις με καθαρό μυαλό.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.planning.i1">Ετήσιος προϋπολογισμός και σενάρια</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.planning.i2">Πρόβλεψη ταμειακών ροών 13 εβδομάδων</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.planning.i3">Μηνιαία αναφορά βασικών δεικτών</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.planning.i4">Ανάλυση τιμολόγησης και περιθωρίων κέρδους</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.planning.i5">Τριμηνιαία συνάντηση ανασκόπησης</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.planning.for">Επιχειρήσεις σε φάση ανάπτυξης ή αναδιοργάνωσης.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.planning.fee">από <strong>250 €</strong> / μήνα</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="planning"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="practice__item" data-key="funding">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-funding" aria-expanded="true" aria-controls="panel-funding"><span class="practice__num">05</span><span data-i18n="svc.funding.title">Χρηματοδοτήσεις & επιδοτήσεις</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-funding" role="region" aria-labelledby="acc-funding">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-funding"/></svg>
+                  <span class="practice__bignum">05</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.funding.title">Χρηματοδοτήσεις & επιδοτήσεις</h3>
+                <p class="practice__desc" data-i18n="svc.funding.desc">Εντοπίζουμε τα προγράμματα που ταιριάζουν στην επιχείρησή σας, ετοιμάζουμε τον φάκελο και παρακολουθούμε την υλοποίηση μέχρι την εκταμίευση.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.funding.i1">Έλεγχος επιλεξιμότητας χωρίς δέσμευση</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.funding.i2">Εθνικά και ευρωπαϊκά προγράμματα ενίσχυσης</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.funding.i3">Επιχειρηματικό σχέδιο και φάκελος υποβολής</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.funding.i4">Τραπεζικός δανεισμός και εγγυοδοτικά προγράμματα</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.funding.i5">Παρακολούθηση έργου και αιτήματα εκταμίευσης</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.funding.for">Επιχειρήσεις με επενδυτικό σχέδιο από 20.000 € και πάνω.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.funding.fee"><strong>2–4%</strong> επί του εγκεκριμένου ποσού</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="funding"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="practice__item" data-key="einvoicing">
+              <h3 class="practice__heading"><button type="button" class="practice__toggle" id="acc-einvoicing" aria-expanded="true" aria-controls="panel-einvoicing"><span class="practice__num">06</span><span data-i18n="svc.einvoicing.title">Ψηφιακή τιμολόγηση</span><span class="practice__pm" aria-hidden="true"></span></button></h3>
+              <div class="practice__panel" id="panel-einvoicing" role="region" aria-labelledby="acc-einvoicing">
+                <div class="practice__panel-head" aria-hidden="true">
+                  <svg class="practice__icon" focusable="false"><use href="#s-einvoicing"/></svg>
+                  <span class="practice__bignum">06</span>
+                </div>
+                <h3 class="practice__panel-title" data-i18n="svc.einvoicing.title">Ψηφιακή τιμολόγηση</h3>
+                <p class="practice__desc" data-i18n="svc.einvoicing.desc">Σωστή διασύνδεση με το myDATA, ηλεκτρονικά τιμολόγια και αυτοματισμοί που γλιτώνουν ώρες χειροκίνητης δουλειάς κάθε μήνα.</p>
+                <div class="practice__cols">
+                  <div>
+                    <p class="mini-label" data-i18n="svc.includes">Τι περιλαμβάνει</p>
+                    <ul class="checklist">
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.einvoicing.i1">Επιλογή και ρύθμιση προγράμματος τιμολόγησης</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.einvoicing.i2">Διασύνδεση με ERP, e-shop και POS</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.einvoicing.i3">Μηνιαία συμφωνία παραστατικών με το myDATA</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.einvoicing.i4">Εκπαίδευση της ομάδας σας</span></li>
+                      <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span data-i18n="svc.einvoicing.i5">Αυτοματοποιημένη ροή παραστατικών</span></li>
+                    </ul>
+                  </div>
+                  <div class="practice__aside">
+                    <p class="mini-label" data-i18n="svc.for">Για ποιους</p>
+                    <p class="practice__for" data-i18n="svc.einvoicing.for">Λιανεμπόριο, e-shop, εστίαση και εταιρείες υπηρεσιών.</p>
+                    <div class="fee">
+                      <p class="mini-label" data-i18n="svc.fee">Ενδεικτική αμοιβή</p>
+                      <p class="fee__value" data-i18n-html="svc.einvoicing.fee">από <strong>290 €</strong> εφάπαξ</p>
+                      <p class="fee__note" data-i18n="svc.note">Ενδεικτικές τιμές, χωρίς ΦΠΑ.</p>
+                    </div>
+                    <a class="btn btn--primary" href="#contact" data-topic="einvoicing"><span data-i18n="svc.cta">Ζητήστε πρόταση</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 ΚΛΑΔΟΙ ============ -->
+    <section class="section section--dark industries" id="industries" aria-labelledby="industries-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">02</span><span data-i18n="industries.label">Κλάδοι</span></p>
+          <h2 class="sec-head__title" id="industries-title" data-i18n="industries.title">Μιλάμε τη γλώσσα του κλάδου σας.</h2>
+          <p class="sec-head__lead" data-i18n="industries.lead">Κάθε κλάδος έχει τους δικούς του κανόνες, την εποχικότητα και τις παγίδες του. Οι σύμβουλοί μας εξειδικεύονται, για να μη χρειάζεται να εξηγείτε τα αυτονόητα.</p>
+        </div>
+
+        <ul class="ind-grid" role="list">
+          <li class="ind" style="--share:.93" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-tourism"/></svg>
+            <h3 class="ind__title" data-i18n="ind.tourism.title">Τουρισμός & φιλοξενία</h3>
+            <p class="ind__desc" data-i18n="ind.tourism.desc">Εποχικό προσωπικό, προκαταβολές κρατήσεων, βραχυχρόνιες μισθώσεις.</p>
+            <p class="ind__meta"><span data-i18n="ind.tourism.count">86 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.70" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-food"/></svg>
+            <h3 class="ind__title" data-i18n="ind.food.title">Εστίαση</h3>
+            <p class="ind__desc" data-i18n="ind.food.desc">Μισθοδοσία βαρδιών, κοστολόγηση μενού, ταμειακά συστήματα.</p>
+            <p class="ind__meta"><span data-i18n="ind.food.count">64 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.77" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-retail"/></svg>
+            <h3 class="ind__title" data-i18n="ind.retail.title">Λιανεμπόριο & e-shop</h3>
+            <p class="ind__desc" data-i18n="ind.retail.desc">Αποθέματα, πλατφόρμες πληρωμών, πωλήσεις σε όλη την ΕΕ.</p>
+            <p class="ind__meta"><span data-i18n="ind.retail.count">71 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.41" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-agri"/></svg>
+            <h3 class="ind__title" data-i18n="ind.agri.title">Αγροδιατροφή & εξαγωγές</h3>
+            <p class="ind__desc" data-i18n="ind.agri.desc">Παραγωγοί, συνεταιρισμοί, ενδοκοινοτικές συναλλαγές.</p>
+            <p class="ind__meta"><span data-i18n="ind.agri.count">38 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.32" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-tech"/></svg>
+            <h3 class="ind__title" data-i18n="ind.tech.title">Τεχνολογία & startups</h3>
+            <p class="ind__desc" data-i18n="ind.tech.desc">Γύροι χρηματοδότησης, stock options, έρευνα και ανάπτυξη.</p>
+            <p class="ind__meta"><span data-i18n="ind.tech.count">29 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.36" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-build"/></svg>
+            <h3 class="ind__title" data-i18n="ind.build.title">Κατασκευές & ακίνητα</h3>
+            <p class="ind__desc" data-i18n="ind.build.desc">Έργα σε εξέλιξη, μισθώσεις, αξιοποίηση ακινήτων.</p>
+            <p class="ind__meta"><span data-i18n="ind.build.count">33 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:1" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-pro"/></svg>
+            <h3 class="ind__title" data-i18n="ind.pro.title">Ελεύθεροι επαγγελματίες</h3>
+            <p class="ind__desc" data-i18n="ind.pro.desc">Γιατροί, μηχανικοί, δικηγόροι, δημιουργοί.</p>
+            <p class="ind__meta"><span data-i18n="ind.pro.count">92 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+          <li class="ind" style="--share:.23" data-reveal>
+            <svg class="ind__icon" aria-hidden="true" focusable="false"><use href="#ind-transport"/></svg>
+            <h3 class="ind__title" data-i18n="ind.transport.title">Μεταφορές & logistics</h3>
+            <p class="ind__desc" data-i18n="ind.transport.desc">Στόλος οχημάτων, καύσιμα, διεθνείς μεταφορές.</p>
+            <p class="ind__meta"><span data-i18n="ind.transport.count">21 πελάτες</span><span class="ind__bar" aria-hidden="true"></span></p>
+          </li>
+        </ul>
+        <p class="ind-caption" data-i18n="industries.caption">Ενεργοί πελάτες ανά κλάδο · ενδεικτικά στοιχεία</p>
+      </div>
+    </section>
+
+    <!-- ============ 03 ΜΕΘΟΔΟΣ ============ -->
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">03</span><span data-i18n="approach.label">Μέθοδος</span></p>
+          <h2 class="sec-head__title" id="approach-title" data-i18n="approach.title">Τέσσερα βήματα. Καμία έκπληξη.</h2>
+          <p class="sec-head__lead" data-i18n="approach.lead">Η αλλαγή λογιστή ακούγεται δύσκολη. Με σωστό σχέδιο ολοκληρώνεται σε λίγες εβδομάδες, χωρίς να σταματήσει στιγμή η δουλειά σας.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="approach.s1.title">Γνωριμία & διάγνωση</h3>
+            <p class="step__text" data-i18n="approach.s1.text">Μια συνάντηση 30 λεπτών για να καταλάβουμε την επιχείρησή σας, τις εκκρεμότητες και τους στόχους σας.</p>
+            <p class="step__tag"><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span data-i18n="approach.s1.tag">30 λεπτά · δωρεάν</span></p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title" data-i18n="approach.s2.title">Πρόταση με σταθερή αμοιβή</h3>
+            <p class="step__text" data-i18n="approach.s2.text">Γραπτή πρόταση με το εύρος των εργασιών και σταθερή μηνιαία αμοιβή, χωρίς κρυφές χρεώσεις.</p>
+            <p class="step__tag"><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span data-i18n="approach.s2.tag">εντός 3 εργάσιμων</span></p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title" data-i18n="approach.s3.title">Ομαλή μετάβαση</h3>
+            <p class="step__text" data-i18n="approach.s3.text">Παραλαμβάνουμε αρχεία και κωδικούς, ελέγχουμε τις προηγούμενες δηλώσεις και μιλάμε εμείς με τον προηγούμενο λογιστή.</p>
+            <p class="step__tag"><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span data-i18n="approach.s3.tag">2–4 εβδομάδες</span></p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title" data-i18n="approach.s4.title">Συνεχής καθοδήγηση</h3>
+            <p class="step__text" data-i18n="approach.s4.text">Μηνιαία αναφορά, ημερολόγιο υποχρεώσεων και τριμηνιαία συνάντηση για τα επόμενα βήματα.</p>
+            <p class="step__tag"><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span data-i18n="approach.s4.tag">κάθε μήνα</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 04 Η ΟΜΑΔΑ ============ -->
+    <section class="section section--alt team" id="team" aria-labelledby="team-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">04</span><span data-i18n="team.label">Η ομάδα</span></p>
+          <h2 class="sec-head__title" id="team-title" data-i18n="team.title">Συνεργάτες, όχι απλώς λογιστές.</h2>
+          <p class="sec-head__lead" data-i18n="team.lead">Δώδεκα άνθρωποι με συμπληρωματικές ειδικότητες. Κάθε πελάτης έχει έναν υπεύθυνο εταίρο και, πίσω του, ολόκληρη την ομάδα.</p>
+        </div>
+
+        <ul class="team-grid" role="list">
+          <li class="person" data-reveal>
+            <div class="person__portrait person__portrait--1" aria-hidden="true"><span class="person__initials" data-i18n="team.p1.initials">ΕΚ</span></div>
+            <div class="person__body">
+              <h3 class="person__name" data-i18n="team.p1.name">Ελένη Καραγιάννη</h3>
+              <p class="person__role" data-i18n="team.p1.role">Ιδρυτικός εταίρος</p>
+              <p class="person__bio" data-i18n="team.p1.bio">Λογίστρια-φοροτέχνης Α΄ τάξης, με 20 χρόνια εμπειρίας σε εταιρείες και ομίλους.</p>
+              <p class="person__focus" data-i18n="team.p1.focus">Φορολογικός σχεδιασμός · Εταιρείες</p>
+            </div>
+          </li>
+          <li class="person" data-reveal>
+            <div class="person__portrait person__portrait--2" aria-hidden="true"><span class="person__initials" data-i18n="team.p2.initials">ΝΔ</span></div>
+            <div class="person__body">
+              <h3 class="person__name" data-i18n="team.p2.name">Νίκος Δημητρίου</h3>
+              <p class="person__role" data-i18n="team.p2.role">Εταίρος</p>
+              <p class="person__bio" data-i18n="team.p2.bio">Οικονομολόγος με MBA. Οργανώνει προϋπολογισμούς και ταμειακές ροές για επιχειρήσεις που μεγαλώνουν.</p>
+              <p class="person__focus" data-i18n="team.p2.focus">Χρηματοοικονομικός σχεδιασμός</p>
+            </div>
+          </li>
+          <li class="person" data-reveal>
+            <div class="person__portrait person__portrait--3" aria-hidden="true"><span class="person__initials" data-i18n="team.p3.initials">ΜΠ</span></div>
+            <div class="person__body">
+              <h3 class="person__name" data-i18n="team.p3.name">Μαρία Παπαδάκη</h3>
+              <p class="person__role" data-i18n="team.p3.role">Επικεφαλής μισθοδοσίας</p>
+              <p class="person__bio" data-i18n="team.p3.bio">Ειδική σε θέματα μισθοδοσίας και εργασιακών σχέσεων, με 12 χρόνια στον χώρο της φιλοξενίας.</p>
+              <p class="person__focus" data-i18n="team.p3.focus">Μισθοδοσία · Ανθρώπινο δυναμικό</p>
+            </div>
+          </li>
+          <li class="person" data-reveal>
+            <div class="person__portrait person__portrait--4" aria-hidden="true"><span class="person__initials" data-i18n="team.p4.initials">ΓΑ</span></div>
+            <div class="person__body">
+              <h3 class="person__name" data-i18n="team.p4.name">Γιώργος Αλεξίου</h3>
+              <p class="person__role" data-i18n="team.p4.role">Σύμβουλος χρηματοδοτήσεων</p>
+              <p class="person__bio" data-i18n="team.p4.bio">Έχει συντονίσει περισσότερους από 150 φακέλους ενίσχυσης για μικρομεσαίες επιχειρήσεις.</p>
+              <p class="person__focus" data-i18n="team.p4.focus">Επιδοτήσεις · Δανεισμός</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="team-foot" data-reveal>
+          <p class="team-foot__more"><span class="team-foot__plus">+8</span><span data-i18n="team.more">λογιστές, ειδικοί μισθοδοσίας και αναλυτές στην ομάδα μας.</span></p>
+          <p class="team-foot__careers"><span data-i18n="team.careers">Θέλετε να δουλέψετε μαζί μας;</span> <a href="mailto:careers@example.com">careers@example.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 INSIGHTS ============ -->
+    <section class="section insights" id="insights" aria-labelledby="insights-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">05</span><span data-i18n="insights.label">Insights</span></p>
+          <h2 class="sec-head__title" id="insights-title" data-i18n="insights.title">Καθαρή σκέψη για όσα αλλάζουν.</h2>
+          <p class="sec-head__lead" data-i18n="insights.lead">Σύντομα, πρακτικά σημειώματα από την ομάδα μας. Χωρίς ορολογία, με παραδείγματα από την πράξη.</p>
+        </div>
+
+        <ul class="posts" role="list">
+          <li class="post" data-reveal>
+            <div class="post__cover post__cover--1" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="400" height="260" fill="#E8E2D3"/>
+                <g fill="none" stroke="#1E3B32" stroke-width="1.25">
+                  <circle cx="138" cy="122" r="58"/>
+                  <rect x="216" y="64" width="116" height="116"/>
+                  <path d="M274 64v116"/>
+                </g>
+                <path d="M48 214h304" stroke="#1E3B32" stroke-opacity=".35"/>
+                <path d="M200 214v-12" stroke="#1E3B32" stroke-opacity=".35"/>
+                <circle cx="200" cy="214" r="6" fill="#B0643A"/>
+                <circle cx="138" cy="122" r="3" fill="#1E3B32"/>
+              </svg>
+            </div>
+            <p class="post__meta"><span data-i18n="insights.p1.tag">Σύσταση εταιρειών</span></p>
+            <h3 class="post__title"><a href="#insights" data-i18n="insights.p1.title">Ατομική επιχείρηση ή ΙΚΕ; Πέντε ερωτήσεις πριν αποφασίσετε</a></h3>
+            <p class="post__excerpt" data-i18n="insights.p1.excerpt">Κόστος, ευθύνη, φορολογία και ευελιξία: όσα ζυγίζουμε μαζί με τους πελάτες μας πριν από κάθε σύσταση.</p>
+            <p class="post__foot"><span data-i18n="team.p1.name">Ελένη Καραγιάννη</span><span data-i18n="insights.p1.read">8 λεπτά ανάγνωσης</span></p>
+          </li>
+          <li class="post" data-reveal>
+            <div class="post__cover post__cover--2" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="400" height="260" fill="#1E3B32"/>
+                <g stroke="#F2EEE4" stroke-opacity=".09"><path d="M0 52h400M0 104h400M0 156h400M0 208h400M80 0v260M160 0v260M240 0v260M320 0v260"/></g>
+                <g fill="#A9BCAE" fill-opacity=".35">
+                  <rect x="34" y="196" width="18" height="40"/><rect x="74" y="186" width="18" height="50"/><rect x="114" y="204" width="18" height="32"/><rect x="154" y="178" width="18" height="58"/><rect x="194" y="190" width="18" height="46"/><rect x="234" y="170" width="18" height="66"/><rect x="274" y="160" width="18" height="76"/><rect x="314" y="150" width="18" height="86"/><rect x="354" y="144" width="18" height="92"/>
+                </g>
+                <path d="M0 150c40-30 70 40 116 18s58-92 112-86 70 70 108 52 40-58 64-62" fill="none" stroke="#F2EEE4" stroke-width="1.75"/>
+                <path d="M0 116h400" stroke="#DE9C74" stroke-dasharray="3 6"/>
+                <circle cx="292" cy="116" r="6.5" fill="#DE9C74"/>
+              </svg>
+            </div>
+            <p class="post__meta"><span data-i18n="insights.p2.tag">Χρηματοοικονομικός σχεδιασμός</span></p>
+            <h3 class="post__title"><a href="#insights" data-i18n="insights.p2.title">Ταμειακές ροές: η μία αναφορά που αξίζει να διαβάζετε κάθε μήνα</a></h3>
+            <p class="post__excerpt" data-i18n="insights.p2.excerpt">Γιατί μια κερδοφόρα επιχείρηση μπορεί να μείνει χωρίς ρευστότητα και πώς να το δείτε έγκαιρα.</p>
+            <p class="post__foot"><span data-i18n="team.p2.name">Νίκος Δημητρίου</span><span data-i18n="insights.p2.read">5 λεπτά ανάγνωσης</span></p>
+          </li>
+          <li class="post" data-reveal>
+            <div class="post__cover post__cover--3" aria-hidden="true">
+              <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="400" height="260" fill="#DCE3D8"/>
+                <g fill="none" stroke="#1E3B32" stroke-width="1.25">
+                  <rect x="96" y="160" width="36" height="56"/>
+                  <rect x="150" y="132" width="36" height="84"/>
+                  <rect x="204" y="100" width="36" height="116"/>
+                  <path d="M96 216h208"/>
+                </g>
+                <rect x="258" y="62" width="36" height="154" fill="#1E3B32"/>
+                <path d="M86 132 168 94l52-10 70-42" fill="none" stroke="#B0643A" stroke-width="1.5" stroke-dasharray="4 5"/>
+                <path d="m276 34 18 8-8 17" fill="none" stroke="#B0643A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="168" cy="94" r="5" fill="#B0643A"/>
+              </svg>
+            </div>
+            <p class="post__meta"><span data-i18n="insights.p3.tag">Χρηματοδοτήσεις</span></p>
+            <h3 class="post__title"><a href="#insights" data-i18n="insights.p3.title">Επιδοτήσεις: ο καλός φάκελος ετοιμάζεται πριν ανοίξει το πρόγραμμα</a></h3>
+            <p class="post__excerpt" data-i18n="insights.p3.excerpt">Ποια έγγραφα, προσφορές και οικονομικά στοιχεία να έχετε έτοιμα, για να κινηθείτε γρήγορα όταν έρθει η ώρα.</p>
+            <p class="post__foot"><span data-i18n="team.p4.name">Γιώργος Αλεξίου</span><span data-i18n="insights.p3.read">7 λεπτά ανάγνωσης</span></p>
+          </li>
+        </ul>
+        <p class="insights__note" data-i18n="insights.note">Τα άρθρα είναι ενδεικτικά και δεν αποτελούν επαγγελματική συμβουλή.</p>
+      </div>
+    </section>
+
+    <!-- ============ ΜΑΡΤΥΡΙΕΣ ============ -->
+    <section class="section testimonial" aria-labelledby="testimonial-title">
+      <div class="wrap testimonial__grid">
+        <div class="testimonial__main" data-reveal>
+          <h2 class="eyebrow testimonial__label" id="testimonial-title" data-i18n="testimonial.label">Τι λένε οι πελάτες μας</h2>
+          <figure class="quote">
+            <span class="quote__mark" aria-hidden="true">“</span>
+            <blockquote class="quote__text">
+              <p data-i18n="testimonial.quote">Για πρώτη φορά ξέρουμε κάθε μήνα πού ακριβώς βρισκόμαστε. Τα νούμερα έπαψαν να είναι πηγή άγχους και έγιναν εργαλείο για αποφάσεις.</p>
+            </blockquote>
+            <figcaption class="quote__cite">
+              <span class="quote__avatar" aria-hidden="true" data-i18n="testimonial.initials">ΔΚ</span>
+              <span class="quote__who"><strong data-i18n="testimonial.name">Δήμητρα Κ.</strong><span data-i18n="testimonial.role">Συνιδιοκτήτρια οικογενειακού οινοποιείου · πελάτισσα από το 2019</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="testimonial__side" data-reveal>
+          <div class="rating">
+            <p class="rating__num">4,9<span class="rating__of">/5</span></p>
+            <p class="rating__stars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></p>
+            <p class="rating__label" data-i18n="testimonial.rating">μέση βαθμολογία από 186 αξιολογήσεις πελατών (ενδεικτικά)</p>
+          </div>
+          <figure class="mini-quote">
+            <blockquote><p data-i18n="testimonial.q2">«Η εταιρεία μας συστάθηκε σε δέκα ημέρες, χωρίς να χρειαστεί να πάω πουθενά.»</p></blockquote>
+            <figcaption data-i18n="testimonial.q2by">Άρης Μ. · ιδρυτής εταιρείας λογισμικού</figcaption>
+          </figure>
+          <figure class="mini-quote">
+            <blockquote><p data-i18n="testimonial.q3">«Μας βρήκαν πρόγραμμα ενίσχυσης που δεν ξέραμε καν ότι υπάρχει.»</p></blockquote>
+            <figcaption data-i18n="testimonial.q3by">Σοφία Λ. · ξενοδόχος στις Κυκλάδες</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 ΠΡΟΘΕΣΜΙΕΣ ============ -->
+    <section class="section deadlines" id="deadlines" aria-labelledby="deadlines-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">06</span><span data-i18n="deadlines.label">Ημερολόγιο υποχρεώσεων</span></p>
+          <h2 class="sec-head__title" id="deadlines-title" data-i18n="deadlines.title">Οι επόμενες προθεσμίες, με μια ματιά.</h2>
+          <p class="sec-head__lead" data-i18n="deadlines.lead">Οι πελάτες μας βλέπουν όλες τις υποχρεώσεις τους σε ένα καθαρό ημερολόγιο και λαμβάνουν υπενθύμιση πριν από κάθε προθεσμία. Δείτε ένα ζωντανό παράδειγμα.</p>
+        </div>
+
+        <div class="dl" data-deadlines>
+          <div class="dl__aside" data-reveal>
+            <dl class="dl__stats">
+              <div class="dl__stat"><dt data-dl-count-label>υποχρεώσεις τις επόμενες 30 ημέρες</dt><dd data-dl-count>5</dd></div>
+              <div class="dl__stat"><dt data-dl-next-label>ημέρες ως την πιο κοντινή προθεσμία</dt><dd data-dl-next>3</dd></div>
+            </dl>
+            <p class="dl__pitch" data-i18n="deadlines.pitch">Κάθε πελάτης έχει το δικό του ημερολόγιο, προσαρμοσμένο στη νομική μορφή και τις δραστηριότητές του, με υπενθυμίσεις μέσω email.</p>
+            <a class="btn btn--ghost" href="#contact"><span data-i18n="deadlines.cta">Θέλω το δικό μου ημερολόγιο</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <div class="dl__card" data-reveal>
+            <div class="dl__bar">
+              <p class="dl__today"><span class="tag" data-i18n="common.example">Παράδειγμα</span><span><span data-i18n="deadlines.today">Σήμερα</span> <time data-dl-today></time></span></p>
+              <div class="dl__filters" role="group" aria-label="Εμφάνιση υποχρεώσεων για" data-i18n-attr="aria-label:deadlines.filterLabel">
+                <button type="button" class="filter" data-filter="all" aria-pressed="true" data-i18n="deadlines.f.all">Όλες</button>
+                <button type="button" class="filter" data-filter="biz" aria-pressed="false" data-i18n="deadlines.f.biz">Εταιρείες</button>
+                <button type="button" class="filter" data-filter="free" aria-pressed="false" data-i18n="deadlines.f.free">Ελεύθεροι επαγγελματίες</button>
+                <button type="button" class="filter" data-filter="emp" aria-pressed="false" data-i18n="deadlines.f.emp">Εργοδότες</button>
+              </div>
+            </div>
+            <div class="tl" aria-hidden="true" data-dl-timeline></div>
+            <ol class="dl__list" data-dl-list>
+              <li class="dl__fallback" data-i18n="deadlines.fallback">Το ημερολόγιο φορτώνει…</li>
+            </ol>
+            <p class="visually-hidden" role="status" data-dl-status></p>
+            <p class="dl__note" data-i18n="deadlines.note">Οι υποχρεώσεις και οι ημερομηνίες είναι ενδεικτικές και υπολογίζονται σε σχέση με τη σημερινή ημέρα, για λόγους επίδειξης. Δεν αποτελούν φορολογική συμβουλή· οι πραγματικές προθεσμίες ορίζονται από τις αρμόδιες αρχές.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 ΡΑΝΤΕΒΟΥ ============ -->
+    <section class="section section--alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="sec-head__label"><span class="sec-head__num">07</span><span data-i18n="contact.label">Ραντεβού</span></p>
+          <h2 class="sec-head__title" id="contact-title" data-i18n="contact.title">Ας γνωριστούμε. Η πρώτη συνάντηση είναι δωρεάν.</h2>
+          <p class="sec-head__lead" data-i18n="contact.lead">Πείτε μας τι σας απασχολεί και διαλέξτε ημέρα και ώρα. Θα επιβεβαιώσουμε το ραντεβού εντός μίας εργάσιμης ημέρας.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info" data-reveal>
+            <h3 class="contact__subtitle" data-i18n="contact.expectTitle">Τι να περιμένετε</h3>
+            <ol class="expect">
+              <li><span class="expect__num" aria-hidden="true">1</span><span data-i18n="contact.expect1">Συζήτηση 30 λεπτών με έναν από τους εταίρους μας.</span></li>
+              <li><span class="expect__num" aria-hidden="true">2</span><span data-i18n="contact.expect2">Μια πρώτη εκτίμηση για όσα χρειάζεστε, χωρίς δέσμευση.</span></li>
+              <li><span class="expect__num" aria-hidden="true">3</span><span data-i18n="contact.expect3">Γραπτή πρόταση με σταθερή αμοιβή εντός 3 εργάσιμων.</span></li>
+            </ol>
+
+            <div class="office">
+              <div class="office__map" aria-hidden="true">
+                <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="320" height="150" fill="#E2DBCB"/>
+                  <path d="M196 0 236 0 274 70 238 70z" fill="#CBD5C8"/>
+                  <g stroke="#F5F2EA" stroke-linecap="square">
+                    <path d="M-10 92 330 52" stroke-width="11"/>
+                    <path d="M60 -10 104 160" stroke-width="8"/>
+                    <path d="M170 -10 150 160" stroke-width="6"/>
+                    <path d="M-10 30 330 -6" stroke-width="5"/>
+                    <path d="M-10 132 330 108" stroke-width="5"/>
+                    <path d="M248 -10 288 160" stroke-width="6"/>
+                  </g>
+                  <circle cx="160" cy="79" r="20" fill="#B0643A" fill-opacity=".16"/>
+                  <circle cx="160" cy="79" r="6.5" fill="#B0643A" stroke="#FBF9F4" stroke-width="2.5"/>
+                </svg>
+              </div>
+              <dl class="office__list">
+                <div><dt><svg aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span data-i18n="contact.addressLabel">Διεύθυνση</span></dt><dd data-i18n="contact.address">Οδός Παραδείγματος 12, 105 64 Αθήνα</dd></div>
+                <div><dt><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-i18n="contact.phoneLabel">Τηλέφωνο</span></dt><dd><a href="tel:+302100000000" data-i18n="contact.phoneVal">210 000 0000</a></dd></div>
+                <div><dt><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>Email</span></dt><dd><a href="mailto:info@example.com">info@example.com</a></dd></div>
+                <div><dt><svg aria-hidden="true" focusable="false"><use href="#i-hours"/></svg><span data-i18n="contact.hoursLabel">Ωράριο</span></dt><dd data-i18n="contact.hours">Δευτέρα – Παρασκευή, 09:00 – 17:30</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="booking" data-reveal>
+            <form class="booking__form" novalidate data-booking>
+              <div class="booking__errors" tabindex="-1" data-error-summary hidden></div>
+
+              <fieldset class="fgroup" data-group="topic">
+                <legend class="fgroup__legend"><span class="fgroup__step">01</span><span data-i18n="form.topicLegend">Θέμα συνάντησης</span></legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="topic" value="accounting" aria-describedby="err-topic"><span data-i18n="form.topic.accounting">Λογιστική & φορολογία</span></label>
+                  <label class="chip"><input type="radio" name="topic" value="payroll" aria-describedby="err-topic"><span data-i18n="form.topic.payroll">Μισθοδοσία</span></label>
+                  <label class="chip"><input type="radio" name="topic" value="formation" aria-describedby="err-topic"><span data-i18n="form.topic.formation">Σύσταση εταιρείας</span></label>
+                  <label class="chip"><input type="radio" name="topic" value="planning" aria-describedby="err-topic"><span data-i18n="form.topic.planning">Χρηματοοικονομικός σχεδιασμός</span></label>
+                  <label class="chip"><input type="radio" name="topic" value="funding" aria-describedby="err-topic"><span data-i18n="form.topic.funding">Χρηματοδοτήσεις</span></label>
+                  <label class="chip"><input type="radio" name="topic" value="einvoicing" aria-describedby="err-topic"><span data-i18n="form.topic.einvoicing">Ψηφιακή τιμολόγηση</span></label>
+                </div>
+                <p class="ferror" id="err-topic" hidden></p>
+              </fieldset>
+
+              <fieldset class="fgroup" data-group="day">
+                <legend class="fgroup__legend"><span class="fgroup__step">02</span><span data-i18n="form.dayLegend">Προτιμώμενη ημέρα</span></legend>
+                <div class="days" data-days></div>
+                <p class="ferror" id="err-day" hidden></p>
+              </fieldset>
+
+              <fieldset class="fgroup" data-group="time">
+                <legend class="fgroup__legend"><span class="fgroup__step">03</span><span data-i18n="form.timeLegend">Ώρα και τρόπος</span></legend>
+                <div class="slots" data-slots>
+                  <label class="slot"><input type="radio" name="time" value="09:30" aria-describedby="err-time"><span class="slot__time">09:30</span><span class="slot__state" data-slot-state></span></label>
+                  <label class="slot"><input type="radio" name="time" value="11:00" aria-describedby="err-time"><span class="slot__time">11:00</span><span class="slot__state" data-slot-state></span></label>
+                  <label class="slot"><input type="radio" name="time" value="12:30" aria-describedby="err-time"><span class="slot__time">12:30</span><span class="slot__state" data-slot-state></span></label>
+                  <label class="slot"><input type="radio" name="time" value="15:00" aria-describedby="err-time"><span class="slot__time">15:00</span><span class="slot__state" data-slot-state></span></label>
+                  <label class="slot"><input type="radio" name="time" value="16:30" aria-describedby="err-time"><span class="slot__time">16:30</span><span class="slot__state" data-slot-state></span></label>
+                </div>
+                <p class="ferror" id="err-time" hidden></p>
+                <div class="modes" role="radiogroup" aria-label="Τρόπος συνάντησης" data-i18n-attr="aria-label:form.modeLabel">
+                  <label class="mode"><input type="radio" name="mode" value="office"><span data-i18n="form.mode.office">Στο γραφείο</span></label>
+                  <label class="mode"><input type="radio" name="mode" value="video" checked><span data-i18n="form.mode.video">Βιντεοκλήση</span></label>
+                  <label class="mode"><input type="radio" name="mode" value="phone"><span data-i18n="form.mode.phone">Τηλεφωνικά</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="fgroup" data-group="details">
+                <legend class="fgroup__legend"><span class="fgroup__step">04</span><span data-i18n="form.detailsLegend">Τα στοιχεία σας</span></legend>
+                <div class="fields">
+                  <div class="field" data-field="name">
+                    <label for="f-name"><span data-i18n="form.name">Ονοματεπώνυμο</span> <span class="req" aria-hidden="true">*</span></label>
+                    <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+                    <p class="ferror" id="err-name" hidden></p>
+                  </div>
+                  <div class="field" data-field="email">
+                    <label for="f-email"><span>Email</span> <span class="req" aria-hidden="true">*</span></label>
+                    <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="err-email" placeholder="onoma@example.com" data-i18n-attr="placeholder:form.emailPh">
+                    <p class="ferror" id="err-email" hidden></p>
+                  </div>
+                  <div class="field" data-field="phone">
+                    <label for="f-phone"><span data-i18n="form.phone">Τηλέφωνο</span> <span class="opt" data-i18n="form.optional">(προαιρετικό)</span></label>
+                    <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="err-phone" placeholder="210 000 0000">
+                    <p class="ferror" id="err-phone" hidden></p>
+                  </div>
+                  <div class="field" data-field="company">
+                    <label for="f-company"><span data-i18n="form.company">Επωνυμία ή ιδιότητα</span> <span class="opt" data-i18n="form.optional">(προαιρετικό)</span></label>
+                    <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="π.χ. Ατομική επιχείρηση, ΙΚΕ, γιατρός" data-i18n-attr="placeholder:form.companyPh">
+                  </div>
+                  <div class="field field--wide" data-field="message">
+                    <label for="f-message"><span data-i18n="form.message">Πείτε μας λίγα λόγια</span> <span class="opt" data-i18n="form.optional">(προαιρετικό)</span></label>
+                    <textarea id="f-message" name="message" rows="3" placeholder="π.χ. Έχω ατομική επιχείρηση με 3 εργαζόμενους και σκέφτομαι μετατροπή σε ΙΚΕ." data-i18n-attr="placeholder:form.messagePh"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="consent" data-field="consent">
+                <label class="check">
+                  <input type="checkbox" name="consent" id="f-consent" aria-describedby="err-consent">
+                  <span class="check__box" aria-hidden="true"><svg focusable="false"><use href="#i-check"/></svg></span>
+                  <span data-i18n="form.consent">Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου μόνο για την οργάνωση αυτής της συνάντησης.</span>
+                </label>
+                <p class="ferror" id="err-consent" hidden></p>
+              </div>
+
+              <div class="booking__footer">
+                <div class="booking__summary">
+                  <p class="mini-label" data-i18n="form.summaryLabel">Η επιλογή σας</p>
+                  <p class="booking__summary-text" data-summary>—</p>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg booking__submit"><span data-i18n="form.submit">Αποστολή αιτήματος</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+              </div>
+              <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="form.demo">Demo φόρμα: δεν αποστέλλονται δεδομένα.</span> <span data-i18n="form.required">Τα πεδία με * είναι υποχρεωτικά.</span></p>
+            </form>
+
+            <div class="booking__success" tabindex="-1" data-success hidden>
+              <div class="success__seal" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false"><circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/><path d="m22 33 7 7 14-16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="success__title" data-success-title>Ευχαριστούμε.</h3>
+              <p class="success__text" data-success-text></p>
+              <dl class="receipt" data-receipt></dl>
+              <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="form.demoSent">Demo: δεν στάλθηκαν δεδομένα πουθενά.</span></p>
+              <button type="button" class="btn btn--ghost" data-success-reset><span data-i18n="form.again">Νέο αίτημα</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-cta">
+        <p class="foot-cta__title" data-i18n-html="footer.cta">Ας βάλουμε τα νούμερα <em>στη θέση τους.</em></p>
+        <a class="btn btn--light btn--lg" href="#contact"><span data-i18n="header.cta">Κλείστε ραντεβού</span><svg class="btn__arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand brand--light" href="#top">
+            <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg>
+            <span class="brand__text">
+              <span class="brand__name" data-i18n="brand.name">Στάθμη</span>
+              <span class="brand__sub" data-i18n="brand.sub">& Συνεργάτες</span>
+            </span>
+          </a>
+          <p class="foot-brand__tag" data-i18n="footer.tagline">Λογιστικό γραφείο & σύμβουλοι επιχειρήσεων στην Αθήνα, από το 2009.</p>
+        </div>
+        <div class="foot-col">
+          <h2 class="foot-col__title" data-i18n="nav.services">Υπηρεσίες</h2>
+          <ul>
+            <li><a href="#services" data-practice-link="accounting" data-i18n="svc.accounting.short">Λογιστική & φοροτεχνικά</a></li>
+            <li><a href="#services" data-practice-link="payroll" data-i18n="form.topic.payroll">Μισθοδοσία</a></li>
+            <li><a href="#services" data-practice-link="formation" data-i18n="svc.formation.title">Σύσταση εταιρειών</a></li>
+            <li><a href="#services" data-practice-link="planning" data-i18n="svc.planning.title">Χρηματοοικονομικός σχεδιασμός</a></li>
+            <li><a href="#services" data-practice-link="funding" data-i18n="form.topic.funding">Χρηματοδοτήσεις</a></li>
+            <li><a href="#services" data-practice-link="einvoicing" data-i18n="svc.einvoicing.title">Ψηφιακή τιμολόγηση</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h2 class="foot-col__title" data-i18n="footer.firm">Η εταιρεία</h2>
+          <ul>
+            <li><a href="#industries" data-i18n="nav.industries">Κλάδοι</a></li>
+            <li><a href="#approach" data-i18n="approach.label">Μέθοδος</a></li>
+            <li><a href="#team" data-i18n="nav.team">Η ομάδα</a></li>
+            <li><a href="#insights" data-i18n="nav.insights">Insights</a></li>
+            <li><a href="#deadlines" data-i18n="footer.deadlines">Προθεσμίες</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h2 class="foot-col__title" data-i18n="nav.contact">Επικοινωνία</h2>
+          <ul class="foot-contact">
+            <li data-i18n="contact.address">Οδός Παραδείγματος 12, 105 64 Αθήνα</li>
+            <li><a href="tel:+302100000000" data-i18n="contact.phoneVal">210 000 0000</a></li>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li data-i18n="contact.hours">Δευτέρα – Παρασκευή, 09:00 – 17:30</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <p>© <span data-year>2026</span> <span data-i18n="footer.legal">Στάθμη & Συνεργάτες · ΑΦΜ 000000000 · Αρ. ΓΕΜΗ 000000000000 · Εικονική επιχείρηση</span></p>
+        <p class="foot-bottom__template" data-i18n="footer.template">Template από την Akamas · Όλα τα στοιχεία είναι ενδεικτικά</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

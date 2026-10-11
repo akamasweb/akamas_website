@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
-import { ArrowUpRightIcon, CheckIcon, PlusIcon } from './Icons'
+import { ArrowRightIcon, ArrowUpRightIcon, CheckIcon, PlusIcon } from './Icons'
 
 const pad = (n: number) => String(n).padStart(2, '0')
 
@@ -43,7 +43,7 @@ export function Services() {
         <SectionHead index="01" eyebrow={s.eyebrow} title={s.title} />
         <div className="services">
           {s.items.map((item, i) => (
-            <article key={item.title} className="service" data-reveal style={{ '--d': i % 3 } as CSSProperties}>
+            <article key={i} className="service" data-reveal style={{ '--d': i % 3 } as CSSProperties}>
               <span className="service__num">{pad(i + 1)}</span>
               <h3 className="service__title">{item.title}</h3>
               <p className="service__text">{item.text}</p>
@@ -60,74 +60,25 @@ export function Services() {
   )
 }
 
-// Εικονογραφήσεις για τα concept έργα (όσα δεν έχουν url/image στο content.ts).
-const MOCK_PALETTES = [
-  { bg: '#0f3b57', fg: '#e8f1f5', accent: '#5fb3c9' },
-  { bg: '#e9e4d0', fg: '#2f3a1f', accent: '#6b7a2c' },
-  { bg: '#3a1420', fg: '#f3e6e0', accent: '#c98a6b' },
-  { bg: '#e6f2ef', fg: '#123b36', accent: '#2a9d8f' },
-]
-
-function SiteMock({ variant }: { variant: number }) {
-  const p = MOCK_PALETTES[variant % MOCK_PALETTES.length]
-  return (
-    <div
-      className={`mock mock--${variant}`}
-      style={{ '--m-bg': p.bg, '--m-fg': p.fg, '--m-accent': p.accent } as CSSProperties}
-      aria-hidden="true"
-    >
-      <div className="mock__bar">
-        <i />
-        <i />
-        <i />
-        <span className="mock__url" />
-      </div>
-      <div className="mock__page">
-        <div className="mock__nav">
-          <span className="mock__logo" />
-          <span className="mock__links">
-            <i />
-            <i />
-            <i />
-          </span>
-        </div>
-        <div className="mock__hero">
-          <div className="mock__copy">
-            <span className="mock__line mock__line--lg" />
-            <span className="mock__line mock__line--lg mock__line--short" />
-            <span className="mock__line" />
-            <span className="mock__btn" />
-          </div>
-          <div className="mock__image" />
-        </div>
-        <div className="mock__cards">
-          <i />
-          <i />
-          <i />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// Screenshot πραγματικού έργου μέσα σε πλαίσιο browser
+// Screenshot έργου μέσα σε πλαίσιο browser. Στη «γραμμή διευθύνσεων» φαίνεται το domain του πελάτη
+// ή, για τα templates, η διαδρομή τους μέσα στο site (π.χ. template/coffee-shop).
 function SiteShot({ url, image, name }: { url: string; image: string; name: string }) {
-  const host = new URL(url).host
+  const address = url.startsWith('/') ? url.replace(/^\/|\/$/g, '') : new URL(url).host
   return (
-    <div className="mock mock--shot">
+    <div className="mock">
       <div className="mock__bar" aria-hidden="true">
         <i />
         <i />
         <i />
-        <span className="mock__host">{host}</span>
+        <span className="mock__host">{address}</span>
       </div>
-      <img className="mock__shot" src={image} alt={`${name} (${host})`} width={1440} height={900} loading="lazy" decoding="async" />
+      <img className="mock__shot" src={image} alt={`${name} (${address})`} width={1440} height={900} loading="lazy" decoding="async" />
     </div>
   )
 }
 
 export function Work() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const w = t.work
   return (
     <section className="section" id="work">
@@ -135,45 +86,27 @@ export function Work() {
         <SectionHead index="02" eyebrow={w.eyebrow} title={w.title} />
         <div className="work">
           {w.items.map((item, i) => {
-            const style = { '--d': i % 2 } as CSSProperties
-            const info = (
-              <div>
-                <p className="project__category">{item.category}</p>
-                <h3 className="project__name">{item.name}</h3>
-                <p className="project__text">{item.text}</p>
-              </div>
-            )
-
-            // Πραγματικό έργο: όλη η κάρτα είναι link προς το site
-            if (item.url && item.image) {
-              return (
-                <a key={item.name} className="project project--live" href={item.url} target="_blank" rel="noopener" data-reveal style={style}>
-                  <div className="project__media">
-                    <SiteShot url={item.url} image={item.image} name={item.name} />
-                  </div>
-                  <div className="project__info">
-                    {info}
-                    <span className="project__badge project__badge--live">
-                      {w.visitLabel}
-                      <ArrowUpRightIcon width={14} height={14} />
-                    </span>
-                  </div>
-                </a>
-              )
-            }
-
-            // Concept: κάθε concept παίρνει τη δική του εικονογράφηση, ανεξάρτητα από τα πραγματικά έργα
-            const variant = w.items.slice(0, i).filter((x) => !(x.url && x.image)).length
+            const isTemplate = item.kind === 'template'
+            // Τα templates ανοίγουν στην ίδια καρτέλα και στη γλώσσα του επισκέπτη· τα sites πελατών σε νέα καρτέλα
+            const href = isTemplate && lang === 'en' ? `${item.url}?lang=en` : item.url
+            const external = isTemplate ? {} : { target: '_blank', rel: 'noopener' }
             return (
-              <article key={item.name} className="project" data-reveal style={style}>
+              <a key={i} className="project" href={href} {...external} data-reveal style={{ '--d': i % 2 } as CSSProperties}>
                 <div className="project__media">
-                  <SiteMock variant={variant} />
+                  <SiteShot url={item.url} image={item.image} name={item.name} />
                 </div>
                 <div className="project__info">
-                  {info}
-                  <span className="project__badge">{w.conceptLabel}</span>
+                  <div>
+                    <p className="project__category">{item.category}</p>
+                    <h3 className="project__name">{item.name}</h3>
+                    <p className="project__text">{item.text}</p>
+                  </div>
+                  <span className="project__badge">
+                    {isTemplate ? w.templateLabel : w.visitLabel}
+                    {isTemplate ? <ArrowRightIcon width={14} height={14} /> : <ArrowUpRightIcon width={14} height={14} />}
+                  </span>
                 </div>
-              </article>
+              </a>
             )
           })}
         </div>
@@ -197,7 +130,7 @@ export function Manifesto() {
         </p>
         <dl className="stats">
           {m.stats.map((s, i) => (
-            <div key={s.label} className="stat" data-reveal style={{ '--d': i } as CSSProperties}>
+            <div key={i} className="stat" data-reveal style={{ '--d': i } as CSSProperties}>
               <dt className="stat__value">{s.value}</dt>
               <dd className="stat__label">{s.label}</dd>
             </div>
@@ -205,7 +138,7 @@ export function Manifesto() {
         </dl>
         <div className="pillars">
           {m.pillars.map((p, i) => (
-            <div key={p.title} className="pillar" data-reveal style={{ '--d': i } as CSSProperties}>
+            <div key={i} className="pillar" data-reveal style={{ '--d': i } as CSSProperties}>
               <h3>{p.title}</h3>
               <p>{p.text}</p>
             </div>
@@ -225,7 +158,7 @@ export function Process() {
         <SectionHead index="04" eyebrow={p.eyebrow} title={p.title} />
         <ol className="process">
           {p.steps.map((step, i) => (
-            <li key={step.title} className="step" data-reveal style={{ '--d': i } as CSSProperties}>
+            <li key={i} className="step" data-reveal style={{ '--d': i } as CSSProperties}>
               <span className="step__num">{pad(i + 1)}</span>
               <h3 className="step__title">{step.title}</h3>
               <p className="step__text">{step.text}</p>
@@ -249,7 +182,7 @@ export function Pricing() {
             const featured = i === 1
             return (
               <article
-                key={plan.name}
+                key={i}
                 className={`plan${featured ? ' plan--featured' : ''}`}
                 data-reveal
                 style={{ '--d': i } as CSSProperties}
@@ -294,7 +227,7 @@ export function Faq() {
         <SectionHead index="06" eyebrow={f.eyebrow} title={f.title} />
         <div className="faq" data-reveal>
           {f.items.map((item, i) => (
-            <details key={item.q} className="faq__item" open={i === 0}>
+            <details key={i} className="faq__item" open={i === 0}>
               <summary>
                 <span>{item.q}</span>
                 <PlusIcon className="faq__icon" />

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 520" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-10 26C40 10 92 18 118 48L146 80" stroke="#2A1A11" stroke-width="20"/>
+<path d="M-10 26C40 10 92 18 118 48L146 80" stroke="#3A2619" stroke-width="13"/>
+<path d="M-20 -10H60V40C40 52 0 52 -20 46Z" fill="#3A2619" stroke="#2A1A11" stroke-width="3"/>
+<path d="M146 82C150 96 152 120 152 176" stroke="#8A5530" stroke-width="4"/>
+<path d="M76 180L150 300L224 180" fill="#F4EADB" stroke="#2A1A11" stroke-width="3"/>
+<path d="M84 186L150 296L216 186Z" fill="#FBF6EE" stroke="#2A1A11" stroke-width="3"/>
+<path d="M108 192L150 286M132 192L150 262M168 192L150 262M192 192L150 286" stroke="#E4D3BC" stroke-width="3"/>
+<path d="M70 176L90 158L108 172L126 156L144 172L162 156L180 172L198 156L214 172L232 162L226 178H74Z" fill="#FBF6EE" stroke="#2A1A11" stroke-width="2.6"/>
+<path d="M226 190C254 190 260 218 234 228" stroke="#2A1A11" stroke-width="12"/><path d="M226 190C254 190 260 218 234 228" stroke="#FBF6EE" stroke-width="7"/>
+<rect x="104" y="294" width="92" height="16" rx="5" fill="#FBF6EE" stroke="#2A1A11" stroke-width="3"/>
+<path d="M150 314V330" stroke="#8A5530" stroke-width="3" stroke-dasharray="4 7"/>
+<path d="M106 350C80 380 70 420 82 452C92 480 118 494 150 494C182 494 208 480 218 452C230 420 220 380 194 350" fill="#FFFFFF" fill-opacity=".45"/>
+<path d="M84 420C110 412 130 428 150 420C172 412 194 426 216 418C222 444 214 468 198 480C184 490 168 494 150 494C132 494 116 490 102 480C86 468 80 446 84 420Z" fill="#5A2F17"/>
+<path d="M84 420C110 412 130 428 150 420C172 412 194 426 216 418" stroke="#8A5530" stroke-width="3"/>
+<path d="M106 350C80 380 70 420 82 452C92 480 118 494 150 494C182 494 208 480 218 452C230 420 220 380 194 350" stroke="#2A1A11" stroke-width="3"/>
+<path d="M102 384C96 406 96 428 104 448" stroke="#FFFFFF" stroke-width="5" opacity=".75"/>
+<path d="M98 352H202L196 380H104Z" fill="#C9A27A" stroke="#2A1A11" stroke-width="3"/>
+<path transform="translate(256 262) scale(0.8)" d="M0 -16l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#B4532A"/><circle cx="52" cy="300" r="5" fill="#8C9C7C"/></svg>

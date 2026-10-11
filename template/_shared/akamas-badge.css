@@ -1,0 +1,142 @@
+/* Ετικέτα «Template από την Akamas». Απομονωμένα στυλ, ώστε να μην επηρεάζεται από το CSS του template. */
+.akamas-badge {
+  all: initial;
+  position: fixed;
+  left: max(16px, env(safe-area-inset-left, 0px));
+  bottom: calc(var(--akamas-badge-offset, 16px) + env(safe-area-inset-bottom, 0px));
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: 7px 8px 7px 8px;
+  border: 1px solid rgba(196, 177, 128, 0.45);
+  border-radius: 999px;
+  background: rgba(11, 22, 46, 0.94);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.55);
+  color: #ece9e1;
+  font: 500 13px/1.2 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.akamas-badge[hidden] {
+  display: none;
+}
+
+.akamas-badge *,
+.akamas-badge *::before,
+.akamas-badge *::after {
+  box-sizing: border-box;
+}
+
+.akamas-badge__mark {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(196, 177, 128, 0.6);
+  border-radius: 50%;
+  color: #c4b180;
+}
+
+.akamas-badge__label::before {
+  content: attr(data-long);
+  white-space: nowrap;
+  color: #c4b180;
+  font-weight: 600;
+}
+
+.akamas-badge__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #ece9e1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.akamas-badge__back {
+  background: rgba(236, 233, 225, 0.08);
+}
+
+.akamas-badge__back:hover {
+  background: rgba(236, 233, 225, 0.16);
+}
+
+.akamas-badge__cta {
+  background: #c4b180;
+  color: #0b162e;
+  font-weight: 600;
+}
+
+.akamas-badge__cta:hover {
+  background: #d6c699;
+}
+
+.akamas-badge__close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #8c95a8;
+  cursor: pointer;
+}
+
+.akamas-badge__close:hover {
+  color: #ece9e1;
+  background: rgba(236, 233, 225, 0.08);
+}
+
+.akamas-badge a:focus-visible,
+.akamas-badge button:focus-visible {
+  outline: 2px solid #c4b180;
+  outline-offset: 2px;
+}
+
+/* Κινητό: πιο σύντομο κείμενο, χωρίς το κουμπί επικοινωνίας */
+@media (max-width: 640px) {
+  .akamas-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .akamas-badge__label::before {
+    content: attr(data-short);
+  }
+
+  .akamas-badge__cta {
+    display: none;
+  }
+
+  .akamas-badge__back {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .akamas-badge__label {
+    display: none;
+  }
+}
+
+@media print {
+  .akamas-badge {
+    display: none;
+  }
+}
