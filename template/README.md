@@ -7,6 +7,7 @@ Demo websites for fictional businesses, shown in the "Selected work" section of 
 | `coffee-shop` | Coffee shop / roastery (Κόκκος Coffee Roasters) | `/template/coffee-shop/` | built + QA'd |
 | `barbershop` | Barbershop (Ξυράφι Barber Studio) | `/template/barbershop/` | built + QA'd |
 | `corporate` | Accounting & business advisory (Στάθμη & Συνεργάτες) | `/template/corporate/` | built + QA'd |
+| `car-service` | Car repair garage (Ροπή Auto Service) | `/template/car-service/` | built + QA'd |
 
 ## How it is wired
 
@@ -27,8 +28,10 @@ Demo websites for fictional businesses, shown in the "Selected work" section of 
 - Responsive (390 / 820 / 1440 px), accessible (landmarks, skip link, one `<h1>`, keyboard-operable widgets, AA contrast), `prefers-reduced-motion` respected, content visible without JS.
 - Akamas's own fonts (Jura, EB Garamond, Manrope) and navy + gold palette are not used, and the four templates look clearly different from each other.
 
-All three are linked from the work section (`src/i18n/content.ts`), with screenshots in `public/work/`.
+All four are linked from the work section (`src/i18n/content.ts`), with screenshots in `public/work/`.
 
-A fourth template for trades & home services was planned but deliberately not built (stopped at the owner's request, Oct 2026). To add a template later: create `template/<slug>/` with `index.html`, `style.css`, `main.js` and `i18n.js` following the rules above (copy the structure of an existing one), QA it at 1440 / 820 / 390 px in both languages, add a `kind: 'template'` item to both languages in `content.ts`, and save a 1440×900 screenshot of its first screen (badge hidden) as `public/work/template-<slug>.webp`.
+`car-service` notes: prices on the service cards, the hero pins, the estimate and the tracking demo are all calculated from the same data in `car-service/i18n.js` (`JOBS`, `SIZES`, `QUALITY`, `LABOUR_RATE`, `VAT`), so changing a price there updates every place it appears. On phones it has a fixed Call / Book bar, so it sets `--akamas-badge-offset` to keep the badge above it. Its card screenshot was taken with the page clock fixed to a weekday at 10:30, so the hero shows "open now".
+
+A template for trades & home services was planned but deliberately not built (stopped at the owner's request, Oct 2026). To add a template later: create `template/<slug>/` with `index.html`, `style.css`, `main.js` and `i18n.js` following the rules above (copy the structure of an existing one), QA it at 1440 / 820 / 390 px in both languages, add a `kind: 'template'` item to both languages in `content.ts`, and save a 1440×900 screenshot of its first screen (badge hidden) as `public/work/template-<slug>.webp`.
 
 Commit and push **only when the owner asks**.

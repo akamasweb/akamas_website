@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ροπή Auto Service — Συνεργείο αυτοκινήτων στη Νέα Ιωνία</title>
+  <meta name="description" content="Σέρβις, φρένα, διάγνωση βλαβών, συμπλέκτες και προέλεγχος ΚΤΕΟ για όλες τις μάρκες, με γραπτή προσφορά πριν από κάθε εργασία. Template από την Akamas με ενδεικτικό περιεχόμενο.">
+  <meta name="theme-color" content="#E9E9E4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316181B'/%3E%3Cpath d='M32 9.5 51.5 20.75v22.5L32 54.5 12.5 43.25v-22.5z' fill='%23FFC21A'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%2316181B'/%3E%3C/svg%3E">
+  <script>if (/[?&]lang=en(&|$)/.test(location.search)) document.documentElement.classList.add('lang-pending')</script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Λογότυπο: παξιμάδι με βέλος ροπής -->
+      <symbol id="i-logo" viewBox="0 0 40 40">
+        <path d="M20 8.5 31 14.85v12.7L20 33.9 9 27.55v-12.7z" fill="#FFC21A"/>
+        <circle cx="20" cy="21.2" r="5" fill="#16181B"/>
+        <path d="M4.6 15.2A16.4 16.4 0 0 1 31.4 8.4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M27.3 5.6l4.6 2.4-1.2 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 20 20"><path d="M4.5 10.5l3.6 3.5L15.5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 20 20"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 20 20"><path d="M6.2 3.5 8 7.2 6.6 8.6a9.4 9.4 0 0 0 4.8 4.8L12.8 12l3.7 1.8-.6 2.7c-.1.5-.6.9-1.1.9A13.3 13.3 0 0 1 2.6 5.2c0-.5.4-1 .9-1.1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 18s-5.5-5.2-5.5-9.5a5.5 5.5 0 0 1 11 0C15.5 12.8 10 18 10 18z"/><circle cx="10" cy="8.5" r="2"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.75" y="4.75" width="14.5" height="10.5" rx="1"/><path d="m3.5 5.5 6.5 5.25 6.5-5.25"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4.3l2.8 1.8"/></g></symbol>
+      <symbol id="i-star" viewBox="0 0 20 20"><path d="m10 1.8 2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.7l-5.1 2.8L6 11.8l-4.3-4 5.8-.7z" fill="currentColor"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.8 4.5 5.6v6c0 4.6 3.1 8.1 7.5 9.6 4.4-1.5 7.5-5 7.5-9.6v-6z"/><path d="m8.6 12 2.4 2.4 4.6-4.8" stroke-linecap="round"/></g></symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 2.8h8.5L19 7.3v13.9H6z"/><path d="M14.5 2.8v4.5H19M9 11.5h7M9 15h7M9 18.5h4"/></g></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7.5h4l1.8-2.7h6.4L17 7.5h4v12H3z"/><circle cx="12" cy="13.2" r="3.6"/></g></symbol>
+      <symbol id="i-calendar" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4.5" width="14" height="12.5" rx="1.5"/><path d="M3 8.5h14M7 2.75v3.5M13 2.75v3.5"/></g></symbol>
+      <symbol id="i-train" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><rect x="4.5" y="2.75" width="11" height="11.5" rx="2.5"/><path d="M4.5 9h11M7.5 17.5l1.3-3.2M12.5 17.5l-1.3-3.2"/><circle cx="7.6" cy="11.6" r=".4"/><circle cx="12.4" cy="11.6" r=".4"/></g></symbol>
+      <symbol id="i-parking" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.75" y="2.75" width="14.5" height="14.5" rx="2.5"/><path d="M8 14.5v-9h2.9a2.6 2.6 0 0 1 0 5.2H8" stroke-linecap="round"/></g></symbol>
+      <symbol id="i-tow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M2.5 17.5V11l3-4.5H11v11"/><path d="M11 17.5h3M11 11h10.5M16.5 11l4-6M20.5 5v4"/><circle cx="7.5" cy="17.8" r="2.2"/><circle cx="16.5" cy="17.8" r="2.2"/></g></symbol>
+      <symbol id="i-info" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10" cy="10" r="7.25"/><path d="M10 9v4.8M10 6.3v.2"/></g></symbol>
+      <symbol id="i-search" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.6" cy="8.6" r="5.6"/><path d="m13 13 4.2 4.2"/></g></symbol>
+      <symbol id="i-wrench" viewBox="0 0 20 20"><path d="M12.6 2.8a4.3 4.3 0 0 0-4.2 5.6L2.9 13.9a1.6 1.6 0 0 0 0 2.3l.9.9a1.6 1.6 0 0 0 2.3 0l5.5-5.5a4.3 4.3 0 0 0 5.6-4.2l-2.6 2.6-2.4-.6-.6-2.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+
+      <!-- Υπηρεσίες: εικονίδια γραμμής 48×48 με μία κίτρινη λεπτομέρεια -->
+      <symbol id="s-oil" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 21.5h21l7.5-6 6 1.5-8.5 9.5v11.5H6z"/><path d="M6 25H3.5v6H6M13.5 21.5v-3.5h6.5v3.5"/></g>
+        <path d="M41 26.5s-3.4 4.1-3.4 6.4a3.4 3.4 0 0 0 6.8 0c0-2.3-3.4-6.4-3.4-6.4z" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="s-brakes" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="21" cy="27" r="15.5"/><circle cx="21" cy="27" r="5.5"/></g>
+        <g fill="currentColor"><circle cx="21" cy="16.6" r="1.3"/><circle cx="30" cy="21.8" r="1.3"/><circle cx="30" cy="32.2" r="1.3"/><circle cx="21" cy="37.4" r="1.3"/><circle cx="12" cy="32.2" r="1.3"/><circle cx="12" cy="21.8" r="1.3"/></g>
+        <path d="M27.6 7.4A21 21 0 0 1 41.2 19.6l-5.6 2.2a15 15 0 0 0-9.7-8.7z" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="s-diag" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="5.5" y="8.5" width="37" height="25" rx="2.5"/><path d="M18 41h12M24 33.5V41"/></g>
+        <path d="M10 24h6l3-8 5 14 3.5-9 2.5 3H38" fill="none" stroke="var(--hivis-line)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="s-belt" viewBox="0 0 48 48">
+        <path d="M7.6 26.3 26.6 8.1a9 9 0 0 1 13.1 12.3L22.6 39.6A11 11 0 0 1 7.6 26.3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="15.5" cy="32" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="33" cy="14.6" r="4.6" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="15.5" cy="32" r="1.6" fill="currentColor"/>
+      </symbol>
+      <symbol id="s-clutch" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 10v28M24 10v28M38 14v24M10 24h28"/></g>
+        <g fill="currentColor"><circle cx="10" cy="10" r="2.4"/><circle cx="24" cy="10" r="2.4"/><circle cx="10" cy="38" r="2.4"/><circle cx="24" cy="38" r="2.4"/><circle cx="38" cy="38" r="2.4"/></g>
+        <circle cx="38" cy="10" r="4.6" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6"/>
+      </symbol>
+      <symbol id="s-susp" viewBox="0 0 48 48">
+        <rect x="20.5" y="10" width="7" height="28" rx="1.5" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8h24M12 40h24M24 4v4M24 40v4"/><path d="M14 11.5 34 15.5 14 19.5 34 23.5 14 27.5 34 31.5 14 35.5 34 37"/></g>
+      </symbol>
+      <symbol id="s-ac" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M24 4v40M6.7 14l34.6 20M6.7 34l34.6-20"/><path d="M19 7.5l5 4 5-4M19 40.5l5-4 5 4M7 21l6.3-1 2.3-6M41 27l-6.3 1-2.3 6M7 27l6.3 1 2.3 6M41 21l-6.3-1-2.3-6"/></g>
+        <circle cx="24" cy="24" r="4.8" fill="var(--hivis)" stroke="currentColor" stroke-width="1.6"/>
+      </symbol>
+      <symbol id="s-kteo" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="8" width="30" height="35" rx="2.5"/><rect x="17" y="4.5" width="14" height="7" rx="1.5" fill="var(--paper)"/></g>
+        <path d="M16 26.5l5.5 5.5 11-12" fill="none" stroke="var(--hivis-line)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Μέγεθος αυτοκινήτου (κοστολόγηση) -->
+      <symbol id="c-small" viewBox="0 0 72 30">
+        <path d="M9 23.5H5.5c-1.4 0-2-1-2-2.3v-3.6c0-1.6.9-2.8 2.4-3.3l6-2 6.3-5.5c1.6-1.4 3.6-2.1 5.8-2.1H37c2.4 0 4.6 1 6.1 2.8l4.6 5.4 8.6 1.8c2.3.5 3.7 2.3 3.7 4.5v2c0 1.3-.8 2.3-2.1 2.3H55" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M23 23.5h18M20 12.5l4.5-4h8.8v4zM36.6 12.5V8.5h1.3c1.5 0 2.8.6 3.7 1.8l1.6 2.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="16" cy="23.5" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="48" cy="23.5" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="c-medium" viewBox="0 0 72 30">
+        <path d="M8 23.5H4.5c-1.4 0-2-1-2-2.3v-3c0-1.6 1-2.8 2.6-3.2l5.4-1.4 8.5-6.6c1.6-1.2 3.5-1.9 5.5-1.9h11.6c2.3 0 4.4.9 6 2.5l6.6 6.3 12.1 1.6c2.5.3 4.2 2.2 4.2 4.6v1.1c0 1.3-.8 2.3-2.1 2.3H60" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M21 23.5h26M17.5 13l5.6-4.4h9.6V13zM36.2 13V8.6h1.6c1.6 0 3.1.6 4.2 1.7L45 13z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="14.5" cy="23.5" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="53.5" cy="23.5" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="c-large" viewBox="0 0 72 30">
+        <path d="M9 24H5.5c-1.4 0-2.2-1-2.2-2.3v-6.3c0-1.8 1.1-3.2 2.9-3.6l3.2-.7 4.2-6.2c1-1.4 2.5-2.2 4.3-2.2h24.3c1.9 0 3.7.9 4.8 2.4l5 6.4 7.7 1.4c2.4.4 4.1 2.4 4.1 4.8v3.8c0 1.4-.9 2.5-2.3 2.5H57" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M23.5 24h21M14.5 11.5l3.4-5.3h11V11.5zM32.4 11.5V6.2h9.2c1.2 0 2.3.5 3 1.5l2.9 3.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="16.5" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="51" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+
+      <!-- Πινακίδα: η μπλε λωρίδα της ΕΕ -->
+      <symbol id="eu-band" viewBox="0 0 22 44">
+        <rect width="22" height="44" fill="#1F4FB5"/>
+        <g fill="#FFD43A"><circle cx="11" cy="7.2" r="1"/><circle cx="14" cy="8" r="1"/><circle cx="16.2" cy="10.2" r="1"/><circle cx="17" cy="13.2" r="1"/><circle cx="16.2" cy="16.2" r="1"/><circle cx="14" cy="18.4" r="1"/><circle cx="11" cy="19.2" r="1"/><circle cx="8" cy="18.4" r="1"/><circle cx="5.8" cy="16.2" r="1"/><circle cx="5" cy="13.2" r="1"/><circle cx="5.8" cy="10.2" r="1"/><circle cx="8" cy="8" r="1"/></g>
+        <text x="11" y="36" fill="#fff" font-size="10" font-weight="700" text-anchor="middle" font-family="Arial, sans-serif">GR</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top" aria-label="Ροπή Auto Service, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+        <svg class="logo__icon" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__text" aria-hidden="true"><span class="logo__name" data-keep-lang>ΡΟΠΗ</span><span class="logo__sub">Auto service</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση" data-i18n-attr="aria-label:nav.label">
+        <ul class="nav__list">
+          <li><a href="#services" data-i18n="nav.services">Υπηρεσίες</a></li>
+          <li><a href="#estimate" data-i18n="nav.estimate">Κοστολόγηση</a></li>
+          <li><a href="#track" data-i18n="nav.track">Παρακολούθηση</a></li>
+          <li><a href="#kteo" data-i18n="nav.kteo">ΚΤΕΟ</a></li>
+          <li><a href="#visit" data-i18n="nav.visit">Επικοινωνία</a></li>
+          <li class="nav__book"><a href="#booking" data-i18n="nav.book">Ραντεβού</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <div class="lang" role="group" aria-label="Γλώσσα" data-i18n-attr="aria-label:lang.label">
+          <button type="button" class="lang__btn" data-set-lang="el" aria-pressed="true" lang="el" aria-label="Ελληνικά">EL</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="header-phone" href="tel:+302100000000"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="contact.phone">210 000 0000</span></a>
+        <a class="btn btn--yellow btn--sm header-cta" href="#booking" data-i18n="nav.book">Ραντεβού</a>
+        <button type="button" class="burger" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα πλοήγησης" data-burger><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="hero__est"><span class="hero__est-mark" aria-hidden="true"></span><span data-i18n="hero.est">Συνεργείο αυτοκινήτων · Νέα Ιωνία · από το 1989</span></p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">Ξέρετε το κόστος <span>πριν σηκώσουμε το καπό.</span></h1>
+          <p class="hero__lead" data-i18n="hero.lead">Σέρβις, φρένα, διάγνωση και επισκευές για όλες τις μάρκες. Με γραπτή προσφορά, φωτογραφίες από κάθε φθορά και ενημέρωση στο κινητό σας σε κάθε βήμα.</p>
+          <div class="hero__actions">
+            <a class="btn btn--yellow" href="#booking"><span data-i18n="hero.cta1">Κλείστε ραντεβού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--line" href="#estimate" data-i18n="hero.cta2">Υπολογίστε το κόστος</a>
+          </div>
+          <div class="status" data-status>
+            <p class="status__now"><span class="status__dot" aria-hidden="true"></span><span data-status-text>Δευτέρα – Παρασκευή 08:00 – 17:00 · Σάββατο 08:00 – 14:00</span></p>
+            <p class="status__next" data-next-slot hidden></p>
+          </div>
+        </div>
+
+        <div class="hero__figure">
+          <div class="drawing">
+            <p class="drawing__label"><span class="drawing__fig" data-i18n="hero.fig">Σχ. 01 · Πλαϊνή όψη</span><span class="drawing__hint" data-i18n="hero.figHint">Πατήστε έναν αριθμό</span></p>
+            <div class="car" data-car>
+              <svg class="car__svg" viewBox="0 0 1000 420" aria-hidden="true" focusable="false">
+                <defs>
+                  <path id="c-spoke" d="M-4.2 -11 L-7.5 -41.5 Q0 -43.5 7.5 -41.5 L4.2 -11 Q0 -9.6 -4.2 -11Z"/>
+                </defs>
+                <ellipse class="car__shadow" cx="488" cy="353" rx="452" ry="9"/>
+                <path class="car__ground" d="M14 352H986"/>
+                <g class="car__hatch"><path d="M40 360l-10 10M70 360l-10 10M100 360l-10 10M130 360l-10 10M160 360l-10 10M190 360l-10 10M220 360l-10 10M250 360l-10 10M280 360l-10 10M310 360l-10 10M340 360l-10 10M370 360l-10 10M400 360l-10 10M430 360l-10 10M460 360l-10 10M490 360l-10 10M520 360l-10 10M550 360l-10 10M580 360l-10 10M610 360l-10 10M640 360l-10 10M670 360l-10 10M700 360l-10 10M730 360l-10 10M760 360l-10 10M790 360l-10 10M820 360l-10 10M850 360l-10 10M880 360l-10 10M910 360l-10 10M940 360l-10 10M970 360l-10 10"/></g>
+
+                <!-- Το αυτοκίνητο σχεδιάζεται με το μπροστινό μέρος δεξιά και καθρεφτίζεται, ώστε να «κοιτάζει» προς το κείμενο -->
+                <g class="car__drive"><g transform="translate(1000 0) scale(-1 1)">
+                  <path class="car__body" d="M96 322C84 316 80 302 80 286V254C80 240 84 228 90 216L98 174C104 142 118 112 140 92C156 78 176 68 204 62L300 52C380 46 470 46 540 50C566 52 586 58 600 68L690 146C700 152 712 156 728 158L846 176C880 182 906 190 922 200C934 208 940 222 942 240L944 278C944 300 938 314 926 322H843A82 82 0 1 0 693 322H313A82 82 0 1 0 163 322Z"/>
+                  <path class="car__glass" d="M184 150C190 120 204 94 238 77L300 65C350 61 396 60 425 60L430 151Z"/>
+                  <path class="car__glass" d="M447 60C484 60 512 60 532 61C556 62 572 68 586 79L673 151L449 152Z"/>
+                  <path class="car__glare" d="M268 140 318 70M300 140 344 80M512 140 556 76"/>
+                  <path class="car__line" d="M438 58 442 316M682 154 684 314M188 151C206 176 226 190 262 200C300 210 316 228 318 252V316M320 314H684"/>
+                  <path class="car__crease" d="M104 194C300 184 600 186 906 206M330 292H680"/>
+                  <rect class="car__handle" x="298" y="172" width="34" height="8" rx="4"/>
+                  <rect class="car__handle" x="470" y="170" width="34" height="8" rx="4"/>
+                  <path class="car__mirror" d="M670 152C674 140 698 134 712 140L716 158C706 164 684 164 674 160Z"/>
+                  <path class="car__light" d="M860 182 918 193C928 196 934 204 932 214L874 205C866 201 860 192 860 182Z"/>
+                  <path class="car__tail" d="M90 182 113 174 117 206 92 213Z"/>
+                  <path class="car__line" d="M904 288H942M84 270 106 272M146 198h22v16h-22z"/>
+                  <circle class="car__line" cx="922" cy="266" r="6"/>
+
+                  <!-- Πίσω τροχός -->
+                  <g transform="translate(238 288)">
+                    <circle class="car__tyre" r="64"/>
+                    <circle class="car__rim" r="45"/>
+                    <circle class="car__disc" r="33"/>
+                    <g class="car__spokes"><use href="#c-spoke"/><use href="#c-spoke" transform="rotate(72)"/><use href="#c-spoke" transform="rotate(144)"/><use href="#c-spoke" transform="rotate(216)"/><use href="#c-spoke" transform="rotate(288)"/></g>
+                    <circle class="car__hub" r="11"/>
+                    <circle class="car__cap" r="4"/>
+                  </g>
+                  <!-- Μπροστινός τροχός, με τη δαγκάνα των φρένων -->
+                  <g transform="translate(768 288)">
+                    <circle class="car__tyre" r="64"/>
+                    <circle class="car__rim" r="45"/>
+                    <circle class="car__disc" r="33"/>
+                    <path class="car__caliper" d="M-35.5 21A41 41 0 0 1 -35.5 -21L-23.4 -13.5A27 27 0 0 0 -23.4 13.5Z"/>
+                    <g class="car__spokes"><use href="#c-spoke"/><use href="#c-spoke" transform="rotate(72)"/><use href="#c-spoke" transform="rotate(144)"/><use href="#c-spoke" transform="rotate(216)"/><use href="#c-spoke" transform="rotate(288)"/></g>
+                    <circle class="car__hub" r="11"/>
+                    <circle class="car__cap" r="4"/>
+                  </g>
+                </g></g>
+
+                <!-- Άξονες και διαστάσεις -->
+                <path class="car__axis" d="M232 196V398M762 196V398"/>
+                <g class="car__dim">
+                  <path d="M56 300V414M920 300V414"/>
+                  <path d="M232 384H762M232 378v12M762 378v12"/>
+                  <path d="M56 408H920M56 402v12M920 402v12"/>
+                  <path d="M968 46V352M962 46h12M962 352h12"/>
+                </g>
+                <g class="car__dimtext">
+                  <text x="497" y="376" text-anchor="middle" data-i18n="hero.dimBase">μεταξόνιο 2.560</text>
+                  <text x="488" y="400" text-anchor="middle" data-i18n="hero.dimLength">μήκος 4.255</text>
+                  <text transform="translate(988 199) rotate(90)" text-anchor="middle" data-i18n="hero.dimHeight">ύψος 1.485</text>
+                </g>
+              </svg>
+              <button type="button" class="pin" style="--x:20%;--y:40.5%" data-pin="minor" aria-pressed="true" aria-controls="pin-card"><span aria-hidden="true">1</span><span class="visually-hidden" data-i18n="svc.minor.name">Σέρβις & λάδια</span></button>
+              <button type="button" class="pin" style="--x:28.4%;--y:56%" data-pin="pads" aria-pressed="false" aria-controls="pin-card"><span aria-hidden="true">2</span><span class="visually-hidden" data-i18n="svc.brakes.name">Φρένα</span></button>
+              <button type="button" class="pin" style="--x:38.5%;--y:27%" data-pin="ac" aria-pressed="false" aria-controls="pin-card"><span aria-hidden="true">3</span><span class="visually-hidden" data-i18n="svc.ac.name">Κλιματισμός</span></button>
+              <button type="button" class="pin" style="--x:76.2%;--y:45%" data-pin="align" aria-pressed="false" aria-controls="pin-card"><span aria-hidden="true">4</span><span class="visually-hidden" data-i18n="svc.susp.name">Ανάρτηση & γεωμετρία</span></button>
+            </div>
+          </div>
+          <div class="pin-card" id="pin-card" aria-live="polite">
+            <p class="pin-card__k"><span data-pin-num>01</span><span data-pin-title>Σέρβις & λάδια</span></p>
+            <p class="pin-card__text" data-pin-text>Λάδια, φίλτρα και έλεγχος 30 σημείων, με το πρόγραμμα του κατασκευαστή.</p>
+            <p class="pin-card__meta"><span><span data-i18n="price.from">από</span> <strong data-pin-price>118 €</strong></span><span class="pin-card__time"><svg aria-hidden="true"><use href="#i-clock"/></svg><span data-pin-time>~45 λεπτά</span></span></p>
+            <a class="pin-card__link" href="#estimate" data-estimate="minor" data-pin-link><span data-i18n="pin.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="strip">
+        <ul class="wrap strip__list">
+          <li class="strip__item"><svg class="strip__icon" aria-hidden="true"><use href="#i-shield"/></svg><p><strong data-i18n="strip.1t">12 μήνες εγγύηση</strong><span data-i18n="strip.1s">σε ανταλλακτικά και εργασία</span></p></li>
+          <li class="strip__item"><svg class="strip__icon" aria-hidden="true"><use href="#i-doc"/></svg><p><strong data-i18n="strip.2t">Γραπτή προσφορά</strong><span data-i18n="strip.2s">πριν ξεκινήσει κάθε εργασία</span></p></li>
+          <li class="strip__item"><svg class="strip__icon" aria-hidden="true"><use href="#i-camera"/></svg><p><strong data-i18n="strip.3t">Φωτογραφίες στο κινητό</strong><span data-i18n="strip.3s">από κάθε φθαρμένο ανταλλακτικό</span></p></li>
+          <li class="strip__item"><svg class="strip__icon" aria-hidden="true"><use href="#i-star"/></svg><p><strong data-i18n="strip.4t">4,8 από 5</strong><span data-i18n="strip.4s">410 κριτικές · ενδεικτικά</span></p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΥΠΗΡΕΣΙΕΣ ================= -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">01</span><span data-i18n="services.eyebrow">Υπηρεσίες</span></p>
+            <h2 class="section-title" id="services-title" data-i18n="services.title">Ό,τι χρειάζεται το αυτοκίνητό σας, κάτω από μία στέγη</h2>
+          </div>
+          <div class="section-head__side">
+            <p class="section-lead" data-i18n="services.lead">Όλες οι μάρκες, με βενζίνη, diesel, υγραέριο ή υβριδικό κινητήρα. Οι τιμές είναι με ΦΠΑ, για μικρό αυτοκίνητο με ισοδύναμα ανταλλακτικά.</p>
+            <p class="tag"><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="services.hybrid">Πιστοποίηση για υβριδικά</span></p>
+          </div>
+        </header>
+
+        <ul class="svc-grid">
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-oil"/></svg><span class="svc__code" aria-hidden="true">01</span></div>
+            <h3 class="svc__name" data-i18n="svc.minor.name">Σέρβις & λάδια</h3>
+            <p class="svc__desc" data-i18n="svc.minor.desc">Λάδια, φίλτρα και έλεγχος 30 σημείων, με το πρόγραμμα του κατασκευαστή. Η εργοστασιακή εγγύηση ισχύει κανονικά.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="minor">118 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="minor">~45 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="minor"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-brakes"/></svg><span class="svc__code" aria-hidden="true">02</span></div>
+            <h3 class="svc__name" data-i18n="svc.brakes.name">Φρένα</h3>
+            <p class="svc__desc" data-i18n="svc.brakes.desc">Τακάκια, δισκόπλακες και υγρά. Μετράμε τη φθορά και σας δείχνουμε τα παλιά ανταλλακτικά.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="pads">94 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="pads">~45 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="pads"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-diag"/></svg><span class="svc__code" aria-hidden="true">03</span></div>
+            <h3 class="svc__name" data-i18n="svc.diag.name">Διάγνωση βλάβης</h3>
+            <p class="svc__desc" data-i18n="svc.diag.desc">Αναμμένο λαμπάκι; Διαγνωστικό για όλες τις μάρκες και εξήγηση σε απλά ελληνικά, πριν από οποιαδήποτε επισκευή.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="diag">30 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="diag">~30 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="diag"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-belt"/></svg><span class="svc__code" aria-hidden="true">04</span></div>
+            <h3 class="svc__name" data-i18n="svc.timing.name">Ιμάντας χρονισμού</h3>
+            <p class="svc__desc" data-i18n="svc.timing.desc">Κιτ ιμάντα και αντλία νερού, στα χιλιόμετρα που ορίζει ο κατασκευαστής, πριν γίνει η ζημιά.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="timing">419 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="timing">~3,5 ώρες</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="timing"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-clutch"/></svg><span class="svc__code" aria-hidden="true">05</span></div>
+            <h3 class="svc__name" data-i18n="svc.clutch.name">Συμπλέκτης</h3>
+            <p class="svc__desc" data-i18n="svc.clutch.desc">Σετ συμπλέκτη και λάδια κιβωτίου, με δωρεάν αυτοκίνητο αντικατάστασης όσο το έχουμε εμείς.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="clutch">472 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="clutch">~4,5 ώρες</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="clutch"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-susp"/></svg><span class="svc__code" aria-hidden="true">06</span></div>
+            <h3 class="svc__name" data-i18n="svc.susp.name">Ανάρτηση & γεωμετρία</h3>
+            <p class="svc__desc" data-i18n="svc.susp.desc">Αμορτισέρ, ψαλίδια, ακρόμπαρα και ευθυγράμμιση τροχών με λέιζερ, για να μη φεύγει το τιμόνι.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="align">35 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="align">~45 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="align"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-ac"/></svg><span class="svc__code" aria-hidden="true">07</span></div>
+            <h3 class="svc__name" data-i18n="svc.ac.name">Κλιματισμός</h3>
+            <p class="svc__desc" data-i18n="svc.ac.desc">Γέμισμα, έλεγχος διαρροών και απολύμανση των αεραγωγών, πριν έρθει το καλοκαίρι.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="ac">103 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="ac">~45 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#estimate" data-estimate="ac"><span data-i18n="svc.link">Αναλυτικό κόστος</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="svc" data-reveal>
+            <div class="svc__top"><svg class="svc__icon" aria-hidden="true"><use href="#s-kteo"/></svg><span class="svc__code" aria-hidden="true">08</span></div>
+            <h3 class="svc__name" data-i18n="svc.kteo.name">ΚΤΕΟ & κάρτα καυσαερίων</h3>
+            <p class="svc__desc" data-i18n="svc.kteo.desc">Προέλεγχος, κάρτα καυσαερίων και, αν θέλετε, πάμε εμείς το αυτοκίνητο στο ΚΤΕΟ.</p>
+            <dl class="svc__meta"><div><dt data-i18n="price.fromCap">Από</dt><dd data-from="kteo">25 €</dd></div><div><dt data-i18n="price.time">Χρόνος</dt><dd data-time="kteo">~30 λεπτά</dd></div></dl>
+            <a class="svc__link" href="#kteo"><span data-i18n="svc.kteoLink">Πότε λήγει το δικό σας;</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΚΟΣΤΟΛΟΓΗΣΗ ================= -->
+    <section class="section estimate" id="estimate" aria-labelledby="estimate-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">02</span><span data-i18n="estimate.eyebrow">Κοστολόγηση</span></p>
+            <h2 class="section-title" id="estimate-title" data-i18n="estimate.title">Η τιμή, πριν φέρετε το αυτοκίνητο</h2>
+          </div>
+          <p class="section-lead" data-i18n="estimate.lead">Διαλέξτε εργασία και αυτοκίνητο. Βλέπετε ανταλλακτικά, εργασία και ΦΠΑ, γραμμή γραμμή, όπως θα τα δείτε και στο τιμολόγιο.</p>
+        </header>
+
+        <div class="est">
+          <form class="est__controls" data-estimator novalidate>
+            <fieldset class="est__group">
+              <legend class="est__legend"><span class="est__step">1</span><span data-i18n="est.q1">Τι χρειάζεται;</span></legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="job" value="minor" checked><span data-i18n="job.minor">Μικρό σέρβις</span></label>
+                <label class="chip"><input type="radio" name="job" value="major"><span data-i18n="job.major">Μεγάλο σέρβις</span></label>
+                <label class="chip"><input type="radio" name="job" value="pads"><span data-i18n="job.pads">Τακάκια εμπρός</span></label>
+                <label class="chip"><input type="radio" name="job" value="discs"><span data-i18n="job.discs">Δισκόπλακες & τακάκια</span></label>
+                <label class="chip"><input type="radio" name="job" value="diag"><span data-i18n="job.diag">Διάγνωση βλάβης</span></label>
+                <label class="chip"><input type="radio" name="job" value="timing"><span data-i18n="job.timing">Ιμάντας χρονισμού</span></label>
+                <label class="chip"><input type="radio" name="job" value="clutch"><span data-i18n="job.clutch">Συμπλέκτης</span></label>
+                <label class="chip"><input type="radio" name="job" value="align"><span data-i18n="job.align">Ευθυγράμμιση</span></label>
+                <label class="chip"><input type="radio" name="job" value="ac"><span data-i18n="job.ac">Κλιματισμός</span></label>
+                <label class="chip"><input type="radio" name="job" value="kteo"><span data-i18n="job.kteo">Προέλεγχος ΚΤΕΟ</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="est__group">
+              <legend class="est__legend"><span class="est__step">2</span><span data-i18n="est.q2">Τι αυτοκίνητο έχετε;</span></legend>
+              <div class="sizes">
+                <label class="size"><input type="radio" name="size" value="small" checked><span class="size__body"><svg class="size__car" aria-hidden="true"><use href="#c-small"/></svg><span class="size__name" data-i18n="size.small">Μικρό</span><span class="size__sub" data-i18n="size.smallSub">πόλης, έως 1.200 cc</span></span></label>
+                <label class="size"><input type="radio" name="size" value="medium"><span class="size__body"><svg class="size__car" aria-hidden="true"><use href="#c-medium"/></svg><span class="size__name" data-i18n="size.medium">Μεσαίο</span><span class="size__sub" data-i18n="size.mediumSub">οικογενειακό, sedan</span></span></label>
+                <label class="size"><input type="radio" name="size" value="large"><span class="size__body"><svg class="size__car" aria-hidden="true"><use href="#c-large"/></svg><span class="size__name" data-i18n="size.large">Μεγάλο</span><span class="size__sub" data-i18n="size.largeSub">SUV, van, 7θέσιο</span></span></label>
+              </div>
+              <p class="est__same" data-same-price hidden></p>
+            </fieldset>
+            <fieldset class="est__group">
+              <legend class="est__legend"><span class="est__step">3</span><span data-i18n="est.q3">Ανταλλακτικά</span></legend>
+              <div class="seg">
+                <label class="seg__opt"><input type="radio" name="parts" value="oe" checked><span><strong data-i18n="parts.oe">Ισοδύναμα</strong><small data-i18n="parts.oeSub">ποιότητα OE, χωρίς το σήμα</small></span></label>
+                <label class="seg__opt"><input type="radio" name="parts" value="oem"><span><strong data-i18n="parts.oem">Γνήσια</strong><small data-i18n="parts.oemSub">της αντιπροσωπείας</small></span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="ticket" data-ticket>
+            <div class="ticket__head">
+              <p class="ticket__brand"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><span data-keep-lang>ΡΟΠΗ</span> Auto service</span></p>
+              <p class="ticket__doc"><span data-i18n="ticket.title">Ενδεικτική προσφορά</span><time data-ticket-date></time></p>
+            </div>
+            <p class="ticket__job" data-ticket-job>Μικρό σέρβις</p>
+            <p class="ticket__spec" data-ticket-spec>Μικρό αυτοκίνητο · Ισοδύναμα ανταλλακτικά</p>
+            <table class="ticket__table">
+              <caption class="visually-hidden" data-i18n="ticket.caption">Ανάλυση κόστους</caption>
+              <thead><tr><th scope="col" data-i18n="ticket.item">Περιγραφή</th><th scope="col" data-i18n="ticket.amount">Ποσό</th></tr></thead>
+              <tbody data-ticket-rows>
+                <tr><td>Λάδι κινητήρα 5W-30 (4 λίτρα)</td><td>32,00 €</td></tr>
+                <tr><td>Φίλτρο λαδιού</td><td>9,00 €</td></tr>
+                <tr><td>Φίλτρο αέρα</td><td>12,00 €</td></tr>
+                <tr><td>Φίλτρο καμπίνας</td><td>10,00 €</td></tr>
+                <tr><td>Εργασία · 0,8 ώρ. × 40 €</td><td>32,00 €</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><th scope="row" data-i18n="ticket.net">Καθαρή αξία</th><td data-ticket-net>95,00 €</td></tr>
+                <tr><th scope="row" data-i18n="ticket.vat">ΦΠΑ 24%</th><td data-ticket-vat>22,80 €</td></tr>
+                <tr class="ticket__total"><th scope="row" data-i18n="ticket.total">Σύνολο</th><td data-ticket-total>117,80 €</td></tr>
+              </tfoot>
+            </table>
+            <p class="ticket__time"><svg aria-hidden="true"><use href="#i-clock"/></svg><span><strong data-ticket-duration>~45 λεπτά</strong> · <span data-ticket-note>Μπορείτε να περιμένετε στον χώρο μας, με καφέ και Wi-Fi.</span></span></p>
+            <a class="btn btn--dark ticket__cta" href="#booking" data-book-estimate><span data-i18n="ticket.cta">Κλείστε ραντεβού με αυτή την τιμή</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <p class="ticket__fine" data-i18n="ticket.fine">Ενδεικτικές τιμές. Η τελική τιμή επιβεβαιώνεται γραπτώς μετά τον έλεγχο του αυτοκινήτου και δεν αλλάζει χωρίς την έγκρισή σας.</p>
+            <p class="ticket__stamp" aria-hidden="true"><span data-i18n="ticket.stamp1">Εγγύηση</span><strong data-i18n="ticket.stamp2">12 μήνες</strong></p>
+            <p class="visually-hidden" aria-live="polite" data-ticket-live></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΠΑΡΑΚΟΛΟΥΘΗΣΗ ================= -->
+    <section class="section track" id="track" aria-labelledby="track-title">
+      <div class="wrap track__grid">
+        <div class="track__intro">
+          <p class="eyebrow"><span class="eyebrow__num">03</span><span data-i18n="track.eyebrow">Παρακολούθηση</span></p>
+          <h2 class="section-title" id="track-title" data-i18n="track.title">Πού είναι το αυτοκίνητό μου;</h2>
+          <p class="section-lead" data-i18n="track.lead">Από τη στιγμή που μας αφήνετε το κλειδί, βλέπετε κάθε βήμα από το κινητό σας: τι βρήκαμε, με φωτογραφίες, τι προτείνουμε και πόσο κοστίζει. Τίποτα δεν γίνεται χωρίς την έγκρισή σας.</p>
+          <ul class="ticks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="track.b1">SMS σε κάθε στάδιο της επισκευής</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="track.b2">Φωτογραφίες από κάθε φθορά που βρίσκουμε</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="track.b3">Εγκρίνετε ή απορρίπτετε με ένα πάτημα</span></li>
+          </ul>
+          <form class="lookup" data-lookup novalidate>
+            <p class="lookup__title" data-i18n="track.formTitle">Βρείτε το αυτοκίνητό σας</p>
+            <div class="lookup__fields">
+              <div class="lookup__field">
+                <label for="lk-plate" data-i18n="track.plate">Αριθμός κυκλοφορίας</label>
+                <input id="lk-plate" name="plate" type="text" value="ΙΖΚ-4821" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="8" data-plate-input>
+              </div>
+              <div class="lookup__field lookup__field--code">
+                <label for="lk-code" data-i18n="track.code">Κωδικός SMS</label>
+                <input id="lk-code" name="code" type="text" value="7315" inputmode="numeric" autocomplete="off" maxlength="4">
+              </div>
+              <button type="submit" class="btn btn--dark lookup__btn"><svg class="btn__icon" aria-hidden="true"><use href="#i-search"/></svg><span data-i18n="track.find">Αναζήτηση</span></button>
+            </div>
+            <p class="lookup__hint"><span data-i18n="track.hint">Demo: δοκιμάστε</span> <strong data-keep-lang>ΙΖΚ-4821</strong> · <strong>7315</strong></p>
+            <p class="lookup__error" role="alert" data-lookup-error hidden></p>
+          </form>
+        </div>
+
+        <article class="job" aria-labelledby="job-title" data-job>
+          <header class="job__bar">
+            <p class="job__live"><span class="job__live-dot" aria-hidden="true"></span><span data-i18n="job.live">Ζωντανή ενημέρωση</span></p>
+            <p class="job__no"><span data-i18n="job.no">Δελτίο εργασίας</span> #7315</p>
+          </header>
+          <div class="job__car">
+            <p class="plate plate--sm" aria-hidden="true"><svg class="plate__eu"><use href="#eu-band"/></svg><span class="plate__text" data-keep-lang>ΙΖΚ-4821</span></p>
+            <div>
+              <h3 class="job__title" id="job-title">Toyota Yaris 1.0 · 2016</h3>
+              <p class="job__meta"><span data-i18n="job.km">112.300 km</span> · <span data-job-received>Παραλαβή σήμερα 08:12</span></p>
+            </div>
+          </div>
+
+          <ol class="stages" data-stages>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.1">Παραλαβή</span><span class="stage__time"></span></li>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.2">Έλεγχος</span><span class="stage__time"></span></li>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.3">Έγκριση</span><span class="stage__time"></span></li>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.4">Επισκευή</span><span class="stage__time"></span></li>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.5">Δοκιμή</span><span class="stage__time"></span></li>
+            <li class="stage"><span class="stage__dot" aria-hidden="true"></span><span class="stage__name" data-i18n="stage.6">Έτοιμο</span><span class="stage__time"></span></li>
+          </ol>
+
+          <div class="job__status" aria-live="polite">
+            <p class="job__status-title" data-job-status>Περιμένουμε την έγκρισή σας</p>
+            <p class="job__status-sub" data-job-eta></p>
+          </div>
+
+          <div class="msg">
+            <span class="msg__avatar" aria-hidden="true">ΕΔ</span>
+            <div class="msg__body">
+              <p class="msg__text" data-i18n="job.msg">Καλημέρα! Στον έλεγχο βρήκαμε τα εμπρός τακάκια στα 3 mm, στο όριο ασφαλείας. Προτείνουμε να τα αλλάξουμε σήμερα. Σας στείλαμε φωτογραφίες με SMS.</p>
+              <p class="msg__by" data-i18n="job.msgBy">Ελένη Δ., τεχνικός</p>
+            </div>
+          </div>
+
+          <div class="checks">
+            <div class="checks__head">
+              <h4 class="checks__title" data-i18n="checks.title">Έλεγχος 30 σημείων</h4>
+              <p class="checks__sum"><span class="lvl lvl--ok">26</span><span class="lvl lvl--warn">3</span><span class="lvl lvl--bad">1</span><span class="visually-hidden" data-i18n="checks.sumSr">26 εντάξει, 3 σύντομα, 1 άμεσα</span></p>
+            </div>
+            <ul class="checks__list">
+              <li class="chk chk--bad"><span class="chk__name" data-i18n="chk.padsF">Τακάκια εμπρός</span><span class="chk__val" data-i18n="chk.padsFv">3 mm</span><span class="chk__bar" aria-hidden="true"><i style="--v:.1"></i></span><span class="chk__pill" data-i18n="lvl.bad">Άμεσα</span></li>
+              <li class="chk chk--warn"><span class="chk__name" data-i18n="chk.discsF">Δισκόπλακες εμπρός</span><span class="chk__val" data-i18n="chk.discsFv">22,4 mm · όριο 22</span><span class="chk__bar" aria-hidden="true"><i style="--v:.3"></i></span><span class="chk__pill" data-i18n="lvl.warn">Σύντομα</span></li>
+              <li class="chk chk--warn"><span class="chk__name" data-i18n="chk.tyresR">Ελαστικά πίσω</span><span class="chk__val" data-i18n="chk.tyresRv">3,1 mm</span><span class="chk__bar" aria-hidden="true"><i style="--v:.32"></i></span><span class="chk__pill" data-i18n="lvl.warn">Σύντομα</span></li>
+              <li class="chk chk--warn"><span class="chk__name" data-i18n="chk.battery">Μπαταρία</span><span class="chk__val" data-i18n="chk.batteryv">12,4 V · 68%</span><span class="chk__bar" aria-hidden="true"><i style="--v:.5"></i></span><span class="chk__pill" data-i18n="lvl.warn">Σύντομα</span></li>
+              <li class="chk chk--ok"><span class="chk__name" data-i18n="chk.padsR">Τακάκια πίσω</span><span class="chk__val" data-i18n="chk.padsRv">7 mm</span><span class="chk__bar" aria-hidden="true"><i style="--v:.7"></i></span><span class="chk__pill" data-i18n="lvl.ok">Εντάξει</span></li>
+              <li class="chk chk--ok"><span class="chk__name" data-i18n="chk.tyresF">Ελαστικά εμπρός</span><span class="chk__val" data-i18n="chk.tyresFv">5,8 mm</span><span class="chk__bar" aria-hidden="true"><i style="--v:.74"></i></span><span class="chk__pill" data-i18n="lvl.ok">Εντάξει</span></li>
+              <li class="chk chk--ok"><span class="chk__name" data-i18n="chk.fluid">Υγρό φρένων</span><span class="chk__val" data-i18n="chk.fluidv">1% υγρασία</span><span class="chk__bar" aria-hidden="true"><i style="--v:.88"></i></span><span class="chk__pill" data-i18n="lvl.ok">Εντάξει</span></li>
+              <li class="chk chk--ok"><span class="chk__name" data-i18n="chk.oil">Λάδι & φίλτρα</span><span class="chk__val" data-i18n="chk.oilv">Αλλάχτηκαν σήμερα</span><span class="chk__bar" aria-hidden="true"><i style="--v:1"></i></span><span class="chk__pill" data-i18n="lvl.ok">Εντάξει</span></li>
+            </ul>
+          </div>
+
+          <div class="approve" data-approval>
+            <div class="approve__info">
+              <p class="approve__k" data-i18n="approve.k">Προτεινόμενη εργασία</p>
+              <p class="approve__title" data-i18n="approve.title">Αλλαγή τακακιών εμπρός</p>
+              <p class="approve__meta"><span data-i18n="approve.time">+45 λεπτά</span> · <strong data-approve-price>94 €</strong> <span data-i18n="price.vat">με ΦΠΑ</span></p>
+            </div>
+            <div class="approve__actions" data-approve-actions>
+              <button type="button" class="btn btn--yellow btn--sm" data-approve="yes"><svg class="btn__icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="approve.yes">Εγκρίνω</span></button>
+              <button type="button" class="btn btn--line btn--sm" data-approve="no" data-i18n="approve.no">Όχι τώρα</button>
+            </div>
+            <p class="approve__done" data-approve-done hidden><span data-approve-done-text></span> <button type="button" class="linkbtn" data-approve="undo" data-i18n="approve.undo">Αναίρεση</button></p>
+          </div>
+
+          <dl class="job__total">
+            <div><dt data-i18n="job.minor">Μικρό σέρβις</dt><dd data-job-base>118 €</dd></div>
+            <div data-job-extra hidden><dt data-i18n="approve.title">Αλλαγή τακακιών εμπρός</dt><dd data-job-extra-price>94 €</dd></div>
+            <div class="job__sum"><dt data-i18n="job.total">Σύνολο μέχρι τώρα</dt><dd data-job-total>118 €</dd></div>
+          </dl>
+          <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="demo.track">Demo: η παρακολούθηση είναι παράδειγμα και δεν αποστέλλονται δεδομένα.</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= ΚΤΕΟ ================= -->
+    <section class="section kteo" id="kteo" aria-labelledby="kteo-title">
+      <div class="wrap kteo__grid">
+        <div class="kteo__intro">
+          <p class="eyebrow eyebrow--dark"><span class="eyebrow__num">04</span><span data-i18n="kteo.eyebrow">ΚΤΕΟ</span></p>
+          <h2 class="section-title" id="kteo-title" data-i18n="kteo.title">Πότε λήγει το ΚΤΕΟ σας;</h2>
+          <p class="section-lead" data-i18n="kteo.lead">Βάλτε πότε περάσατε τελευταία φορά και δείτε αμέσως την προθεσμία. Κάνουμε προέλεγχο, βγάζουμε την κάρτα καυσαερίων και, αν θέλετε, πάμε εμείς το αυτοκίνητο στο ΚΤΕΟ.</p>
+          <ul class="kteo__prices">
+            <li><span data-i18n="kteo.p1">Προέλεγχος</span><strong data-from="kteo">25 €</strong></li>
+            <li><span data-i18n="kteo.p2">Συνοδεία στο ΚΤΕΟ</span><strong data-price="20" data-plus>+20 €</strong></li>
+          </ul>
+        </div>
+
+        <form class="kcalc" data-kteo novalidate>
+          <fieldset class="kcalc__set">
+            <legend class="kcalc__legend" data-kteo-legend>Τελευταίο ΚΤΕΟ</legend>
+            <div class="kcalc__row">
+              <div class="kcalc__field">
+                <label for="kt-month" data-i18n="kteo.month">Μήνας</label>
+                <select id="kt-month" name="month" data-kteo-month>
+                  <option value="0">Ιανουάριος</option><option value="1">Φεβρουάριος</option><option value="2">Μάρτιος</option><option value="3">Απρίλιος</option><option value="4">Μάιος</option><option value="5">Ιούνιος</option><option value="6">Ιούλιος</option><option value="7">Αύγουστος</option><option value="8">Σεπτέμβριος</option><option value="9">Οκτώβριος</option><option value="10">Νοέμβριος</option><option value="11">Δεκέμβριος</option>
+                </select>
+              </div>
+              <div class="kcalc__field">
+                <label for="kt-year" data-i18n="kteo.year">Έτος</label>
+                <select id="kt-year" name="year" data-kteo-year><option value="2026">2026</option><option value="2025">2025</option><option value="2024" selected>2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option></select>
+              </div>
+            </div>
+            <label class="kcalc__never"><input type="checkbox" name="never" data-kteo-never><span data-i18n="kteo.never">Δεν έχει περάσει ποτέ ΚΤΕΟ (αυτοκίνητο έως 4 ετών)</span></label>
+          </fieldset>
+
+          <div class="kres" data-kteo-result aria-live="polite">
+            <p class="kres__k" data-i18n="kteo.next">Επόμενο ΚΤΕΟ</p>
+            <p class="kres__date" data-kteo-date>—</p>
+            <p class="kres__rel" data-kteo-rel></p>
+            <div class="kres__bar" aria-hidden="true"><i data-kteo-fill></i><span class="kres__today" data-kteo-today></span></div>
+            <p class="kres__msg" data-kteo-msg></p>
+            <a class="btn btn--yellow btn--sm kres__cta" href="#booking" data-book="kteo"><span data-i18n="kteo.cta">Κλείστε προέλεγχο</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="kcalc__note"><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="kteo.note">Ενδεικτικός υπολογισμός για ιδιωτικά επιβατικά: πρώτος έλεγχος 4 χρόνια μετά την πρώτη κυκλοφορία, μετά κάθε 2 χρόνια.</span></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= ΡΑΝΤΕΒΟΥ ================= -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">05</span><span data-i18n="booking.eyebrow">Ραντεβού</span></p>
+            <h2 class="section-title" id="booking-title" data-i18n="booking.title">Κλείστε ραντεβού σε δύο λεπτά</h2>
+          </div>
+          <p class="section-lead" data-i18n="booking.lead">Πείτε μας τι αυτοκίνητο έχετε και τι χρειάζεται. Σας καλούμε την ίδια μέρα για να επιβεβαιώσουμε την ώρα.</p>
+        </header>
+
+        <div class="booking__grid">
+          <div class="booking__main">
+            <form class="bform" data-booking novalidate>
+              <div class="bform__errors" tabindex="-1" data-error-summary hidden></div>
+
+              <fieldset class="bform__set">
+                <legend class="bform__legend"><span class="bform__num">1</span><span data-i18n="bf.car">Το αυτοκίνητο</span></legend>
+                <div class="bform__row bform__row--car">
+                  <div class="field field--plate">
+                    <label for="bf-plate" data-i18n="bf.plate">Αριθμός κυκλοφορίας</label>
+                    <div class="plate plate--input"><svg class="plate__eu" aria-hidden="true"><use href="#eu-band"/></svg><input id="bf-plate" name="plate" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="8" placeholder="ΙΖΚ-4821" aria-describedby="bf-plate-hint err-plate" data-plate-input></div>
+                    <p class="field__hint" id="bf-plate-hint" data-i18n="bf.plateHint">3 γράμματα και 4 αριθμοί. Γράφετε και με λατινικά.</p>
+                    <p class="field__error" id="err-plate" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="bf-model" data-i18n="bf.model">Μάρκα & μοντέλο</label>
+                    <input id="bf-model" name="model" type="text" autocomplete="off" placeholder="π.χ. Toyota Yaris 2016" aria-describedby="err-model" data-i18n-attr="placeholder:bf.modelPh">
+                    <p class="field__error" id="err-model" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="bf-km"><span data-i18n="bf.km">Χιλιόμετρα</span> <span class="field__opt" data-i18n="bf.optional">(προαιρετικό)</span></label>
+                    <input id="bf-km" name="km" type="text" inputmode="numeric" autocomplete="off" placeholder="π.χ. 112.000" data-i18n-attr="placeholder:bf.kmPh">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="bform__set">
+                <legend class="bform__legend"><span class="bform__num">2</span><span data-i18n="bf.jobs">Τι χρειάζεται;</span></legend>
+                <div class="chips chips--light" aria-describedby="err-jobs">
+                  <label class="chip"><input type="checkbox" name="jobs" value="service"><span data-i18n="bj.service">Σέρβις</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="brakes"><span data-i18n="bj.brakes">Φρένα</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="diag"><span data-i18n="bj.diag">Διάγνωση / λαμπάκι</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="timing"><span data-i18n="bj.timing">Ιμάντας</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="clutch"><span data-i18n="bj.clutch">Συμπλέκτης</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="susp"><span data-i18n="bj.susp">Ανάρτηση</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="ac"><span data-i18n="bj.ac">Κλιματισμός</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="kteo"><span data-i18n="bj.kteo">ΚΤΕΟ & ΚΕΚ</span></label>
+                  <label class="chip"><input type="checkbox" name="jobs" value="other"><span data-i18n="bj.other">Κάτι άλλο</span></label>
+                </div>
+                <p class="field__error" id="err-jobs" hidden></p>
+                <div class="attached" data-attached hidden>
+                  <svg aria-hidden="true"><use href="#i-doc"/></svg>
+                  <p><span data-i18n="bf.attached">Επισυνάφθηκε η ενδεικτική προσφορά:</span> <strong data-attached-text></strong></p>
+                  <button type="button" class="attached__x" data-attached-remove aria-label="Αφαίρεση προσφοράς" data-i18n-attr="aria-label:bf.attachedRemove"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+                </div>
+                <div class="field field--wide">
+                  <label for="bf-note"><span data-i18n="bf.note">Περιγράψτε το πρόβλημα</span> <span class="field__opt" data-i18n="bf.optional">(προαιρετικό)</span></label>
+                  <textarea id="bf-note" name="note" rows="3" placeholder="π.χ. Τρίζουν τα φρένα όταν σταματάω." data-i18n-attr="placeholder:bf.notePh"></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset class="bform__set">
+                <legend class="bform__legend"><span class="bform__num">3</span><span data-i18n="bf.when">Πότε σας βολεύει;</span></legend>
+                <p class="bform__label" id="lbl-day" data-i18n="bf.day">Ημέρα</p>
+                <div class="days" role="radiogroup" aria-labelledby="lbl-day" aria-describedby="err-day" data-days></div>
+                <p class="field__error" id="err-day" hidden></p>
+                <p class="bform__label" id="lbl-time" data-i18n="bf.time">Ώρα που θα φέρετε το αυτοκίνητο</p>
+                <div class="times" role="radiogroup" aria-labelledby="lbl-time" aria-describedby="err-time" data-times>
+                  <label class="time"><input type="radio" name="time" value="08:00"><span class="time__box"><span class="time__t">08:00</span><span class="time__s" data-slot-state></span></span></label>
+                  <label class="time"><input type="radio" name="time" value="08:30"><span class="time__box"><span class="time__t">08:30</span><span class="time__s" data-slot-state></span></span></label>
+                  <label class="time"><input type="radio" name="time" value="09:00"><span class="time__box"><span class="time__t">09:00</span><span class="time__s" data-slot-state></span></span></label>
+                  <label class="time"><input type="radio" name="time" value="09:30"><span class="time__box"><span class="time__t">09:30</span><span class="time__s" data-slot-state></span></span></label>
+                  <label class="time"><input type="radio" name="time" value="10:00"><span class="time__box"><span class="time__t">10:00</span><span class="time__s" data-slot-state></span></span></label>
+                </div>
+                <p class="field__error" id="err-time" hidden></p>
+                <div class="extras">
+                  <label class="extra"><input type="checkbox" name="pickup"><span class="extra__box"><span class="extra__t" data-i18n="bf.pickup">Παραλαβή & επιστροφή από το σπίτι ή τη δουλειά</span><span class="extra__s" data-price="15" data-plus>+15 €</span></span></label>
+                  <label class="extra"><input type="checkbox" name="courtesy"><span class="extra__box"><span class="extra__t" data-i18n="bf.courtesy">Χρειάζομαι αυτοκίνητο αντικατάστασης</span><span class="extra__s" data-i18n="bf.courtesySub">δωρεάν, αν η εργασία κρατήσει πάνω από μία μέρα</span></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="bform__set">
+                <legend class="bform__legend"><span class="bform__num">4</span><span data-i18n="bf.you">Τα στοιχεία σας</span></legend>
+                <div class="bform__row">
+                  <div class="field">
+                    <label for="bf-name" data-i18n="bf.name">Ονοματεπώνυμο</label>
+                    <input id="bf-name" name="name" type="text" autocomplete="name" aria-describedby="err-name">
+                    <p class="field__error" id="err-name" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="bf-phone" data-i18n="bf.phone">Κινητό</label>
+                    <input id="bf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="69Χ ΧΧΧ ΧΧΧΧ" aria-describedby="err-phone" data-i18n-attr="placeholder:bf.phonePh">
+                    <p class="field__error" id="err-phone" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="bf-email"><span>Email</span> <span class="field__opt" data-i18n="bf.optional">(προαιρετικό)</span></label>
+                    <input id="bf-email" name="email" type="email" autocomplete="email" placeholder="onoma@example.com" aria-describedby="err-email">
+                    <p class="field__error" id="err-email" hidden></p>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="bform__submit">
+                <button type="submit" class="btn btn--yellow"><span data-i18n="bf.submit">Κλείστε ραντεβού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="demo.form">Demo φόρμα: δεν αποστέλλονται δεδομένα.</span></p>
+              </div>
+            </form>
+
+            <div class="done" tabindex="-1" data-done hidden>
+              <div class="done__icon" aria-hidden="true"><svg><use href="#i-check"/></svg></div>
+              <h3 class="done__title" data-i18n="done.title">Το ραντεβού σας κλείστηκε</h3>
+              <p class="done__text" data-done-text></p>
+              <dl class="done__receipt" data-done-receipt></dl>
+              <p class="demo-note"><span class="demo-note__dot" aria-hidden="true"></span><span data-i18n="demo.done">Demo: δεν στάλθηκε κανένα ραντεβού.</span></p>
+              <button type="button" class="btn btn--line btn--sm" data-done-reset data-i18n="bf.again">Νέο ραντεβού</button>
+            </div>
+          </div>
+
+          <aside class="next" aria-labelledby="next-title">
+            <h3 class="next__title" id="next-title" data-i18n="next.title">Τι γίνεται μετά</h3>
+            <ol class="next__list">
+              <li><span class="next__n" aria-hidden="true">1</span><div><p class="next__t" data-i18n="next.1t">Σας καλούμε</p><p class="next__d" data-i18n="next.1d">Επιβεβαιώνουμε την ώρα και ρωτάμε ό,τι χρειάζεται για το αυτοκίνητο.</p></div></li>
+              <li><span class="next__n" aria-hidden="true">2</span><div><p class="next__t" data-i18n="next.2t">Φέρνετε το αυτοκίνητο</p><p class="next__d" data-i18n="next.2d">Ή το παραλαμβάνουμε εμείς. Καφές και Wi-Fi, αν θέλετε να περιμένετε.</p></div></li>
+              <li><span class="next__n" aria-hidden="true">3</span><div><p class="next__t" data-i18n="next.3t">Γραπτή προσφορά</p><p class="next__d" data-i18n="next.3d">Μετά τον έλεγχο, με φωτογραφίες. Καμία εργασία χωρίς την έγκρισή σας.</p></div></li>
+              <li><span class="next__n" aria-hidden="true">4</span><div><p class="next__t" data-i18n="next.4t">Παραλαβή & εγγύηση</p><p class="next__d" data-i18n="next.4d">Πληρώνετε μόνο ό,τι εγκρίνατε, με 12 μήνες εγγύηση.</p></div></li>
+            </ol>
+            <div class="next__call">
+              <p data-i18n="next.call">Βιάζεστε; Πάρτε μας τηλέφωνο</p>
+              <a href="tel:+302100000000"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="contact.phone">210 000 0000</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΚΡΙΤΙΚΕΣ ================= -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="wrap reviews__grid">
+        <div class="reviews__score" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__num">06</span><span data-i18n="reviews.eyebrow">Κριτικές</span></p>
+          <h2 class="section-title" id="reviews-title"><span class="reviews__big" data-i18n="reviews.score">4,8</span><span class="visually-hidden" data-i18n="reviews.titleSr">μέση βαθμολογία πελατών</span></h2>
+          <p class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+          <p class="reviews__count" data-i18n="reviews.count">από 410 κριτικές · ενδεικτικά</p>
+        </div>
+        <ul class="quotes">
+          <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r1">«Μου έστειλαν φωτογραφίες από τα τακάκια πριν τα αλλάξουν. Πρώτη φορά ξέρω ακριβώς τι πληρώνω.»</p></blockquote><p class="quote__by"><span data-i18n="reviews.r1n">Δήμητρα Κ.</span><span class="quote__car">Toyota Yaris</span></p></li>
+          <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r2">«Η τιμή ήταν ακριβώς αυτή που είδα στο site. Ούτε ένα ευρώ παραπάνω.»</p></blockquote><p class="quote__by"><span data-i18n="reviews.r2n">Παύλος Ν.</span><span class="quote__car">Škoda Octavia</span></p></li>
+          <li class="quote" data-reveal><blockquote><p data-i18n="reviews.r3">«Πήγαν το αυτοκίνητο στο ΚΤΕΟ για μένα και μου το έφεραν στο γραφείο. Δέκα με τόνο.»</p></blockquote><p class="quote__by"><span data-i18n="reviews.r3n">Σοφία Μ.</span><span class="quote__car">Fiat Panda</span></p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΩΡΑΡΙΟ & ΤΟΠΟΘΕΣΙΑ ================= -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit__grid">
+        <div class="visit__info">
+          <p class="eyebrow"><span class="eyebrow__num">07</span><span data-i18n="visit.eyebrow">Επικοινωνία</span></p>
+          <h2 class="section-title" id="visit-title" data-i18n="visit.title">Ελάτε από το συνεργείο</h2>
+          <table class="hours">
+            <caption class="visually-hidden" data-i18n="visit.hoursCaption">Ωράριο λειτουργίας</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row" data-i18n="day.1">Δευτέρα</th><td>08:00 – 17:00</td></tr>
+              <tr data-day="2"><th scope="row" data-i18n="day.2">Τρίτη</th><td>08:00 – 17:00</td></tr>
+              <tr data-day="3"><th scope="row" data-i18n="day.3">Τετάρτη</th><td>08:00 – 17:00</td></tr>
+              <tr data-day="4"><th scope="row" data-i18n="day.4">Πέμπτη</th><td>08:00 – 17:00</td></tr>
+              <tr data-day="5"><th scope="row" data-i18n="day.5">Παρασκευή</th><td>08:00 – 17:00</td></tr>
+              <tr data-day="6"><th scope="row" data-i18n="day.6">Σάββατο</th><td>08:00 – 14:00</td></tr>
+              <tr data-day="0" class="is-off"><th scope="row" data-i18n="day.0">Κυριακή</th><td data-i18n="visit.closed">Κλειστά</td></tr>
+            </tbody>
+          </table>
+          <ul class="contact">
+            <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="contact.address">Οδός Παραδείγματος 12, 142 31 Νέα Ιωνία</span></li>
+            <li><svg aria-hidden="true"><use href="#i-train"/></svg><span data-i18n="contact.train">5 λεπτά με τα πόδια από τον σταθμό Νέα Ιωνία (Γραμμή 1)</span></li>
+            <li><svg aria-hidden="true"><use href="#i-parking"/></svg><span data-i18n="contact.parking">Δωρεάν στάθμευση για πελάτες</span></li>
+            <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+302100000000" data-i18n="contact.phone">210 000 0000</a></li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:service@example.com">service@example.com</a></li>
+          </ul>
+          <div class="tow">
+            <svg class="tow__icon" aria-hidden="true"><use href="#i-tow"/></svg>
+            <div>
+              <p class="tow__title" data-i18n="tow.title">Μείνατε στον δρόμο;</p>
+              <p class="tow__text" data-i18n="tow.text">Πάρτε μας τηλέφωνο: στέλνουμε γερανό συνεργάτη, 24 ώρες το 24ωρο.</p>
+            </div>
+          </div>
+        </div>
+        <div class="visit__map">
+          <svg viewBox="0 0 640 560" role="img" aria-label="Σχηματικός χάρτης της περιοχής γύρω από το συνεργείο, κοντά στον σταθμό του τρένου" data-i18n-attr="aria-label:visit.mapLabel" preserveAspectRatio="xMidYMid slice">
+            <rect width="640" height="560" fill="#DCDCD5"/>
+            <g fill="#E9E9E4"><rect x="24" y="24" width="150" height="120" rx="4"/><rect x="204" y="24" width="190" height="120" rx="4"/><rect x="424" y="24" width="192" height="120" rx="4"/><rect x="24" y="174" width="150" height="160" rx="4"/><rect x="204" y="174" width="190" height="160" rx="4"/><rect x="424" y="174" width="192" height="160" rx="4"/><rect x="24" y="364" width="150" height="172" rx="4"/><rect x="204" y="364" width="190" height="172" rx="4"/><rect x="424" y="364" width="192" height="172" rx="4"/></g>
+            <g fill="#D3D3CB"><rect x="44" y="196" width="48" height="36" rx="2"/><rect x="104" y="196" width="52" height="58" rx="2"/><rect x="224" y="388" width="70" height="44" rx="2"/><rect x="306" y="388" width="70" height="80" rx="2"/><rect x="444" y="44" width="80" height="44" rx="2"/><rect x="536" y="44" width="62" height="80" rx="2"/></g>
+            <path d="M-20 470 660 190" stroke="#F6F6F2" stroke-width="30"/>
+            <path d="M-20 470 660 190" stroke="#16181B" stroke-opacity=".08" stroke-width="30" stroke-dasharray="2 14"/>
+            <g stroke="#9AA0A6" stroke-width="3" fill="none"><path d="M184 -10 184 570"/><path d="M194 -10 194 570"/></g>
+            <path d="M189 -10 189 570" stroke="#9AA0A6" stroke-width="12" stroke-dasharray="2 10" fill="none"/>
+            <g transform="translate(189 210)"><rect x="-26" y="-14" width="52" height="28" rx="14" fill="#16181B"/><text y="5" fill="#E9E9E4" font-size="14" font-weight="700" text-anchor="middle" font-family="sans-serif">1</text></g>
+            <text x="212" y="166" font-size="15" font-weight="600" fill="#3D4248" font-family="sans-serif" data-i18n="map.station">Σταθμός Νέα Ιωνία</text>
+            <text x="250" y="372" font-size="14" font-weight="600" fill="#5B6168" font-family="sans-serif" transform="rotate(-22.4 250 372)" data-i18n="map.avenue">Λεωφόρος</text>
+            <path d="M216 212C262 228 300 250 330 262S386 270 402 262" fill="none" stroke="#16181B" stroke-width="3" stroke-dasharray="1 9" stroke-linecap="round"/>
+            <g transform="translate(436 258)">
+              <circle r="54" fill="#FFC21A" opacity=".22"/>
+              <circle r="32" fill="#FFC21A" opacity=".35"/>
+              <path d="M0-26 22.5-13v26L0 26-22.5 13v-26z" fill="#FFC21A" stroke="#16181B" stroke-width="3" stroke-linejoin="round"/>
+              <circle r="8.5" fill="#16181B"/>
+            </g>
+            <g transform="translate(470 136)"><rect x="-17" y="-17" width="34" height="34" rx="6" fill="#1F4FB5"/><text y="7" fill="#fff" font-size="20" font-weight="700" text-anchor="middle" font-family="sans-serif">P</text></g>
+          </svg>
+          <p class="visit__chip"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><span data-keep-lang>Ροπή</span> Auto Service</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__big" data-i18n-html="footer.big">Καλό δρόμο. <span>Τα λέμε στο επόμενο σέρβις.</span></p>
+        <a class="btn btn--yellow" href="#booking"><span data-i18n="hero.cta1">Κλείστε ραντεβού</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a class="logo logo--light" href="#top" aria-label="Ροπή Auto Service, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+            <svg class="logo__icon" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="logo__text" aria-hidden="true"><span class="logo__name" data-keep-lang>ΡΟΠΗ</span><span class="logo__sub">Auto service</span></span>
+          </a>
+          <p class="footer__tag" data-i18n="footer.tag">Οικογενειακό συνεργείο αυτοκινήτων στη Νέα Ιωνία, από το 1989.</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="footer.hours">Ωράριο</h2>
+          <p data-i18n="footer.hours1">Δευτέρα – Παρασκευή 08:00 – 17:00</p>
+          <p data-i18n="footer.hours2">Σάββατο 08:00 – 14:00</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="footer.contact">Επικοινωνία</h2>
+          <p data-i18n="contact.address">Οδός Παραδείγματος 12, 142 31 Νέα Ιωνία</p>
+          <p><a href="tel:+302100000000" data-i18n="contact.phone">210 000 0000</a> · <a href="mailto:service@example.com">service@example.com</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> <span data-keep-lang>Ροπή</span> Auto Service · <span data-i18n="footer.fictional">Εικονική επιχείρηση</span></p>
+        <p class="footer__template" data-i18n="footer.template">Template από την Akamas · Όλα τα στοιχεία είναι ενδεικτικά</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="callbar" aria-label="Γρήγορη επικοινωνία" data-i18n-attr="aria-label:callbar.label" data-callbar>
+    <a class="callbar__btn" href="tel:+302100000000"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="callbar.call">Κλήση</span></a>
+    <a class="callbar__btn callbar__btn--book" href="#booking"><svg aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="callbar.book">Ραντεβού</span></a>
+  </nav>
+</body>
+</html>
