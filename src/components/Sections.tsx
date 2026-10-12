@@ -1,4 +1,5 @@
-import type { CSSProperties, ReactNode } from 'react'
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
+import { offer } from '../config'
 import { useLanguage } from '../i18n/LanguageContext'
 import { ArrowRightIcon, ArrowUpRightIcon, CheckIcon, PlusIcon } from './Icons'
 
@@ -170,9 +171,38 @@ export function Process() {
   )
 }
 
+// Χρόνος που απομένει στην προσφορά (ms), ενημερώνεται κάθε δευτερόλεπτο· null αν έχει λήξει.
+// Υπολογίζεται μόνο στον browser, ώστε το έτοιμο HTML του build να μη δείχνει ποτέ προσφορά που έχει ήδη λήξει.
+function useOfferLeft() {
+  const [left, setLeft] = useState<number | null>(null)
+  useEffect(() => {
+    const end = Date.parse(offer.ends)
+    const tick = () => {
+      const ms = end - Date.now()
+      setLeft(ms > 0 ? ms : null)
+      if (ms <= 0) clearInterval(id)
+    }
+    const id = setInterval(tick, 1000)
+    tick()
+    return () => clearInterval(id)
+  }, [])
+  return left
+}
+
 export function Pricing() {
   const { t } = useLanguage()
   const p = t.pricing
+  const offerLeft = useOfferLeft()
+  // Ημέρες, ώρες, λεπτά, δευτερόλεπτα για το χρονόμετρο
+  const timer =
+    offerLeft === null
+      ? null
+      : [
+          Math.floor(offerLeft / 86_400_000),
+          Math.floor(offerLeft / 3_600_000) % 24,
+          Math.floor(offerLeft / 60_000) % 60,
+          Math.floor(offerLeft / 1000) % 60,
+        ]
   return (
     <section className="section" id="pricing">
       <div className="container">
@@ -180,6 +210,7 @@ export function Pricing() {
         <div className="plans">
           {p.plans.map((plan, i) => {
             const featured = i === 1
+            const onOffer = timer !== null && plan.name === offer.plan
             return (
               <article
                 key={i}
@@ -188,11 +219,36 @@ export function Pricing() {
                 style={{ '--d': i } as CSSProperties}
               >
                 {featured && <span className="plan__badge">{p.popular}</span>}
+                {onOffer && <span className="plan__badge plan__badge--offer">{p.offer.badge(new Date(offer.ends))}</span>}
                 <h3 className="plan__name">{plan.name}</h3>
                 <p className="plan__price">
                   <span className="plan__from">{p.from}</span>
-                  <span className="plan__amount">€{plan.price}</span>
+                  {onOffer ? (
+                    <>
+                      <s className="plan__was">
+                        <span className="sr-only">{p.offer.was}: </span>€{plan.price}
+                      </s>
+                      <span className="plan__amount">
+                        <span className="sr-only">{p.offer.now}: </span>€{offer.price}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="plan__amount">€{plan.price}</span>
+                  )}
                 </p>
+                {onOffer && (
+                  <div className="offer-timer" role="timer">
+                    <p className="offer-timer__label">{p.offer.endsIn}</p>
+                    <div className="offer-timer__cells">
+                      {timer.map((n, k) => (
+                        <span key={k} className="offer-timer__cell">
+                          <span className="offer-timer__num">{pad(n)}</span>
+                          <span className="offer-timer__unit">{p.offer.units[k]}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 <p className="plan__text">{plan.text}</p>
                 <ul className="plan__features">
                   {plan.features.map((f) => (

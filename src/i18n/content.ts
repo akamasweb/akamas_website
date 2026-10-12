@@ -193,6 +193,15 @@ const el = {
     popular: 'Δημοφιλές',
     choose: 'Ζητήστε προσφορά',
     note: 'Οι τιμές είναι ενδεικτικές, χωρίς ΦΠΑ. Κάθε έργο κοστολογείται αφού μιλήσουμε.',
+    // Προσφορά περιορισμένου χρόνου (ρυθμίζεται στο config.ts)
+    offer: {
+      badge: (end: Date) =>
+        `Προσφορά έως ${end.toLocaleDateString('el-GR', { day: 'numeric', month: 'numeric', timeZone: 'Europe/Athens' })}`,
+      was: 'Κανονική τιμή',
+      now: 'Τιμή προσφοράς',
+      endsIn: 'Η προσφορά λήγει σε',
+      units: ['Ημέρες', 'Ώρες', 'Λεπτά', 'Δευτ.'],
+    },
     plans: [
       {
         name: 'Landing',
@@ -457,6 +466,14 @@ const en: Content = {
     popular: 'Popular',
     choose: 'Request a quote',
     note: 'Prices are indicative and exclude VAT. Every project is quoted after we talk.',
+    offer: {
+      badge: (end: Date) =>
+        `Offer until ${end.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'Europe/Athens' })}`,
+      was: 'Regular price',
+      now: 'Offer price',
+      endsIn: 'Offer ends in',
+      units: ['Days', 'Hours', 'Min', 'Sec'],
+    },
     plans: [
       {
         name: 'Landing',

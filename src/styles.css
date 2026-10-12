@@ -1354,6 +1354,66 @@ ul {
   line-height: 1;
 }
 
+/* Προσφορά περιορισμένου χρόνου: ετικέτα με περίγραμμα, παλιά τιμή διαγραμμένη, χρονόμετρο */
+.plan__badge--offer,
+:root[data-theme='light'] .plan__badge--offer {
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--accent-ink);
+}
+
+.plan__was {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  line-height: 1;
+  color: var(--muted);
+  text-decoration-thickness: 1px;
+}
+
+.offer-timer {
+  margin-top: 1.1rem;
+  padding: 0.85rem 1rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--glow);
+}
+
+.offer-timer__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.offer-timer__cells {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.offer-timer__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-timer__num {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.offer-timer__unit {
+  margin-top: 0.3rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .plan__text {
   margin-top: 0.85rem;
   color: var(--muted);
