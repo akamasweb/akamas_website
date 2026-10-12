@@ -263,6 +263,8 @@ const el = {
     budgets: ['< €500', '€500 – 1.500', '€1.500 – 5.000', '€5.000+', 'Δεν ξέρω ακόμα'],
     message: 'Μήνυμα',
     messagePlaceholder: 'Περιγράψτε σύντομα την επιχείρηση και τι θέλετε να πετύχετε…',
+    // Αρχικό μήνυμα όταν ο επισκέπτης έρχεται από το «Θέλω κάτι παρόμοιο» ενός template
+    fromTemplate: (name: string) => `Γεια σας! Είδα το template «${name}» και θα ήθελα κάτι παρόμοιο για την επιχείρησή μου.`,
     submit: 'Αποστολή μηνύματος',
     sending: 'Αποστολή…',
     sent: 'Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.',
@@ -535,6 +537,7 @@ const en: Content = {
     budgets: ['< €500', '€500 – 1,500', '€1,500 – 5,000', '€5,000+', 'Not sure yet'],
     message: 'Message',
     messagePlaceholder: 'Briefly describe your business and what you want to achieve…',
+    fromTemplate: (name: string) => `Hi! I saw the “${name}” template and I’d like something similar for my business.`,
     submit: 'Send message',
     sending: 'Sending…',
     sent: 'Thank you! We will be in touch shortly.',

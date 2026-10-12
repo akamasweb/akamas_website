@@ -71,6 +71,10 @@
   background: rgba(236, 233, 225, 0.16);
 }
 
+.akamas-badge__short {
+  display: none;
+}
+
 .akamas-badge__cta {
   background: #c4b180;
   color: #0b162e;
@@ -107,30 +111,35 @@
   outline-offset: 2px;
 }
 
-/* Κινητό: πιο σύντομο κείμενο, χωρίς το κουμπί επικοινωνίας */
+/* Κινητό: το κουμπί επικοινωνίας μένει, το υπόλοιπο μικραίνει για να χωρέσει */
 @media (max-width: 640px) {
   .akamas-badge {
     left: 50%;
     transform: translateX(-50%);
     gap: 6px;
     font-size: 12px;
+    white-space: nowrap;
   }
 
-  .akamas-badge__label::before {
-    content: attr(data-short);
-  }
-
-  .akamas-badge__cta {
+  .akamas-badge__label {
     display: none;
   }
 
-  .akamas-badge__back {
+  .akamas-badge__link {
     padding: 6px 10px;
+  }
+
+  .akamas-badge__long {
+    display: none;
+  }
+
+  .akamas-badge__short {
+    display: inline;
   }
 }
 
-@media (max-width: 360px) {
-  .akamas-badge__label {
+@media (max-width: 340px) {
+  .akamas-badge__mark {
     display: none;
   }
 }

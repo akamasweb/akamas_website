@@ -12,7 +12,7 @@ Demo websites for fictional businesses, shown in the "Selected work" section of 
 ## How it is wired
 
 - `vite.config.ts` turns every folder `template/<slug>/` that has an `index.html` into its own page (`/template/<slug>/`). Folders starting with `_` are shared code, not pages.
-- `template/_shared/akamas-badge.js|css`: the small "Template by Akamas" pill shown on every template, with links back to the Akamas site. Each template calls `mountAkamasBadge(lang)` on load and `setAkamasBadgeLang(lang)` when its language changes.
+- `template/_shared/akamas-badge.js|css`: the small "Template by Akamas" pill shown on every template, with links back to the Akamas site. Its "Θέλω κάτι παρόμοιο" button (shown on phones too) opens `/?template=<slug>`: the home page starts at the top, shows every section at once (no fade-in, images loaded eagerly) and scrolls by itself down to the contact form (`src/scrollTour.ts`; any wheel, touch or key press stops it). The message is pre-filled with the template's name (`contact.fromTemplate` in `src/i18n/content.ts`) and `?template` is then dropped from the URL. Each template calls `mountAkamasBadge(lang)` on load and `setAkamasBadgeLang(lang)` when its language changes.
 - The work cards live in `src/i18n/content.ts` (`work.items`, `kind: 'template'`) and are rendered by `Work()` in `src/components/Sections.tsx`. Templates open in the same tab; from the English site they open with `?lang=en`.
 - Card screenshots: `public/work/template-<slug>.webp` (1440×900, first screen of the template, badge hidden).
 

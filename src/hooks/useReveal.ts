@@ -2,6 +2,17 @@ import { useEffect } from 'react'
 
 const SELECTOR = '[data-reveal]:not(.is-visible)'
 
+// Εμφανίζει αμέσως όλα τα στοιχεία, χωρίς fade-in (π.χ. όταν η σελίδα κάνει μόνη της scroll ως τη φόρμα,
+// ώστε ο επισκέπτης να βλέπει το περιεχόμενο καθώς περνά). Τα transitions κλείνουν για μια στιγμή,
+// το reflow εφαρμόζει την τελική κατάσταση και μετά ξανανοίγουν χωρίς να «παίξουν».
+export function revealAllNow() {
+  const root = document.documentElement
+  root.classList.add('reveal-instant')
+  document.querySelectorAll(SELECTOR).forEach((el) => el.classList.add('is-visible'))
+  void root.offsetHeight
+  root.classList.remove('reveal-instant')
+}
+
 // Εμφανίζει σταδιακά όσα στοιχεία έχουν το attribute data-reveal όταν μπαίνουν στην οθόνη.
 // Παρακολουθεί και στοιχεία που προστίθενται αργότερα (π.χ. μετά από αλλαγή γλώσσας ή hot reload),
 // αλλιώς θα έμεναν αόρατα.

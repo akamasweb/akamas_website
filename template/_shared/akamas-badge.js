@@ -15,6 +15,7 @@ const TEXT = {
     label: 'Template από την Akamas',
     short: 'Template · Akamas',
     back: 'Πίσω στην Akamas',
+    backShort: 'Akamas',
     cta: 'Θέλω κάτι παρόμοιο',
     dismiss: 'Απόκρυψη',
     aria: 'Σημείωση: αυτή η σελίδα είναι template',
@@ -23,6 +24,7 @@ const TEXT = {
     label: 'Template by Akamas',
     short: 'Template · Akamas',
     back: 'Back to Akamas',
+    backShort: 'Akamas',
     cta: 'I want one like this',
     dismiss: 'Hide',
     aria: 'Note: this page is a template',
@@ -49,6 +51,15 @@ function cameFromAkamas() {
   }
 }
 
+// «Θέλω κάτι παρόμοιο»: στην αρχική της Akamas με το όνομα του template. Εκεί η σελίδα κατεβαίνει
+// μόνη της από την κορυφή ως τη φόρμα επικοινωνίας, με το μήνυμα ήδη συμπληρωμένο
+// («Είδα το template … και θα ήθελα κάτι παρόμοιο»). Χωρίς #contact, ώστε ο browser να μην πηδήξει
+// κατευθείαν στη φόρμα πριν ξεκινήσει η κίνηση.
+function contactHref(home) {
+  const slug = location.pathname.match(/\/template\/([^/]+)/)?.[1]
+  return slug ? `${home}?template=${encodeURIComponent(slug)}` : `${home}#contact`
+}
+
 function render() {
   if (!root) return
   const t = TEXT[currentLang] ?? TEXT.el
@@ -57,8 +68,8 @@ function render() {
   root.innerHTML = `
     <span class="akamas-badge__mark">${markSvg}</span>
     <span class="akamas-badge__label" data-long="${t.label}" data-short="${t.short}"></span>
-    <a class="akamas-badge__link akamas-badge__back" href="${home}#work">${arrowSvg}<span>${t.back}</span></a>
-    <a class="akamas-badge__link akamas-badge__cta" href="${home}#contact">${t.cta}</a>
+    <a class="akamas-badge__link akamas-badge__back" href="${home}#work" aria-label="${t.back}">${arrowSvg}<span class="akamas-badge__long">${t.back}</span><span class="akamas-badge__short" aria-hidden="true">${t.backShort}</span></a>
+    <a class="akamas-badge__link akamas-badge__cta" href="${contactHref(home)}">${t.cta}</a>
     <button type="button" class="akamas-badge__close" aria-label="${t.dismiss}" title="${t.dismiss}">${closeSvg}</button>
   `
   root.querySelector('.akamas-badge__back').addEventListener('click', (e) => {

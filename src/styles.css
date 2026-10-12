@@ -945,6 +945,11 @@ ul {
   transform: none;
 }
 
+/* revealAllNow(): όλα εμφανίζονται αμέσως, χωρίς fade-in */
+.js.reveal-instant [data-reveal] {
+  transition: none;
+}
+
 /* ---------- Services ---------- */
 
 .services {

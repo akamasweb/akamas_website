@@ -1,6 +1,7 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { site } from '../config'
 import { useLanguage } from '../i18n/LanguageContext'
+import { scrollTour } from '../scrollTour'
 import { ArrowRightIcon } from './Icons'
 
 type Status = 'idle' | 'sending' | 'sent' | 'mailto' | 'error'
@@ -9,6 +10,24 @@ export function Contact() {
   const { t, pathFor } = useLanguage()
   const c = t.contact
   const [status, setStatus] = useState<Status>('idle')
+  const sectionRef = useRef<HTMLElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
+
+  // Από το «Θέλω κάτι παρόμοιο» ενός template (/?template=<όνομα>): η σελίδα ξεκινά από την κορυφή
+  // και κατεβαίνει μόνη της ως τη φόρμα, με όλο το περιεχόμενο ορατό στη διαδρομή. Το μήνυμα ξεκινά
+  // συμπληρωμένο με το template, ώστε να φαίνεται από πού ήρθε ο πελάτης. Μετά καθαρίζει το URL
+  // (και τυχόν #, ώστε το useHashLanding να μην πηδήξει κατευθείαν στη φόρμα).
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    const slug = url.searchParams.get('template')
+    if (!slug) return
+    const item = t.work.items.find((w) => w.url === `/template/${slug}/`)
+    const message = messageRef.current
+    if (item && message && !message.value) message.value = c.fromTemplate(item.name)
+    url.searchParams.delete('template')
+    window.history.replaceState(window.history.state, '', url.pathname + url.search)
+    if (sectionRef.current) scrollTour(sectionRef.current)
+  }, [])
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -66,7 +85,7 @@ export function Contact() {
   }
 
   return (
-    <section className="section contact" id="contact">
+    <section ref={sectionRef} className="section contact" id="contact">
       <div className="container contact__grid">
         <div className="contact__intro" data-reveal>
           <p className="eyebrow">
@@ -127,7 +146,7 @@ export function Contact() {
 
           <label className="field">
             <span>{c.message}</span>
-            <textarea name="message" rows={5} placeholder={c.messagePlaceholder} required />
+            <textarea ref={messageRef} name="message" rows={5} placeholder={c.messagePlaceholder} required />
           </label>
 
           <input className="form__honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />

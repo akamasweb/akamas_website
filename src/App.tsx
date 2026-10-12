@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Privacy } from './components/Privacy'
 import { Faq, Manifesto, Marquee, Pricing, Process, Services, Work } from './components/Sections'
+import { useHashLanding } from './hooks/useHashLanding'
 import { useReveal } from './hooks/useReveal'
 import { useLanguage } from './i18n/LanguageContext'
 
@@ -26,6 +27,7 @@ function Home() {
 export default function App() {
   const { page } = useLanguage()
   useReveal()
+  useHashLanding()
 
   return (
     <>
