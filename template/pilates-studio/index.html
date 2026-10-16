@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ανάσα — Studio Pilates & κίνησης για μικρούς και μεγάλους</title>
+  <meta name="description" content="Pilates mat work, yoga και aerial yoga για ενήλικες· aerial yoga, μουσικοκινητική και θεατρικό παιχνίδι για παιδιά 1–11 ετών. Template από την Akamas με ενδεικτικό περιεχόμενο.">
+  <meta name="theme-color" content="#fbf7f1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232D6A5A'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23FBF7F1' stroke-width='5'/%3E%3Cpath d='M15 34c6-7 11-7 17 0s11 7 17 0' fill='none' stroke='%23F6C443' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>if (/[?&](lang=en|for=)/.test(location.search)) document.documentElement.classList.add('lang-pending')</script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <!-- Εικονίδια -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-logo" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M6 17c3.2-3.8 6.4-3.8 10 0s6.8 3.8 10 0" fill="none" stroke="var(--logo-wave, currentColor)" stroke-width="2.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4.2-2 1.4a12 12 0 0 0 6.3 6.3l1.4-2 4.2 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7l8 6 8-6"/></g></symbol>
+      <symbol id="i-bus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="14" rx="3"/><path d="M5 11h14M8 17.5V20M16 17.5V20"/><circle cx="8.5" cy="14.3" r=".6" fill="currentColor"/><circle cx="15.5" cy="14.3" r=".6" fill="currentColor"/></g></symbol>
+      <!-- Μαθήματα -->
+      <symbol id="i-ring" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><path d="M3 9.2v5.6M21 9.2v5.6M3 12h2M19 12h2"/></g></symbol>
+      <symbol id="i-lotus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 19c-2.4-2.6-3-6.4 0-11 3 4.6 2.4 8.4 0 11z"/><path d="M12 19c-4 .2-7.6-2-8.8-6 3.6-.4 6.6 1.6 8.8 6zM12 19c4 .2 7.6-2 8.8-6-3.6-.4-6.6 1.6-8.8 6z"/></g></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></symbol>
+      <symbol id="i-hammock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5h8"/><path d="M12 2.5 6 13q6 9 12 0L12 2.5"/><path d="M6.6 14.2q5.4 3.6 10.8 0"/></g></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"/><path d="M17 3.5v3M15.5 5h3"/></g></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.1 4.1 0 0 1 12 7.4a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-mombaby" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="6.5" r="2.8"/><path d="M3.5 20.5c0-4.4 2.4-7.6 5.5-7.6s5.5 3.2 5.5 7.6"/><circle cx="17.5" cy="12.8" r="2"/><path d="M14.9 20.5c0-2.3 1.1-3.9 2.6-3.9s2.6 1.6 2.6 3.9"/></g></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8c.8 4.6 3.6 7.4 8.2 8.2-4.6.8-7.4 3.6-8.2 8.2-.8-4.6-3.6-7.4-8.2-8.2 4.6-.8 7.4-3.6 8.2-8.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5V5.5l10-2v12"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="15.5" r="2.5"/><path d="M9 9.5l10-2"/></g></symbol>
+      <symbol id="i-mask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4.5h15v6.5a7.5 7.5 0 0 1-15 0z"/><path d="M8 9.5c.6-.7 1.6-.7 2.2 0M13.8 9.5c.6-.7 1.6-.7 2.2 0M8.8 13.5c1.8 1.8 4.6 1.8 6.4 0"/></g></symbol>
+      <!-- Οφέλη -->
+      <symbol id="i-spine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5c-1.8 3 1.8 6.2 0 9.5s1.8 6.5 0 9.5"/><path d="M8.5 6h7M8 10.5h7.5M8.5 15h7M9 19.5h6"/></g></symbol>
+      <symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9c2.4-2.6 4.6-2.6 7 0s4.6 2.6 7 0c1.2-1.3 2.4-1.9 4-1.9"/><path d="M3 15c2.4-2.6 4.6-2.6 7 0s4.6 2.6 7 0c1.2-1.3 2.4-1.9 4-1.9"/></g></symbol>
+      <symbol id="i-balance" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M4 13h16M12 13l-4 7.5h8z"/><path d="M12 7v6"/></g></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M12 8v8M8 12h8"/></g></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8.2 5.2-14 14.5-14C19.5 14.2 13.8 19 5 19z"/><path d="M5 19l7.5-7.5"/></g></symbol>
+      <symbol id="i-hips" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v5"/><path d="M5 8.5c2.4 1.4 4.6 1.4 7-.5 2.4 1.9 4.6 1.9 7 .5-.3 4.2-2.2 7-5 8.5h-4C7.2 15.5 5.3 12.7 5 8.5z"/><path d="M9.5 17l-1 4M14.5 17l1 4"/></g></symbol>
+      <!-- Θεραπείες & εκδηλώσεις -->
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16v-8H4z"/><path d="M4 16c2 1.4 4 1.4 6 0 2 1.4 4 1.4 6 0 1.5 1 2.8 1.2 4 .4"/><path d="M12 12.5V9"/><path d="M12 3.5c1.2 1.3 1.2 2.7 0 3.5-1.2-.8-1.2-2.2 0-3.5z"/></g></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 6.5C10 4.8 7.2 4.3 4 4.5v13c3.2-.2 6 .3 8 2 2-1.7 4.8-2.2 8-2v-13c-3.2-.2-6 .3-8 2z"/><path d="M12 6.5v13"/></g></symbol>
+      <symbol id="i-frame" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M6.5 16.5l4-4.5 3 3 2-2 2.5 3.5"/><circle cx="15.5" cy="8.8" r="1.4"/></g></symbol>
+      <!-- Για ποιον -->
+      <symbol id="i-me" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.4"/><path d="M12 9v6M6.5 10.5 12 9l5.5 1.5M12 15l-3.2 6M12 15l3.2 6"/></g></symbol>
+      <symbol id="i-kid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3"/><path d="M8.6 7.2 7 6M15.4 7.2 17 6"/><path d="M12 12.5v4.2M7.5 12.8l4.5 1 4.5-1M12 16.7l-2.5 4M12 16.7l2.5 4"/></g></symbol>
+      <symbol id="i-family" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="4.5" r="2.2"/><path d="M8 8v6.5M4 10l4-1.2 4 1.2M8 14.5 5.8 21M8 14.5l2.2 6.5"/><circle cx="17" cy="11" r="2"/><path d="M17 14v3.5M14.5 15.4l2.5-.6 2.5.6M17 17.5l-1.6 3.5M17 17.5l1.6 3.5"/></g></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top" aria-label="Ανάσα, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__text" aria-hidden="true"><span class="logo__name" data-i18n="logo.name">ανάσα</span><span class="logo__sub" data-i18n="logo.sub">pilates · yoga · κίνηση</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση" data-i18n-attr="aria-label:nav.label">
+        <ul class="nav__list">
+          <li><a href="#classes" data-i18n="nav.classes">Μαθήματα</a></li>
+          <li><a href="#kids" data-i18n="nav.kids">Παιδιά</a></li>
+          <li><a href="#schedule" data-i18n="nav.schedule">Πρόγραμμα</a></li>
+          <li><a href="#prices" data-i18n="nav.prices">Τιμές</a></li>
+          <li><a href="#wellness" data-i18n="nav.wellness">Θεραπείες</a></li>
+          <li><a href="#visit" data-i18n="nav.visit">Επικοινωνία</a></li>
+          <li class="nav__cta"><a href="#trial" data-i18n="nav.trial">Δοκιμαστικό μάθημα</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__tools">
+        <div class="lang" role="group" aria-label="Γλώσσα" data-i18n-attr="aria-label:lang.label">
+          <button type="button" class="lang__btn" data-set-lang="el" aria-pressed="true" lang="el" aria-label="Ελληνικά">EL</button>
+          <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="btn btn--accent btn--sm header-cta" href="#trial" data-i18n="nav.trialShort">Δοκιμαστικό</a>
+        <button type="button" class="burger" aria-expanded="false" aria-controls="nav" aria-label="Άνοιγμα πλοήγησης" data-burger><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__intro">
+        <div>
+          <p class="hero__eyebrow" data-i18n="hero.eyebrow">Pilates · Yoga · Aerial · Παιδικά τμήματα</p>
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">Κίνηση για <em>μικρούς</em> και <em>μεγάλους</em>.</h1>
+        </div>
+        <p class="hero__lead" data-i18n="hero.lead">Ένα ζεστό στούντιο για όλη την οικογένεια. Διαλέξτε από πού θα ξεκινήσετε και η σελίδα προσαρμόζεται σε εσάς.</p>
+      </div>
+
+      <div class="wrap">
+        <div class="doors">
+          <article class="door door--adults" data-door="adults" aria-labelledby="door-adults-title">
+            <svg class="door__art" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+              <g class="door__rings">
+                <circle cx="196" cy="104" r="184"/><circle cx="196" cy="104" r="138"/><circle cx="196" cy="104" r="96"/><circle cx="196" cy="104" r="62"/>
+              </g>
+              <circle class="door__core" cx="196" cy="104" r="44"/>
+              <path class="door__wave" d="M140 108c18-21 37-21 56 0s38 21 56 0"/>
+              <path class="door__spark" d="M74 52c1.8 10 6.6 14.8 16.6 16.6-10 1.8-14.8 6.6-16.6 16.6-1.8-10-6.6-14.8-16.6-16.6 10-1.8 14.8-6.6 16.6-16.6z"/>
+            </svg>
+            <div class="door__body">
+              <p class="door__tag"><svg aria-hidden="true"><use href="#i-me"/></svg><span data-i18n="door.adults.tag">Για ενήλικες</span></p>
+              <h2 class="door__title" id="door-adults-title" data-i18n-html="door.adults.title">Δυναμώστε. <em>Ηρεμήστε.</em></h2>
+              <ul class="door__list">
+                <li>Pilates mat work</li>
+                <li>Hatha & Ashtanga</li>
+                <li>Aerial yoga</li>
+                <li>Yoga Nidra</li>
+              </ul>
+              <p class="door__next" data-door-next="adults" hidden></p>
+              <div class="door__ctas">
+                <a class="btn door__btn" href="#trial" data-trial-for="adults"><span data-i18n="door.adults.cta">Δοκιμαστικό με 5 €</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="door__link" href="#classes" data-set-aud="adults" data-i18n="door.adults.more">Τα μαθήματα</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="door door--kids" data-door="kids" aria-labelledby="door-kids-title">
+            <svg class="door__art" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+              <circle class="door__blob" cx="196" cy="150" r="112"/>
+              <g class="door__dots"><circle cx="262" cy="96" r="5"/><circle cx="250" cy="212" r="6"/><circle cx="128" cy="232" r="4"/></g>
+              <path class="door__spark door__spark--a" d="M58 84c2 11.6 8 17.6 19.6 19.6-11.6 2-17.6 8-19.6 19.6-2-11.6-8-17.6-19.6-19.6 11.6-2 17.6-8 19.6-19.6z"/>
+              <path class="door__spark door__spark--b" d="M276 236c1.4 8 5.6 12.2 13.6 13.6-8 1.4-12.2 5.6-13.6 13.6-1.4-8-5.6-12.2-13.6-13.6 8-1.4 12.2-5.6 13.6-13.6z"/>
+              <g class="door__swing">
+                <path class="door__bar" d="M128 12h96"/>
+                <circle class="door__ring" cx="176" cy="22" r="6"/>
+                <path class="door__fabric-back" d="M176 28 122 176Q176 224 230 176Z"/>
+                <circle class="door__kid" cx="157" cy="150" r="7"/><circle class="door__kid" cx="195" cy="150" r="7"/>
+                <circle class="door__kid" cx="176" cy="160" r="18"/>
+                <circle class="door__kid" cx="142" cy="176" r="6.5"/><circle class="door__kid" cx="210" cy="176" r="6.5"/>
+                <path class="door__pouch" d="M116 172Q176 214 236 172 224 248 176 252 128 248 116 172Z"/>
+                <path class="door__leg" d="M192 198 225 181 231 220"/>
+              </g>
+              <g class="door__note"><path d="M262 172v-24l16-4v22"/><circle cx="257" cy="173" r="5.5"/><circle cx="273" cy="167" r="5.5"/></g>
+            </svg>
+            <div class="door__body">
+              <p class="door__tag"><svg aria-hidden="true"><use href="#i-kid"/></svg><span data-i18n="door.kids.tag">Για παιδιά 1–11 ετών</span></p>
+              <h2 class="door__title" id="door-kids-title" data-i18n-html="door.kids.title">Παίζουν, αιωρούνται, <em>μεγαλώνουν.</em></h2>
+              <ul class="door__list">
+                <li>Aerial yoga</li>
+                <li data-i18n="cls.music.name">Μουσικοκινητική</li>
+                <li data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</li>
+                <li data-i18n="door.kids.party">Πάρτι γενεθλίων</li>
+              </ul>
+              <p class="door__next" data-door-next="kids" hidden></p>
+              <div class="door__ctas">
+                <a class="btn door__btn" href="#trial" data-trial-for="kids"><span data-i18n="door.kids.cta">Δωρεάν πρώτο μάθημα</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="door__link" href="#kids" data-set-aud="kids" data-i18n="door.kids.more">Τα προγράμματα</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <ul class="wrap facts">
+        <li class="fact"><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n-html="facts.1"><strong>Εγγραφή δωρεάν</strong> σε όλα τα πακέτα</span></li>
+        <li class="fact"><svg aria-hidden="true"><use href="#i-ring"/></svg><span data-i18n-html="facts.2"><strong>6 μαθήματα Pilates</strong> κάθε εβδομάδα</span></li>
+        <li class="fact"><svg aria-hidden="true"><use href="#i-kid"/></svg><span data-i18n-html="facts.3"><strong>Παιδικά τμήματα</strong> για 1–11 ετών</span></li>
+        <li class="fact"><svg aria-hidden="true"><use href="#i-family"/></svg><span data-i18n-html="facts.4"><strong>−15% για οικογένειες</strong> με 2+ μέλη</span></li>
+      </ul>
+    </section>
+
+    <!-- ================= ΜΑΘΗΜΑΤΑ ================= -->
+    <section class="section" id="classes" aria-labelledby="classes-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-i18n="classes.eyebrow">Τα μαθήματά μας</p>
+            <h2 class="section-title" id="classes-title" data-i18n="classes.title">Βρείτε το μάθημα που σας ταιριάζει</h2>
+          </div>
+          <p class="section-lead" data-i18n="classes.lead">Από ήπια hatha yoga μέχρι aerial με αναστροφές, κι από το πρώτο βρεφικό μάθημα μέχρι το Pilates της εφηβείας. Ό,τι κι αν διαλέξετε, ξεκινάτε με ένα δοκιμαστικό.</p>
+        </header>
+
+        <div class="filter" role="group" aria-label="Εμφάνιση μαθημάτων για" data-i18n-attr="aria-label:filter.label">
+          <button type="button" class="filter__btn" data-set-aud="all" aria-pressed="true"><span data-i18n="filter.all">Όλα</span> <span class="filter__count" data-count="all">11</span></button>
+          <button type="button" class="filter__btn" data-set-aud="adults" aria-pressed="false"><span data-i18n="filter.adults">Ενήλικες</span> <span class="filter__count" data-count="adults">8</span></button>
+          <button type="button" class="filter__btn" data-set-aud="kids" aria-pressed="false"><span data-i18n="filter.kids">Παιδιά</span> <span class="filter__count" data-count="kids">4</span></button>
+        </div>
+
+        <ul class="classes" data-classes>
+          <li class="class class--pilates class--feature" data-aud="adults" data-reveal>
+            <div class="class__top">
+              <span class="class__icon"><svg aria-hidden="true"><use href="#i-ring"/></svg></span>
+              <span class="class__flag" data-i18n="cls.pilates.flag">Το πιο δημοφιλές μας</span>
+            </div>
+            <h3 class="class__name">Pilates Mat Work</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>60′</span><span data-i18n="cls.pilates.who">Από την εφηβεία και μετά</span></p>
+            <p class="class__desc" data-i18n="cls.pilates.desc">Η βάση της μεθόδου Pilates, πάνω στο στρώμα. Δυναμώνει τους βαθιούς μύες που κρατούν το σώμα όρθιο, ευθυγραμμίζει αρθρώσεις και σπονδυλική στήλη, και μαθαίνει κάθε κίνηση να γίνεται με έλεγχο και ανάσα.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.pilates.days">Τρίτη, Πέμπτη & Σάββατο · 6 τμήματα</span></p>
+            <a class="class__cta" href="#trial" data-book="pilates"><span data-i18n="cls.try">Δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--yoga" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-lotus"/></svg></span></div>
+            <h3 class="class__name">Hatha Yoga</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>90′</span><span data-i18n="cls.allLevels">Όλα τα επίπεδα</span></p>
+            <p class="class__desc" data-i18n="cls.hatha.desc">Στάσεις, αναπνοή και χαλάρωση σε ήπιο ρυθμό. Η ιδανική αρχή για όποιον κάνει τα πρώτα του βήματα στη yoga.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.hatha.days">Πέμπτη βράδυ</span></p>
+            <a class="class__cta" href="#trial" data-book="hatha"><span data-i18n="cls.try">Δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--yoga" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-sun"/></svg></span></div>
+            <h3 class="class__name">Ashtanga Yoga</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>90′</span><span data-i18n="cls.dynamic">Δυναμική ροή</span></p>
+            <p class="class__desc" data-i18n="cls.ashtanga.desc">Μια σταθερή σειρά στάσεων που δένει κίνηση και ανάσα. Για όσους θέλουν ένταση, ρυθμό και ιδρώτα.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.ashtanga.days">Δευτέρα βράδυ</span></p>
+            <a class="class__cta" href="#trial" data-book="ashtanga"><span data-i18n="cls.try">Δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--aerial" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-hammock"/></svg></span></div>
+            <h3 class="class__name">Aerial Yoga</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>60′</span><span data-i18n="cls.allLevels">Όλα τα επίπεδα</span></p>
+            <p class="class__desc" data-i18n="cls.aerial.desc">Yoga με την υποστήριξη της αιώρας. Αναστροφές χωρίς φορτίο στη σπονδυλική στήλη, δύναμη στα χέρια και τον κορμό, και μια αίσθηση ότι πετάτε.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.aerial.days">Δευτέρα & Τετάρτη βράδυ</span></p>
+            <a class="class__cta" href="#trial" data-book="aerial"><span data-i18n="cls.try">Δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--aerial" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-moon"/></svg></span></div>
+            <h3 class="class__name">Yin Aerial Yoga</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>90′</span><span data-i18n="cls.slow">Αργό & βαθύ</span></p>
+            <p class="class__desc" data-i18n="cls.yin.desc">Παθητικές, μακρές διατάσεις με το σώμα να στηρίζεται στην αιώρα. Για αρθρώσεις, συνδετικό ιστό και ένα μυαλό που επιτέλους ησυχάζει.</p>
+            <p class="class__days class__days--soon"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.onRequest">Νέο τμήμα με συνεννόηση</span></p>
+            <a class="class__cta" href="#trial" data-book="yinAerial"><span data-i18n="cls.ask">Δηλώστε ενδιαφέρον</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--yoga" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-moon"/></svg></span></div>
+            <h3 class="class__name">Yoga Nidra</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>120′</span><span data-i18n="cls.lying">Ξαπλωμένοι, με καθοδήγηση</span></p>
+            <p class="class__desc" data-i18n="cls.nidra.desc">Ο «ύπνος της yoga»: καθοδηγούμενη βαθιά χαλάρωση, στο όριο ανάμεσα σε ξύπνιο και ύπνο. Για το άγχος, την αϋπνία και την κούραση της εβδομάδας.</p>
+            <p class="class__days class__days--soon"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.onRequest">Νέο τμήμα με συνεννόηση</span></p>
+            <a class="class__cta" href="#trial" data-book="nidra"><span data-i18n="cls.ask">Δηλώστε ενδιαφέρον</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--yoga" data-aud="adults" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></span></div>
+            <h3 class="class__name" data-i18n="cls.prenatal.name">Yoga εγκυμοσύνης & λοχείας</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>90′</span><span data-i18n="cls.prenatal.who">Με έγκριση γιατρού</span></p>
+            <p class="class__desc" data-i18n="cls.prenatal.desc">Ήπια yoga πριν και μετά τον τοκετό: αναπνοή, χαλάρωση και ασφαλείς στάσεις για ένα σώμα που αλλάζει κάθε εβδομάδα.</p>
+            <p class="class__days class__days--soon"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.onRequest">Νέο τμήμα με συνεννόηση</span></p>
+            <a class="class__cta" href="#trial" data-book="prenatal"><span data-i18n="cls.ask">Δηλώστε ενδιαφέρον</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--family" data-aud="adults kids" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-mombaby"/></svg></span><span class="class__flag class__flag--soft" data-i18n="cls.together">Μαζί</span></div>
+            <h3 class="class__name">Mom & Baby Yoga</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>60′</span><span data-i18n="cls.mombaby.who">Μωρά 2 μηνών ως τα πρώτα βήματα</span></p>
+            <p class="class__desc" data-i18n="cls.mombaby.desc">Ασκήσεις αποκατάστασης για κοιλιά και πύελο, αναπνοές που βοηθούν τον θηλασμό, και βρεφικό μασάζ για κολικούς και καλύτερο ύπνο. Και οι δύο φεύγετε πιο ήρεμοι.</p>
+            <p class="class__days class__days--soon"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.onRequest">Νέο τμήμα με συνεννόηση</span></p>
+            <a class="class__cta" href="#trial" data-book="momBaby"><span data-i18n="cls.ask">Δηλώστε ενδιαφέρον</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--kids" data-aud="kids" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="class__age" data-i18n="age.5to11">5–11 ετών</span></div>
+            <h3 class="class__name" data-i18n="cls.aerialKids.name">Aerial yoga για παιδιά</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>60′</span><span data-i18n="cls.firstFree">Πρώτο μάθημα δωρεάν</span></p>
+            <p class="class__desc" data-i18n="cls.aerialKids.desc">Yoga στο έδαφος και στην αιώρα, παιχνίδι στον αέρα και χαλάρωση. Τα παιδιά κερδίζουν ευλυγισία, δύναμη και θάρρος, και μαθαίνουν να συνεργάζονται.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.aerialKids.days">Τετάρτη απόγευμα</span></p>
+            <a class="class__cta" href="#trial" data-book="aerialKids"><span data-i18n="cls.tryFree">Δωρεάν δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--kids" data-aud="kids" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-music"/></svg></span><span class="class__age" data-i18n="age.1to7">1–7 ετών</span></div>
+            <h3 class="class__name" data-i18n="cls.music.name">Μουσικοκινητική</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45′ / 60′</span><span data-i18n="cls.music.groups">Δύο ομάδες ηλικιών</span></p>
+            <p class="class__desc" data-i18n="cls.music.desc">Μουσική, κίνηση και λόγος σε ένα μάθημα. Ρυθμός, μικρά όργανα, τραγούδι και αυτοσχεδιασμός, με κάθε παιδί να ανακαλύπτει τη μουσική με το δικό του σώμα.</p>
+            <p class="class__days"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.music.days">Παρασκευή απόγευμα · 1–3½ και 4–7 ετών</span></p>
+            <a class="class__cta" href="#trial" data-book="music"><span data-i18n="cls.tryFree">Δωρεάν δοκιμαστικό</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="class class--kids" data-aud="kids" data-reveal>
+            <div class="class__top"><span class="class__icon"><svg aria-hidden="true"><use href="#i-mask"/></svg></span><span class="class__age" data-i18n="age.4to10">4–10 ετών</span></div>
+            <h3 class="class__name" data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</h3>
+            <p class="class__meta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>60′</span><span data-i18n="cls.firstFree">Πρώτο μάθημα δωρεάν</span></p>
+            <p class="class__desc" data-i18n="cls.theatre.desc">Παιχνίδια και αυτοσχεδιασμοί που ξεκλειδώνουν φαντασία και έκφραση. Τα παιδιά μαθαίνουν να δουλεύουν σε ομάδα, να παρατηρούν και να μιλούν με σιγουριά.</p>
+            <p class="class__days class__days--soon"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="cls.onRequest">Νέο τμήμα με συνεννόηση</span></p>
+            <a class="class__cta" href="#trial" data-book="theatre"><span data-i18n="cls.ask">Δηλώστε ενδιαφέρον</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PILATES ================= -->
+    <section class="section section--tint" id="pilates" aria-labelledby="pilates-title">
+      <div class="wrap pilates">
+        <div class="pilates__copy">
+          <p class="eyebrow" data-i18n="pilates.eyebrow">Γιατί Pilates</p>
+          <h2 class="section-title" id="pilates-title" data-i18n-html="pilates.title">Δυνατός κορμός, <em>ήρεμο μυαλό.</em></h2>
+          <p class="section-lead" data-i18n="pilates.lead">Η μέθοδος του Joseph Pilates στο στρώμα, εκεί που ξεκίνησαν όλα. Δουλεύουμε τους βαθιούς μύες που στηρίζουν το σώμα, με συνειδητό έλεγχο σε κάθε κίνηση και χωρίς περιττές, κουραστικές επαναλήψεις.</p>
+
+          <ul class="benefits">
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-spine"/></svg><div><h3 data-i18n="ben.1.t">Στάση σώματος</h3><p data-i18n="ben.1.d">Βοηθά σε κύφωση, σκολίωση και λόρδωση.</p></div></li>
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-hips"/></svg><div><h3 data-i18n="ben.2.t">Μέση & ισχία</h3><p data-i18n="ben.2.d">Ανακουφίζει από πόνους στη μέση και στους γοφούς.</p></div></li>
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-wave"/></svg><div><h3 data-i18n="ben.3.t">Αναπνοή</h3><p data-i18n="ben.3.d">Αναπνέετε βαθύτερα και πιο ήρεμα, και μέσα στη μέρα.</p></div></li>
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-balance"/></svg><div><h3 data-i18n="ben.4.t">Ισορροπία & συντονισμός</h3><p data-i18n="ben.4.d">Καλύτερη αίσθηση του σώματος στον χώρο.</p></div></li>
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-plus"/></svg><div><h3 data-i18n="ben.5.t">Αποκατάσταση</h3><p data-i18n="ben.5.d">Βοηθά την επάνοδο μετά από τραυματισμούς και καταπονήσεις.</p></div></li>
+            <li class="benefit" data-reveal><svg aria-hidden="true"><use href="#i-leaf"/></svg><div><h3 data-i18n="ben.6.t">Λιγότερο στρες</h3><p data-i18n="ben.6.d">Η συγκέντρωση στην κίνηση αφήνει την ένταση της μέρας έξω.</p></div></li>
+          </ul>
+
+          <div class="for-whom">
+            <h3 class="for-whom__title" data-i18n="pilates.forWhom">Για ποιους είναι</h3>
+            <ul class="tags">
+              <li data-i18n="pilates.w1">Ενήλικες κάθε ηλικίας</li>
+              <li data-i18n="pilates.w2">Έφηβοι</li>
+              <li data-i18n="pilates.w3">Παιδιά που χορεύουν ή αθλούνται</li>
+              <li data-i18n="pilates.w4">Αθλητές & χορευτές</li>
+              <li data-i18n="pilates.w5">Εγκυμοσύνη & λοχεία, με έγκριση γιατρού</li>
+            </ul>
+            <p class="small-note" data-i18n="pilates.note">Το Pilates δεν αντικαθιστά την ιατρική διάγνωση ή θεραπεία. Θέλει συνέπεια και λίγη υπομονή στην αρχή, αλλά το σώμα σας θα το καταλάβει γρήγορα.</p>
+          </div>
+        </div>
+
+        <aside class="breath" aria-labelledby="breath-title" data-breath>
+          <p class="breath__kicker" data-i18n="breath.kicker">Δοκιμάστε το τώρα</p>
+          <h3 class="breath__title" id="breath-title" data-i18n="breath.title">Πάρτε μια ανάσα</h3>
+          <p class="breath__text" data-i18n="breath.text">Έτσι ξεκινά κάθε μάθημά μας: τρεις αργές αναπνοές. Κατάλληλο και για παιδιά.</p>
+          <div class="breath__stage" aria-hidden="true">
+            <span class="breath__halo"></span>
+            <span class="breath__ball"></span>
+            <span class="breath__sec" data-breath-sec></span>
+          </div>
+          <p class="breath__phase" aria-live="polite" data-breath-phase data-i18n="breath.ready">Έτοιμοι όταν είστε κι εσείς.</p>
+          <button type="button" class="btn btn--accent btn--sm breath__btn" data-breath-btn data-i18n="breath.start">Ξεκινήστε · 30″</button>
+          <noscript><p class="breath__text" data-i18n="breath.noscript">Εισπνοή από τη μύτη σε 4 χρόνους, εκπνοή από το στόμα σε 6. Τρεις φορές.</p></noscript>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= ΠΑΙΔΙΑ ================= -->
+    <section class="section kids" id="kids" aria-labelledby="kids-title">
+      <svg class="kids__wave kids__wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30C120 6 240 6 360 30s240 24 360 0 240-24 360 0 240 24 360 0V60z"/></svg>
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--kids" data-i18n="kids.eyebrow">Για παιδιά 1–11 ετών</p>
+            <h2 class="section-title kids__title" id="kids-title" data-i18n-html="kids.title">Μεγαλώνουν <em>παίζοντας.</em></h2>
+          </div>
+          <p class="section-lead" data-i18n="kids.lead">Τρία προγράμματα για παιδιά, από τα πρώτα βήματα ως το τέλος του δημοτικού. Το πρώτο μάθημα είναι πάντα δωρεάν, και τα αδέρφια έχουν ειδική τιμή.</p>
+        </header>
+
+        <div class="agefinder" data-agefinder>
+          <div class="agefinder__control">
+            <label class="agefinder__label" for="age-range" data-i18n="age.question">Πόσων χρονών είναι το παιδί;</label>
+            <p class="agefinder__value" aria-hidden="true"><span class="agefinder__num" data-age-num>6</span> <span class="agefinder__unit" data-age-unit>ετών</span></p>
+            <input class="agefinder__range" id="age-range" type="range" min="0.5" max="12" step="0.5" value="6" aria-valuetext="6 ετών" data-age-range>
+            <p class="agefinder__result" aria-live="polite" data-age-result></p>
+          </div>
+
+          <div class="ages" style="--ax: 13; --age: 6" data-ages>
+            <div class="ages__axis" aria-hidden="true">
+              <div class="ages__ticks"><span style="--at: 0">0</span><span style="--at: 2">2</span><span style="--at: 4">4</span><span style="--at: 6">6</span><span style="--at: 8">8</span><span style="--at: 10">10</span><span style="--at: 12">12+</span></div>
+            </div>
+            <ul class="ages__rows">
+              <li class="agerow agerow--family" data-from="0.17" data-until="1.5" data-prog="momBaby">
+                <p class="agerow__label"><strong>Mom & Baby Yoga</strong><span data-i18n="age.mombaby">2 μηνών – πρώτα βήματα</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: .17; --until: 1.5"></span></div>
+                <p class="agerow__when" data-i18n="age.whenRequest">Με συνεννόηση</p>
+              </li>
+              <li class="agerow" data-from="1" data-until="4" data-prog="music">
+                <p class="agerow__label"><strong data-i18n="cls.music.name">Μουσικοκινητική</strong><span data-i18n="age.1to3">1–3½ ετών</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: 1; --until: 4"></span></div>
+                <p class="agerow__when" data-i18n="age.whenFri18">Παρασκευή 18:00</p>
+              </li>
+              <li class="agerow" data-from="4" data-until="8" data-prog="music">
+                <p class="agerow__label"><strong data-i18n="cls.music.name">Μουσικοκινητική</strong><span data-i18n="age.4to7">4–7 ετών</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: 4; --until: 8"></span></div>
+                <p class="agerow__when" data-i18n="age.whenFri19">Παρασκευή 19:00</p>
+              </li>
+              <li class="agerow" data-from="4" data-until="11" data-prog="theatre">
+                <p class="agerow__label"><strong data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</strong><span data-i18n="age.4to10">4–10 ετών</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: 4; --until: 11"></span></div>
+                <p class="agerow__when" data-i18n="age.whenRequest">Με συνεννόηση</p>
+              </li>
+              <li class="agerow" data-from="5" data-until="12" data-prog="aerialKids">
+                <p class="agerow__label"><strong data-i18n="cls.aerialKids.name">Aerial yoga για παιδιά</strong><span data-i18n="age.5to11">5–11 ετών</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: 5; --until: 12"></span></div>
+                <p class="agerow__when" data-i18n="age.whenWed19">Τετάρτη 19:00</p>
+              </li>
+              <li class="agerow agerow--teen" data-from="12" data-until="99" data-prog="pilates">
+                <p class="agerow__label"><strong>Pilates Mat Work</strong><span data-i18n="age.teen">Από 12 ετών</span></p>
+                <div class="agerow__track"><span class="agerow__bar" style="--from: 12; --until: 13"></span></div>
+                <p class="agerow__when" data-i18n="age.whenPilates">Τρ, Πε & Σάβ</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kids__grid">
+          <div class="flow" aria-labelledby="flow-title">
+            <h3 class="flow__title" id="flow-title" data-i18n="flow.title">Πώς κυλάει ένα μάθημα aerial yoga για παιδιά</h3>
+            <ol class="flow__steps">
+              <li class="flow__step" data-reveal><span class="flow__num">1</span><h4 data-i18n="flow.1.t">Ζέσταμα</h4><p data-i18n="flow.1.d">Ξυπνάμε το σώμα με παιχνίδι.</p></li>
+              <li class="flow__step" data-reveal><span class="flow__num">2</span><h4 data-i18n="flow.2.t">Στάσεις</h4><p data-i18n="flow.2.d">Στο έδαφος και μέσα στην αιώρα.</p></li>
+              <li class="flow__step" data-reveal><span class="flow__num">3</span><h4 data-i18n="flow.3.t">Παιχνίδι στον αέρα</h4><p data-i18n="flow.3.d">Κούνιες, αναστροφές, πολύ γέλιο.</p></li>
+              <li class="flow__step" data-reveal><span class="flow__num">4</span><h4 data-i18n="flow.4.t">Χαλάρωση</h4><p data-i18n="flow.4.d">Κουκούλι στην αιώρα, μάτια κλειστά.</p></li>
+              <li class="flow__step" data-reveal><span class="flow__num">5</span><h4 data-i18n="flow.5.t">Κύκλος κουβέντας</h4><p data-i18n="flow.5.d">Λέμε τι νιώσαμε και τι μας άρεσε.</p></li>
+            </ol>
+          </div>
+
+          <ul class="tips">
+            <li class="tip" data-reveal><h3 data-i18n="tip.1.t">Τι να φορέσει</h3><p data-i18n="tip.1.d">Άνετα ρούχα και μπλούζα με μανίκια, για να μην τρίβεται το ύφασμα της αιώρας.</p></li>
+            <li class="tip" data-reveal><h3 data-i18n="tip.2.t">Υγεία πρώτα</h3><p data-i18n="tip.2.d">Πείτε μας για γλαύκωμα, πρόσφατη επέμβαση, καρδιολογικά ή θέματα σπονδυλικής στήλης.</p></li>
+            <li class="tip" data-reveal><h3 data-i18n="tip.3.t">Αδέρφια</h3><p data-i18n-html="tip.3.d">Δύο αδέρφια στο ίδιο πρόγραμμα: <strong><span data-price="65">65 €</span> τον μήνα</strong> αντί για <span data-price="76">76 €</span>.</p></li>
+          </ul>
+        </div>
+
+        <article class="party" aria-labelledby="party-title">
+          <div class="party__copy">
+            <p class="party__kicker"><svg aria-hidden="true"><use href="#i-cake"/></svg><span data-i18n="party.kicker">Πάρτι γενεθλίων</span></p>
+            <h3 class="party__title" id="party-title" data-i18n="party.title">Το πάρτι του γίνεται στο στούντιο</h3>
+            <p data-i18n="party.text">Το οργανώνουμε μαζί σας, με ό,τι αγαπά το παιδί σας. Εσείς φέρνετε την τούρτα· εμείς το παιχνίδι.</p>
+            <a class="btn btn--dark btn--sm" href="#visit"><span data-i18n="party.cta">Ρωτήστε για ημερομηνία</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="party__ideas">
+            <ul class="confetti">
+              <li data-i18n="party.i1">Θεατρικά παιχνίδια</li>
+              <li data-i18n="party.i2">Μουσικοκινητική</li>
+              <li data-i18n="party.i3">Karaoke</li>
+              <li data-i18n="party.i4">Διαγωνισμός τραγουδιού & χορού</li>
+              <li data-i18n="party.i5">Ομαδικά παιχνίδια</li>
+              <li data-i18n="party.i6">Escape game</li>
+              <li data-i18n="party.i7">Προβολή ταινίας</li>
+              <li data-i18n="party.i8">Θεατρική παράσταση</li>
+            </ul>
+            <p class="party__theme" data-i18n-html="party.theme"><strong>Θεματικό πάρτι «Στον Όλυμπο»:</strong> θεατρικά παιχνίδια, αφήγηση μύθων και μια ταινία για τους δώδεκα θεούς.</p>
+          </div>
+        </article>
+      </div>
+      <svg class="kids__wave kids__wave--bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0v30c120 24 240 24 360 0s240-24 360 0 240 24 360 0 240-24 360 0V0z"/></svg>
+    </section>
+
+    <!-- ================= ΠΡΟΓΡΑΜΜΑ ================= -->
+    <section class="section" id="schedule" aria-labelledby="schedule-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-i18n="schedule.eyebrow">Πρόγραμμα 2026–27</p>
+            <h2 class="section-title" id="schedule-title" data-i18n="schedule.title">Η εβδομάδα στο στούντιο</h2>
+          </div>
+          <p class="section-lead" data-i18n="schedule.lead">Απογεύματα τις καθημερινές, πρωί το Σάββατο. Πατήστε ένα μάθημα για να κλείσετε δοκιμαστικό σε αυτή την ώρα.</p>
+        </header>
+
+        <div class="schedule-bar">
+          <div class="filter" role="group" aria-label="Εμφάνιση μαθημάτων για" data-i18n-attr="aria-label:filter.label">
+            <button type="button" class="filter__btn" data-set-aud="all" aria-pressed="true" data-i18n="filter.all">Όλα</button>
+            <button type="button" class="filter__btn" data-set-aud="adults" aria-pressed="false" data-i18n="filter.adults">Ενήλικες</button>
+            <button type="button" class="filter__btn" data-set-aud="kids" aria-pressed="false" data-i18n="filter.kids">Παιδιά</button>
+          </div>
+          <ul class="legend" aria-label="Υπόμνημα" data-i18n-attr="aria-label:legend.label">
+            <li class="legend__item legend__item--pilates">Pilates</li>
+            <li class="legend__item legend__item--yoga">Yoga</li>
+            <li class="legend__item legend__item--aerial">Aerial</li>
+            <li class="legend__item legend__item--kids" data-i18n="legend.kids">Παιδικά</li>
+          </ul>
+        </div>
+
+        <div class="tt" data-tt>
+          <section class="tt__day" data-day="1" aria-labelledby="tt-d1">
+            <h3 class="tt__name" id="tt-d1"><span data-i18n="day.1">Δευτέρα</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--yoga" href="#trial" data-slot data-aud="adults" data-cls="ashtanga" data-day="1" data-start="19:10" data-end="20:40"><span class="slot__time">19:10 – 20:40</span><span class="slot__name">Ashtanga Yoga</span><span class="slot__meta" data-i18n="tt.adults90">Ενήλικες · 90′</span></a></li>
+              <li><a class="slot slot--aerial" href="#trial" data-slot data-aud="adults" data-cls="aerial" data-day="1" data-start="20:45" data-end="21:45"><span class="slot__time">20:45 – 21:45</span><span class="slot__name">Aerial Yoga</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+            </ul>
+          </section>
+          <section class="tt__day" data-day="2" aria-labelledby="tt-d2">
+            <h3 class="tt__name" id="tt-d2"><span data-i18n="day.2">Τρίτη</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="2" data-start="19:00" data-end="20:00"><span class="slot__time">19:00 – 20:00</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="2" data-start="20:00" data-end="21:00"><span class="slot__time">20:00 – 21:00</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+            </ul>
+          </section>
+          <section class="tt__day" data-day="3" aria-labelledby="tt-d3">
+            <h3 class="tt__name" id="tt-d3"><span data-i18n="day.3">Τετάρτη</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--kids" href="#trial" data-slot data-aud="kids" data-cls="aerialKids" data-day="3" data-start="19:00" data-end="20:00"><span class="slot__time">19:00 – 20:00</span><span class="slot__name" data-i18n="cls.aerialKids.name">Aerial yoga για παιδιά</span><span class="slot__meta" data-i18n="tt.kids5">Παιδιά 5–11 ετών</span></a></li>
+              <li><a class="slot slot--aerial" href="#trial" data-slot data-aud="adults" data-cls="aerial" data-day="3" data-start="20:45" data-end="21:45"><span class="slot__time">20:45 – 21:45</span><span class="slot__name">Aerial Yoga</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+            </ul>
+          </section>
+          <section class="tt__day" data-day="4" aria-labelledby="tt-d4">
+            <h3 class="tt__name" id="tt-d4"><span data-i18n="day.4">Πέμπτη</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="4" data-start="18:30" data-end="19:30"><span class="slot__time">18:30 – 19:30</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="4" data-start="19:30" data-end="20:30"><span class="slot__time">19:30 – 20:30</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+              <li><a class="slot slot--yoga" href="#trial" data-slot data-aud="adults" data-cls="hatha" data-day="4" data-start="20:40" data-end="22:10"><span class="slot__time">20:40 – 22:10</span><span class="slot__name">Hatha Yoga</span><span class="slot__meta" data-i18n="tt.adults90">Ενήλικες · 90′</span></a></li>
+            </ul>
+          </section>
+          <section class="tt__day" data-day="5" aria-labelledby="tt-d5">
+            <h3 class="tt__name" id="tt-d5"><span data-i18n="day.5">Παρασκευή</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--kids" href="#trial" data-slot data-aud="kids" data-cls="music" data-ages="1-3.5" data-day="5" data-start="18:00" data-end="18:45"><span class="slot__time">18:00 – 18:45</span><span class="slot__name" data-i18n="cls.music.name">Μουσικοκινητική</span><span class="slot__meta" data-i18n="tt.kids1">Παιδιά 1–3½ ετών</span></a></li>
+              <li><a class="slot slot--kids" href="#trial" data-slot data-aud="kids" data-cls="music" data-ages="4-7" data-day="5" data-start="19:00" data-end="20:00"><span class="slot__time">19:00 – 20:00</span><span class="slot__name" data-i18n="cls.music.name">Μουσικοκινητική</span><span class="slot__meta" data-i18n="tt.kids4">Παιδιά 4–7 ετών</span></a></li>
+            </ul>
+          </section>
+          <section class="tt__day" data-day="6" aria-labelledby="tt-d6">
+            <h3 class="tt__name" id="tt-d6"><span data-i18n="day.6">Σάββατο</span></h3>
+            <ul class="tt__list">
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="6" data-start="10:30" data-end="11:30"><span class="slot__time">10:30 – 11:30</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+              <li><a class="slot slot--pilates" href="#trial" data-slot data-aud="adults" data-cls="pilates" data-day="6" data-start="11:30" data-end="12:30"><span class="slot__time">11:30 – 12:30</span><span class="slot__name">Pilates Mat Work</span><span class="slot__meta" data-i18n="tt.adults60">Ενήλικες · 60′</span></a></li>
+            </ul>
+          </section>
+        </div>
+        <p class="small-note tt__note" data-i18n="schedule.note">Κυριακή κλειστά. Yin aerial, yoga nidra, yoga εγκυμοσύνης, mom & baby και θεατρικό παιχνίδι: νέα τμήματα ανοίγουν μόλις συμπληρωθεί ομάδα. Δηλώστε ενδιαφέρον και θα σας ειδοποιήσουμε.</p>
+      </div>
+    </section>
+
+    <!-- ================= ΤΙΜΕΣ ================= -->
+    <section class="section section--tint" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-i18n="prices.eyebrow">Τιμές</p>
+            <h2 class="section-title" id="prices-title" data-i18n="prices.title">Βρείτε το πακέτο σας</h2>
+          </div>
+          <p class="section-lead" data-i18n="prices.lead">Εγγραφή δωρεάν, χωρίς ψιλά γράμματα. Πείτε μας πόσο συχνά θέλετε να έρχεστε και σας δείχνουμε τι σας συμφέρει.</p>
+        </header>
+
+        <div class="prices">
+          <div class="calc" data-calc>
+            <div class="calc__tabs" role="group" aria-label="Τιμές για" data-i18n-attr="aria-label:calc.tabsLabel">
+              <button type="button" class="calc__tab" data-calc-tab="adults" aria-pressed="true" aria-controls="calc-adults" data-i18n="filter.adults">Ενήλικες</button>
+              <button type="button" class="calc__tab" data-calc-tab="kids" aria-pressed="false" aria-controls="calc-kids" data-i18n="filter.kids">Παιδιά</button>
+            </div>
+
+            <form class="calc__body" id="calc-adults" data-calc-panel="adults" aria-label="Υπολογισμός τιμής για ενήλικες" data-i18n-attr="aria-label:calc.adultsLabel">
+              <fieldset class="calc__field">
+                <legend data-i18n="calc.perMonth">Μαθήματα τον μήνα</legend>
+                <div class="pills pills--4">
+                  <label class="pill"><input type="radio" name="n" value="4"><span><strong>4</strong><small data-i18n="calc.n4">1 / εβδομάδα</small></span></label>
+                  <label class="pill"><input type="radio" name="n" value="6"><span><strong>6</strong><small data-i18n="calc.n6">1–2 / εβδομάδα</small></span></label>
+                  <label class="pill"><input type="radio" name="n" value="8" checked><span><strong>8</strong><small data-i18n="calc.n8">2 / εβδομάδα</small></span></label>
+                  <label class="pill"><input type="radio" name="n" value="12"><span><strong>12</strong><small data-i18n="calc.n12">3 / εβδομάδα</small></span></label>
+                </div>
+              </fieldset>
+              <fieldset class="calc__field">
+                <legend data-i18n="calc.period">Πληρωμή</legend>
+                <div class="pills pills--2">
+                  <label class="pill"><input type="radio" name="period" value="m" checked><span><strong data-i18n="calc.monthly">Μηνιαία</strong><small data-i18n="calc.4weeks">4 εβδομάδες</small></span></label>
+                  <label class="pill"><input type="radio" name="period" value="q"><span><strong data-i18n="calc.quarterly">Ανά τρίμηνο</strong><small data-i18n="calc.12weeks">12 εβδομάδες · φθηνότερα</small></span></label>
+                </div>
+              </fieldset>
+              <div class="calc__checks">
+                <label class="check"><input type="checkbox" name="reduced"><span data-i18n="calc.reduced">Είμαι φοιτητής/τρια, άνεργος/η ή συνταξιούχος</span></label>
+                <label class="check"><input type="checkbox" name="family"><span data-i18n="calc.family">Γυμνάζονται κι άλλα μέλη της οικογένειας (−15%)</span></label>
+              </div>
+            </form>
+
+            <form class="calc__body" id="calc-kids" data-calc-panel="kids" hidden aria-label="Υπολογισμός τιμής για παιδιά" data-i18n-attr="aria-label:calc.kidsLabel">
+              <fieldset class="calc__field">
+                <legend data-i18n="calc.programme">Πρόγραμμα · 4 μαθήματα τον μήνα</legend>
+                <div class="pills pills--2">
+                  <label class="pill"><input type="radio" name="prog" value="move" checked><span><strong data-i18n="calc.move">Aerial yoga ή μουσικοκινητική</strong></span></label>
+                  <label class="pill"><input type="radio" name="prog" value="theatre"><span><strong data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</strong></span></label>
+                </div>
+              </fieldset>
+              <fieldset class="calc__field">
+                <legend data-i18n="calc.howMany">Πόσα παιδιά;</legend>
+                <div class="pills pills--2">
+                  <label class="pill"><input type="radio" name="kids" value="1" checked><span><strong data-i18n="calc.oneKid">Ένα παιδί</strong></span></label>
+                  <label class="pill"><input type="radio" name="kids" value="2"><span><strong data-i18n="calc.siblings">Δύο αδέρφια</strong></span></label>
+                </div>
+              </fieldset>
+              <fieldset class="calc__field">
+                <legend data-i18n="calc.period">Πληρωμή</legend>
+                <div class="pills pills--2">
+                  <label class="pill"><input type="radio" name="period" value="m" checked><span><strong data-i18n="calc.monthly">Μηνιαία</strong><small data-i18n="calc.4weeks">4 εβδομάδες</small></span></label>
+                  <label class="pill"><input type="radio" name="period" value="q"><span><strong data-i18n="calc.quarterly">Ανά τρίμηνο</strong><small data-i18n="calc.12weeks">12 εβδομάδες · φθηνότερα</small></span></label>
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="calc__out" aria-live="polite" data-calc-out>
+              <p class="calc__price"><span data-calc-price>75 €</span> <small data-calc-unit>/ μήνα</small></p>
+              <p class="calc__per" data-calc-per>9,38 € ανά μάθημα · 8 μαθήματα</p>
+              <p class="calc__save" data-calc-save>Κερδίζετε 29 € σε σχέση με μεμονωμένα μαθήματα</p>
+              <p class="calc__note" data-calc-note hidden></p>
+            </div>
+          </div>
+
+          <div class="price-side">
+            <div class="price-card">
+              <h3 class="price-card__title" data-i18n="prices.single">Μεμονωμένα & δοκιμαστικά</h3>
+              <dl class="plist">
+                <div><dt data-i18n="prices.trialAdult">Δοκιμαστικό, ενήλικες</dt><dd data-price="5">5 €</dd></div>
+                <div><dt data-i18n="prices.trialKids">Δοκιμαστικό, παιδιά</dt><dd class="plist__free" data-i18n="prices.free">Δωρεάν</dd></div>
+                <div><dt data-i18n="prices.drop">Μεμονωμένο μάθημα</dt><dd data-price="13">13 €</dd></div>
+                <div><dt data-i18n="prices.dropAerial">Μεμονωμένο aerial yoga</dt><dd data-price="15">15 €</dd></div>
+                <div><dt data-i18n="prices.dropKids">Μεμονωμένο παιδικό</dt><dd data-price="10">10 €</dd></div>
+                <div><dt data-i18n="prices.private">Ιδιαίτερο hatha yoga για 2</dt><dd data-price="40">40 €</dd></div>
+              </dl>
+              <p class="small-note" data-i18n="prices.aerialNote">Για το δοκιμαστικό aerial yoga κρατάμε τη θέση σας με προκαταβολή 5 €, γιατί οι αιώρες είναι λίγες.</p>
+            </div>
+
+            <details class="price-all">
+              <summary data-i18n="prices.all">Όλος ο τιμοκατάλογος</summary>
+              <div class="price-all__body">
+                <table class="ptable">
+                  <caption data-i18n="prices.tAdults">Ομαδικά ενηλίκων · κανονική / μειωμένη τιμή</caption>
+                  <thead><tr><th scope="col" data-i18n="prices.tPack">Πακέτο</th><th scope="col" data-i18n="prices.tMonth">Μήνας</th><th scope="col" data-i18n="prices.tQuarter">Τρίμηνο</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row" data-i18n="prices.t4">4 μαθήματα</th><td><span data-price="50">50 €</span> / <span data-price="42">42 €</span></td><td><span data-price="130">130 €</span> / <span data-price="116">116 €</span></td></tr>
+                    <tr><th scope="row" data-i18n="prices.t6">6 μαθήματα</th><td><span data-price="65">65 €</span> / <span data-price="56">56 €</span></td><td><span data-price="175">175 €</span> / <span data-price="158">158 €</span></td></tr>
+                    <tr><th scope="row" data-i18n="prices.t8">8 μαθήματα</th><td><span data-price="75">75 €</span> / <span data-price="65">65 €</span></td><td><span data-price="200">200 €</span> / <span data-price="180">180 €</span></td></tr>
+                    <tr><th scope="row" data-i18n="prices.t12">12 μαθήματα</th><td><span data-price="90">90 €</span> / <span data-price="80">80 €</span></td><td><span data-price="250">250 €</span> / <span data-price="225">225 €</span></td></tr>
+                  </tbody>
+                </table>
+                <table class="ptable">
+                  <caption data-i18n="prices.tKids">Παιδικά · 4 μαθήματα τον μήνα</caption>
+                  <thead><tr><th scope="col" data-i18n="prices.tProg">Πρόγραμμα</th><th scope="col" data-i18n="prices.tMonth">Μήνας</th><th scope="col" data-i18n="prices.tQuarter">Τρίμηνο</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row" data-i18n="prices.tMove">Aerial yoga / μουσικοκινητική</th><td data-price="38">38 €</td><td data-price="100">100 €</td></tr>
+                    <tr><th scope="row" data-i18n="prices.tMove2">…για δύο αδέρφια</th><td data-price="65">65 €</td><td data-price="170">170 €</td></tr>
+                    <tr><th scope="row" data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</th><td data-price="30">30 €</td><td data-price="80">80 €</td></tr>
+                    <tr><th scope="row" data-i18n="prices.tTheatre2">…για δύο αδέρφια</th><td data-price="50">50 €</td><td data-price="140">140 €</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </div>
+        <p class="small-note prices__fine" data-i18n="prices.fine">Ο «μήνας» είναι 4 συνεχόμενες εβδομάδες και το τρίμηνο 12, από όποια μέρα κι αν ξεκινήσετε. Για τη μειωμένη τιμή χρειάζεται φοιτητική ή κάρτα ανεργίας. Οι εκπτώσεις δεν συνδυάζονται. Όλες οι τιμές περιλαμβάνουν ΦΠΑ 24%.</p>
+      </div>
+    </section>
+
+    <!-- ================= ΘΕΡΑΠΕΙΕΣ & ΕΚΔΗΛΩΣΕΙΣ ================= -->
+    <section class="section" id="wellness" aria-labelledby="wellness-title">
+      <div class="wrap wellness">
+        <div class="wellness__head">
+          <p class="eyebrow" data-i18n="well.eyebrow">Θεραπείες ευεξίας</p>
+          <h2 class="section-title" id="wellness-title" data-i18n-html="well.title">Μια ώρα <em>μόνο για εσάς.</em></h2>
+          <p class="section-lead" data-i18n="well.lead">Ατομικές συνεδρίες στο ήσυχο δωμάτιο του στούντιο, για τις μέρες που το σώμα ζητά κάτι παραπάνω από άσκηση.</p>
+          <a class="btn btn--ghost btn--sm" href="tel:+302100000000"><svg class="btn__icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="well.cta">Ραντεβού στο 210 000 0000</span></a>
+        </div>
+        <ul class="menu">
+          <li class="menu__item"><div><h3 data-i18n="th.1.t">Ρεφλεξολογία</h3><p data-i18n="th.1.d">Πιέσεις σε σημεία των πελμάτων που αντιστοιχούν σε όλο το σώμα.</p></div><p class="menu__meta"><span>60′</span><strong data-price="35">35 €</strong></p></li>
+          <li class="menu__item"><div><h3>Reiki</h3><p data-i18n="th.2.d">Ήπια ενεργειακή θεραπεία με το άγγιγμα των χεριών, για βαθιά ηρεμία.</p></div><p class="menu__meta"><span>90′</span><strong data-price="40">40 €</strong></p></li>
+          <li class="menu__item"><div><h3 data-i18n="th.3.t">Αρωματοθεραπεία</h3><p data-i18n="th.3.d">Μασάζ με αιθέρια έλαια, επιλεγμένα για ό,τι χρειάζεστε εκείνη τη μέρα.</p></div><p class="menu__meta"><span>60′</span><strong data-price="50">50 €</strong></p></li>
+          <li class="menu__item"><div><h3 data-i18n="th.4.t">Λεμφικό μασάζ</h3><p data-i18n="th.4.d">Απαλές, ρυθμικές κινήσεις που βοηθούν την κυκλοφορία και ξεφουσκώνουν.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+          <li class="menu__item"><div><h3 data-i18n="th.5.t">Ολιστικό ενεργειακό μασάζ</h3><p data-i18n="th.5.d">Μασάζ σε όλο το σώμα, για να ξαναβρούν ισορροπία σώμα και μυαλό.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+          <li class="menu__item"><div><h3>Thai Yoga Massage</h3><p data-i18n="th.6.d">Παθητικές διατάσεις και πιέσεις στο στρώμα, με άνετα ρούχα.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+          <li class="menu__item"><div><h3>Shiatsu</h3><p data-i18n="th.7.d">Ιαπωνική τεχνική με πιέσεις των δακτύλων κατά μήκος των μεσημβρινών.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+          <li class="menu__item"><div><h3>Rejuvance</h3><p data-i18n="th.8.d">Τεχνική μασάζ προσώπου για λάμψη και χαλάρωση, χωρίς βελόνες και χημικά.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+          <li class="menu__item"><div><h3 data-i18n="th.9.t">Βελονισμός</h3><p data-i18n="th.9.d">Λεπτές βελόνες σε συγκεκριμένα σημεία, για πόνο και ένταση.</p></div><p class="menu__meta"><span>60′</span><strong data-price="60">60 €</strong></p></li>
+        </ul>
+      </div>
+
+      <div class="wrap events">
+        <h3 class="events__title" data-i18n="ev.title">Στο στούντιο γίνονται και…</h3>
+        <ul class="events__list">
+          <li class="event" data-reveal><svg aria-hidden="true"><use href="#i-cake"/></svg><h4 data-i18n="ev.1.t">Παιδικά πάρτι</h4><p data-i18n="ev.1.d">Γενέθλια με θεατρικό παιχνίδι, μουσική και πολύ κίνηση.</p></li>
+          <li class="event" data-reveal><svg aria-hidden="true"><use href="#i-book"/></svg><h4 data-i18n="ev.2.t">Παρουσιάσεις παιδικών βιβλίων</h4><p data-i18n="ev.2.d">Συγγραφείς διαβάζουν, τα παιδιά ζωγραφίζουν και ρωτούν.</p></li>
+          <li class="event" data-reveal><svg aria-hidden="true"><use href="#i-mask"/></svg><h4 data-i18n="ev.3.t">Θεατρικές παραστάσεις</h4><p data-i18n="ev.3.d">Μικρές σκηνές για μικρούς και μεγάλους θεατές.</p></li>
+          <li class="event" data-reveal><svg aria-hidden="true"><use href="#i-frame"/></svg><h4 data-i18n="ev.4.t">Εκθέσεις</h4><p data-i18n="ev.4.d">Φωτογραφία και ζωγραφική στους τοίχους του στούντιο.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ΔΟΚΙΜΑΣΤΙΚΟ ================= -->
+    <section class="section section--tint" id="trial" aria-labelledby="trial-title">
+      <div class="wrap trial">
+        <div class="trial__intro">
+          <p class="eyebrow" data-i18n="trial.eyebrow">Δοκιμαστικό μάθημα</p>
+          <h2 class="section-title" id="trial-title" data-i18n-html="trial.title">Το πρώτο βήμα <em>είναι το πιο εύκολο.</em></h2>
+          <p class="section-lead" data-i18n="trial.lead">Διαλέξτε μάθημα και ώρα, κι εμείς σας κρατάμε θέση. Δοκιμαστικό για ενήλικες 5 €, για παιδιά δωρεάν.</p>
+          <ol class="trial__steps">
+            <li><span>1</span><p data-i18n="trial.s1">Κλείνετε θέση εδώ ή με ένα τηλεφώνημα.</p></li>
+            <li><span>2</span><p data-i18n="trial.s2">Έρχεστε 10 λεπτά νωρίτερα, με άνετα ρούχα.</p></li>
+            <li><span>3</span><p data-i18n="trial.s3">Αποφασίζετε μετά το μάθημα, χωρίς καμία δέσμευση.</p></li>
+          </ol>
+        </div>
+
+        <div class="booking" data-booking>
+          <form class="booking__form" data-trial-form novalidate>
+            <fieldset class="field">
+              <legend class="field__label" data-i18n="bk.who">Για ποιον είναι το μάθημα;</legend>
+              <div class="pills pills--2">
+                <label class="pill pill--icon"><input type="radio" name="who" value="adults" checked><span><svg aria-hidden="true"><use href="#i-me"/></svg><strong data-i18n="who.adults">Για μένα</strong></span></label>
+                <label class="pill pill--icon"><input type="radio" name="who" value="kids"><span><svg aria-hidden="true"><use href="#i-kid"/></svg><strong data-i18n="who.kids">Για το παιδί μου</strong></span></label>
+              </div>
+            </fieldset>
+
+            <div class="field" data-kid-only hidden>
+              <label class="field__label" for="bk-age" data-i18n="bk.age">Ηλικία παιδιού</label>
+              <select id="bk-age" name="age" aria-describedby="bk-age-err">
+                <option value="" data-i18n="bk.choose">Επιλέξτε…</option>
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option>
+              </select>
+              <p class="field__error" id="bk-age-err" hidden></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="bk-class" data-i18n="bk.class">Μάθημα</label>
+              <select id="bk-class" name="cls" aria-describedby="bk-class-err" data-class-select>
+                <option value="" data-i18n="bk.choose">Επιλέξτε…</option>
+                <option value="pilates">Pilates Mat Work</option>
+                <option value="hatha">Hatha Yoga</option>
+                <option value="ashtanga">Ashtanga Yoga</option>
+                <option value="aerial">Aerial Yoga</option>
+                <option value="yinAerial">Yin Aerial Yoga</option>
+                <option value="nidra">Yoga Nidra</option>
+                <option value="prenatal" data-i18n="cls.prenatal.name">Yoga εγκυμοσύνης & λοχείας</option>
+                <option value="momBaby">Mom & Baby Yoga</option>
+                <option value="aerialKids" data-i18n="cls.aerialKids.name">Aerial yoga για παιδιά</option>
+                <option value="music" data-i18n="cls.music.name">Μουσικοκινητική</option>
+                <option value="theatre" data-i18n="cls.theatre.name">Θεατρικό παιχνίδι</option>
+              </select>
+              <p class="field__error" id="bk-class-err" hidden></p>
+            </div>
+
+            <fieldset class="field" data-session-field>
+              <legend class="field__label" data-i18n="bk.when">Πότε;</legend>
+              <div class="sessions" data-sessions><p class="field__hint" data-i18n="bk.pickClass">Διαλέξτε πρώτα μάθημα για να δείτε τις επόμενες ώρες.</p></div>
+              <p class="field__error" id="bk-when-err" hidden data-when-err></p>
+            </fieldset>
+
+            <div class="field-row">
+              <div class="field">
+                <label class="field__label" for="bk-name" data-label-name>Ονοματεπώνυμο</label>
+                <input id="bk-name" name="name" type="text" autocomplete="name" aria-describedby="bk-name-err" required>
+                <p class="field__error" id="bk-name-err" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="bk-phone" data-i18n="bk.phone">Κινητό</label>
+                <input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="69X XXX XXXX" aria-describedby="bk-phone-err" required>
+                <p class="field__error" id="bk-phone-err" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="bk-note"><span data-i18n="bk.note">Κάτι που πρέπει να ξέρουμε;</span> <span class="field__opt" data-i18n="bk.optional">(προαιρετικό)</span></label>
+              <textarea id="bk-note" name="note" rows="2" placeholder="π.χ. τραυματισμός, εγκυμοσύνη, πρώτη φορά σε aerial" data-i18n-attr="placeholder:bk.notePh"></textarea>
+            </div>
+
+            <div class="booking__foot">
+              <p class="booking__cost" data-cost><span data-i18n="bk.cost">Κόστος δοκιμαστικού:</span> <strong data-cost-value>5 €</strong></p>
+              <button type="submit" class="btn btn--accent"><span data-i18n="bk.submit">Κλείστε θέση</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <p class="booking__demo" data-i18n="bk.demo">Demo φόρμα: δεν αποστέλλονται στοιχεία.</p>
+          </form>
+
+          <div class="booking__done" data-booking-done tabindex="-1" hidden>
+            <span class="booking__check" aria-hidden="true"><svg><use href="#i-check"/></svg></span>
+            <h3 data-done-title></h3>
+            <p data-done-text></p>
+            <p class="booking__demo" data-i18n="bk.demoDone">Demo: δεν στάλθηκε καμία κράτηση.</p>
+            <button type="button" class="btn btn--ghost btn--sm" data-booking-again data-i18n="bk.again">Νέα κράτηση</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <div>
+          <p class="eyebrow" data-i18n="faq.eyebrow">Συχνές ερωτήσεις</p>
+          <h2 class="section-title" id="faq-title" data-i18n="faq.title">Πριν έρθετε</h2>
+        </div>
+        <div class="faq__list">
+          <details class="qa"><summary data-i18n="faq.1.q">Δεν έχω ξαναγυμναστεί. Μπορώ να ξεκινήσω;</summary><p data-i18n="faq.1.a">Φυσικά. Κάθε άσκηση έχει πιο εύκολη και πιο απαιτητική εκδοχή, και προσαρμόζουμε το μάθημα σε εσάς. Θέλει συνέπεια και λίγη υπομονή τις πρώτες εβδομάδες.</p></details>
+          <details class="qa"><summary data-i18n="faq.2.q">Τι να φέρω;</summary><p data-i18n="faq.2.a">Άνετα ρούχα και ένα μπουκάλι νερό. Γυμναζόμαστε ξυπόλυτοι ή με κάλτσες. Για το aerial φορέστε μπλούζα με μανίκια, για να μην τρίβεται το ύφασμα στο δέρμα. Στρώματα και αιώρες υπάρχουν στο στούντιο.</p></details>
+          <details class="qa"><summary data-i18n="faq.3.q">Μπορώ να κάνω Pilates στην εγκυμοσύνη;</summary><p data-i18n="faq.3.a">Ναι, με την έγκριση του γιατρού σας. Υπάρχει και ειδικό τμήμα yoga για την εγκυμοσύνη και την περίοδο μετά τον τοκετό, και mom & baby yoga όταν έρθει το μωρό.</p></details>
+          <details class="qa"><summary data-i18n="faq.4.q">Πώς μετράει ο «μήνας» στα πακέτα;</summary><p data-i18n="faq.4.a">Ως 4 συνεχόμενες εβδομάδες (και το τρίμηνο ως 12), από όποια μέρα κι αν ξεκινήσετε. Έτσι δεν χάνετε μαθήματα αν γραφτείτε στη μέση του μήνα.</p></details>
+          <details class="qa"><summary data-i18n="faq.5.q">Υπάρχουν εκπτώσεις;</summary><p data-i18n="faq.5.a">Μειωμένες τιμές για φοιτητές, ανέργους και συνταξιούχους, 15% έκπτωση για οικογένειες με δύο ή περισσότερα μέλη σε ομαδικά τμήματα, και ειδική τιμή για αδέρφια στα παιδικά. Οι εκπτώσεις δεν συνδυάζονται μεταξύ τους.</p></details>
+          <details class="qa"><summary data-i18n="faq.6.q">Έχω ένα θέμα υγείας. Πρέπει να σας το πω;</summary><p data-i18n="faq.6.a">Ναι, πάντα, και ειδικά πριν από aerial, όπου κάνουμε αναστροφές: γλαύκωμα, πρόσφατη επέμβαση, καρδιολογικά ή θέματα σπονδυλικής στήλης. Το Pilates βοηθά πολύ, αλλά δεν αντικαθιστά τη διάγνωση και τη θεραπεία από γιατρό.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ΕΠΙΚΟΙΝΩΝΙΑ ================= -->
+    <section class="section section--tint" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit">
+        <div class="visit__info">
+          <p class="eyebrow" data-i18n="visit.eyebrow">Επικοινωνία</p>
+          <h2 class="section-title" id="visit-title" data-i18n="visit.title">Ελάτε να γνωριστούμε</h2>
+          <ul class="contact">
+            <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><h3 data-i18n="visit.where">Πού θα μας βρείτε</h3><p data-i18n="visit.address">Οδός Παραδείγματος 12, στην πλατεία, Αθήνα</p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-phone"/></svg><div><h3 data-i18n="visit.call">Τηλέφωνο</h3><p><a href="tel:+302100000000">210 000 0000</a> · <a href="tel:+306900000000">690 000 0000</a></p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg><div><h3>Email</h3><p><a href="mailto:hello@example.com">hello@example.com</a></p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-bus"/></svg><div><h3 data-i18n="visit.how">Πώς θα έρθετε</h3><p data-i18n="visit.transport">Στάση λεωφορείου στη γωνία, μετρό σε 10 λεπτά με τα πόδια.</p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3 data-i18n="visit.hours">Ώρες μαθημάτων</h3><p data-i18n="visit.hours1">Δευτέρα – Παρασκευή 18:00 – 22:10</p><p data-i18n="visit.hours2">Σάββατο 10:30 – 12:30 · Κυριακή κλειστά</p></div></li>
+          </ul>
+        </div>
+        <div class="map" role="img" aria-label="Σχηματικός χάρτης: το στούντιο βρίσκεται πάνω στην πλατεία, κοντά σε στάση λεωφορείου" data-i18n-attr="aria-label:visit.mapLabel">
+          <svg viewBox="0 0 520 420" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <rect class="map__bg" width="520" height="420"/>
+            <g class="map__blocks">
+              <rect class="map__block" x="16" y="28" width="104" height="72" rx="10"/><rect class="map__block" x="16" y="116" width="104" height="76" rx="10"/>
+              <rect class="map__block" x="164" y="28" width="196" height="76" rx="10"/><rect class="map__block" x="164" y="120" width="72" height="72" rx="10"/><rect class="map__block" x="252" y="120" width="108" height="70" rx="10"/>
+              <rect class="map__block" x="16" y="260" width="110" height="54" rx="10"/><rect class="map__block" x="16" y="352" width="110" height="60" rx="10"/>
+              <rect class="map__block" x="170" y="352" width="66" height="60" rx="10"/><rect class="map__block" x="276" y="244" width="88" height="70" rx="10"/><rect class="map__block" x="276" y="352" width="88" height="60" rx="10"/>
+              <rect class="map__block" x="404" y="232" width="100" height="80" rx="10"/>
+            </g>
+            <rect class="map__park" x="402" y="24" width="104" height="150" rx="18"/>
+            <circle class="map__tree" cx="428" cy="56" r="12"/><circle class="map__tree" cx="470" cy="84" r="16"/><circle class="map__tree" cx="430" cy="128" r="13"/><circle class="map__tree" cx="482" cy="146" r="10"/>
+            <path class="map__road map__road--main" d="M-10 220C120 210 220 230 300 214S440 190 530 200"/>
+            <path class="map__road" d="M140 -10C150 120 130 300 150 430M380 -10v440M-10 330h540M256 214 252 430"/>
+            <rect class="map__square" x="166" y="240" width="74" height="74" rx="16"/>
+            <g class="map__bus"><rect x="88" y="232" width="30" height="22" rx="6"/><path d="M95 254v4M111 254v4"/></g>
+            <g class="map__metro"><circle cx="440" cy="368" r="15"/><path d="M433 375v-14l7 8 7-8v14"/></g>
+          </svg>
+          <div class="map__pin" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><use href="#i-logo"/></svg>
+            <span data-keep-lang>ανάσα</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__big" data-i18n-html="footer.big">Η επόμενη ανάσα σας <em>θα είναι πιο βαθιά.</em></p>
+        <a class="btn btn--light" href="#trial"><span data-i18n="hero.cta1">Κλείστε δοκιμαστικό</span><svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <a class="logo logo--light" href="#top" aria-label="Ανάσα, αρχή σελίδας" data-i18n-attr="aria-label:logo.label">
+            <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="logo__text" aria-hidden="true"><span class="logo__name" data-i18n="logo.name">ανάσα</span><span class="logo__sub" data-i18n="logo.sub">pilates · yoga · κίνηση</span></span>
+          </a>
+          <p class="footer__tag" data-i18n="footer.tag">Pilates, yoga και κίνηση για μικρούς και μεγάλους, σε ένα στούντιο της γειτονιάς.</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="visit.hours">Ώρες μαθημάτων</h2>
+          <p data-i18n="visit.hours1">Δευτέρα – Παρασκευή 18:00 – 22:10</p>
+          <p data-i18n="visit.hours2">Σάββατο 10:30 – 12:30 · Κυριακή κλειστά</p>
+        </div>
+        <div>
+          <h2 class="footer__title" data-i18n="footer.contact">Επικοινωνία</h2>
+          <p data-i18n="visit.address">Οδός Παραδείγματος 12, στην πλατεία, Αθήνα</p>
+          <p><a href="tel:+302100000000">210 000 0000</a> · <a href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> <span data-i18n="footer.name">Ανάσα Studio</span> · <span data-i18n="footer.fictional">Εικονική επιχείρηση</span></p>
+        <p class="footer__template" data-i18n="footer.template">Template από την Akamas · Όλα τα στοιχεία είναι ενδεικτικά</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
